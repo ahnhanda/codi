@@ -1,0 +1,35 @@
+=== [2009/01/15 12:58:17] =================================================================
+filename: /product/ajax_shop_rank_sub.php?term=weekly&kwd=&key=&f_date=2009-01-04
+select count(*) from tblShop A, tblRankShop B where 1  and A.shop_idx = B.shop_idx and A.shop_status = 'Y'  and B.rs_start_dt = '2009-01-04' and C.rp_end_dt = '2009-01-10'  
+------------------------------------------------------------------------------------------
+1109 : Unknown table 'C' in where clause
+===========================================================================================
+
+=== [2009/01/15 12:58:17] =================================================================
+filename: /product/ajax_shop_rank_sub.php?term=weekly&kwd=&key=&f_date=2009-01-04
+
+	select
+	A.shop_idx, A.mem_id, A.shop_name, A.shop_url, A.shop_person, A.shop_mobile, A.shop_phone, A.shop_logo, A.shop_medal,
+	(select count(*) from tblProduct where shop_idx = A.shop_idx and p_judgment != 'R') as codi_cnt,
+	B.rs_score, B.rs_rank, B.rs_total_score, B.rs_total_rank 
+	from tblShop A, tblRankShop B
+	where 1  and A.shop_idx = B.shop_idx and A.shop_status = 'Y'  and B.rs_start_dt = '2009-01-04' and C.rp_end_dt = '2009-01-10'   order by B.rs_score desc  limit 10
+	
+------------------------------------------------------------------------------------------
+1109 : Unknown table 'C' in where clause
+===========================================================================================
+
+=== [2009/01/15 16:53:10] =================================================================
+filename: /product/ajax_shop_rank_sub_list.php?term=weekly&kwd=&key=&f_date=2009-01-04&page=1
+select count(*) from tblProduct A, tblShop B, tblRankProduct C where 1  and A.shop_idx = B.shop_idx and A.shop_status = 'Y'  and B.rs_start_dt = '2009-01-04' and B.rs_end_dt = '2009-01-10'  
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'A.shop_status' in 'where clause'
+===========================================================================================
+
+=== [2009/01/15 16:53:55] =================================================================
+filename: /product/ajax_shop_rank_sub_list.php?term=weekly&kwd=&key=&f_date=2009-01-04&page=1
+select count(*) from tblProduct A, tblShop B, tblRankProduct C where 1  and A.shop_idx = B.shop_idx and A.shop_status = 'Y'  and B.rs_start_dt = '2009-01-04' and B.rs_end_dt = '2009-01-10'  
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'A.shop_status' in 'where clause'
+===========================================================================================
+

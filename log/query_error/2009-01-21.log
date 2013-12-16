@@ -1,0 +1,51 @@
+=== [2009/01/21 16:15:33] =================================================================
+filename: /board/ucc_write_ok.php
+
+		update tblUcc set 
+			ucc_title = '저 지성인데요.. 코디 좀 평가해 주시면 안잡아먹쥐 ~~~^^', ucc_content = '<P>어떤가효?</P>
+<P>&nbsp;</P>
+<P>멋지나효?</P>', ucc_file = '200901/1615338nymb1b3z.jpg;',
+			ucc_ip = '61.102.177.82', ucc_categ = 'C'
+		where ucc_idx = 
+		
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4
+===========================================================================================
+
+=== [2009/01/21 16:29:18] =================================================================
+filename: /board/ucc_write_ok.php
+
+		update tblUcc set 
+			ucc_title = '올림픽의 벅찬 감동을 간직하면서 저의 코디 자랑합니다 ^^', ucc_content = '[마이데일리 = 이석무 기자] 세계 최강을 자부하며 <a href=\\\"http://search.daum.net/search?w=tot&q=%BA%A3%C0%CC%C2%A1%BF%C3%B8%B2%C7%C8&nil_profile=newskwd&nil_id=v20080822154608515\\\" target=\\\"new\\\" class=\\\"keyword\\\" title=\\\"\\\" onmouseover=\\\"UI.toolTip(event)\\\">베이징올림픽</a> 금메달을 노렸던 일본 야구가 큰 충격에 빠졌다. <br><br>
+일본 언론들은 22일 중국 베이징올림픽 야구 4강전에서 일본이 한국에 2-6으로 역전패를 당한 뒤 일제히 비난의 목소리를 냈다. <br><br>
+일본 \\\'시사통신\\\'은 \\\"한국에 설욕하지 못하고 금메달의 꿈이 무너졌다\\\"라며 \\\"금메달을 노릴 수 있는 마지막 찬스가 될지 모르는 베이징에서 결승전 조차 치를 수 없게 됐다\\\"고 강조했다. <br><br>
+<div class=\\\"GS_conC\\\" style=\\\"width: 500px;\\\"> 
+    <p class=\\\"ph\\\"><img src=\\\"http://photo-media.daum-img.net/200808/22/mydaily/20080822155308.144.0.jpg\\\" alt=\\\"\\\" width=\\\"500\\\"><span></span></p> 
+</div> 
+시사통신은 \\\"프로-아마 혼성팀이 나간 2000년 <a href=\\\"http://search.daum.net/search?w=tot&q=%BD%C3%B5%E5%B4%CF%BF%C3%B8%B2%C7%C8&nil_profile=newskwd&nil_id=v20080822154608515\\\" target=\\\"new\\\" class=\\\"keyword\\\" title=\\\">검색하기\\\" onmouseover=\\\"UI.toolTip(event)\\\">시드니올림픽</a> 때와 <a href=\\\"http://search.daum.net/search?w=tot&q=2004%B3%E2+%BE%C6%C5%D7%B3%D7%BF%C3%B8%B2%C7%C8&nil_profile=newskwd&nil_id=v20080822154608515\\\" target=\\\"new\\\" class=\\\"keyword\\\" title=\\\">검색하기\\\" onmouseover=\\\"UI.toolTip(event)\\\">2004년 아테네올림픽</a> 때 1구단 2명 선발의 제약이 있었지만 이번 호시노 재팬은 그런 제약이 없는 최강 전력의 대표팀이었다\\\"라며 \\\"최강 멤버로 임했지만 은메달에도 이르지 못한 것은 굴욕적인 결과라고 말할 수 있다\\\"고 주장했다. <br><br>
+아울러 \\\"국민적 기대가 높았던 만큼 쇼크는 일본 야구계에 무겁게 걸릴 것 같다\\\"고 덧붙이기도 했다. <br><br>
+일본 스포츠신문 \\\'스포츠호치\\\'는 \\\"호시노 재팬의 승리 방정식이 무너졌다\\\"라며 \\\"선취점을 뽑은 일본이 빠른 투수교체로 승부를
+걸었지만 후지카와, 이와세의 투입이 오산이었다\\\"고 전했다. \\\'니칸스포츠\\\'도 \\\"추가점을 뽑지 못해 도망가는데 실패한 것이 역전패에
+영향을 줬다\\\"고 주장했다. <br><br>
+[일본에 역전승을 거둔 뒤 기쁨을 감추지 못하는 한국 야구대표팀. 사진=베이징 유진형 기자 zolong@mydaily.co.kr]', ucc_file = '200901/162918wpy4678u0k.jpg;200901/162918dh224dgky.jpg;',
+			ucc_ip = '61.102.177.82', ucc_categ = 'C'
+		where ucc_idx = 
+		
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4
+===========================================================================================
+
+=== [2009/01/21 18:40:26] =================================================================
+filename: /board/shop_pr_list.php
+
+select A.pr_idx, A.shop_idx, A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name,
+(select ifnull(sum(pr_s_score),0) from tblUccScore where pr_idx=A.pr_idx) as score,
+(select count(*) from tblUccComment where pr_idx=A.pr_idx) as comment_cnt
+from tblUcc A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'A.pr_idx' in 'field list'
+===========================================================================================
+

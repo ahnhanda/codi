@@ -1,0 +1,70 @@
+=== [2009/02/06 10:29:50] =================================================================
+filename: /mypage/Mgift.php
+select gt_status, count(*) as cnt from tblGiftTracking  where 1 and A.shop_mem_id = 'nuna5004'  group by gt_status 
+------------------------------------------------------------------------------------------
+1109 : Unknown table 'A' in where clause
+===========================================================================================
+
+=== [2009/02/06 13:26:51] =================================================================
+filename: /mypage/Mcash.php
+select cc_cid, cash_io, cash, cash_reg_dt from tblCash where 1  and mem_id = 'anna'   order by cash_idx desc  limit -10, 10 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 1
+===========================================================================================
+
+=== [2009/02/06 13:27:20] =================================================================
+filename: /mypage/Mcash.php
+select cc_cid, cash_io, cash, cash_reg_dt from tblCash where 1  and mem_id = 'anna'   order by cash_idx desc  limit -10, 10 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 1
+===========================================================================================
+
+=== [2009/02/06 13:27:52] =================================================================
+filename: /mypage/Mcash.php
+select cc_cid, cash_io, cash, cash_reg_dt from tblCash where 1  and mem_id = 'anna'   order by cash_idx desc  limit -10, 10 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 1
+===========================================================================================
+
+=== [2009/02/06 13:29:30] =================================================================
+filename: /mypage/Mcash.php
+select cc_cid, cash_io, cash, cash_reg_dt from tblCash where 1  and mem_id = 'anna'   order by cash_idx desc  limit -10, 10 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 1
+===========================================================================================
+
+=== [2009/02/06 13:30:34] =================================================================
+filename: /mypage/Mcash.php
+select cc_cid, cash_io, cash, cash_reg_dt from tblCash where 1  and mem_id = 'anna'   order by cash_idx desc  limit -10, 10 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 1
+===========================================================================================
+
+=== [2009/02/06 18:14:43] =================================================================
+filename: /manage/member/bankbook_list.php
+select count(*) from tblChargeBookBank A, tblMember B, tblShop C  where 1 and A.mem_id = B.mem_id and B.mem_id = C.mem_id and A.bb_status = 'N'  
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.tblChargeBookBank' doesn't exist
+===========================================================================================
+
+=== [2009/02/06 18:14:43] =================================================================
+filename: /manage/member/bankbook_list.php
+select A.bb_idx, A.bb_code, A.bb_cash, A.bb_reg_dt, B.mem_id, B.mem_name, B.mem_mobile, C.shop_idx, C.shop_name  where 1 and A.mem_id = B.mem_id and B.mem_id = C.mem_id and A.bb_status = 'N'   order by bb_idx desc  limit 1, 20 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where 1 and A.mem_id = B.mem_id and B.mem_id = C.mem_id and A.bb_status = 'N'   ' at line 1
+===========================================================================================
+
+=== [2009/02/06 18:15:34] =================================================================
+filename: /manage/member/bankbook_list.php
+select count(*) from tblChargeBookBank A, tblMember B, tblShop C  where 1 and A.mem_id = B.mem_id and B.mem_id = C.mem_id and A.bb_status = 'N'  
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.tblChargeBookBank' doesn't exist
+===========================================================================================
+
+=== [2009/02/06 18:15:34] =================================================================
+filename: /manage/member/bankbook_list.php
+select A.bb_idx, A.bb_code, A.bb_cash, A.bb_reg_dt, B.mem_id, B.mem_name, B.mem_mobile, C.shop_idx, C.shop_name from tblChargeBookBank A, tblMember B, tblShop C  where 1 and A.mem_id = B.mem_id and B.mem_id = C.mem_id and A.bb_status = 'N'   order by bb_idx desc  limit 1, 20 
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.tblChargeBookBank' doesn't exist
+===========================================================================================
+

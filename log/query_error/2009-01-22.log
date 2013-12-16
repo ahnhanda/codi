@@ -1,0 +1,219 @@
+=== [2009/01/22 14:12:44] =================================================================
+filename: /common/ajax_tail_board.php?tkind=P&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.pr_idx, , A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) from tblPrComment where pr_idx=A.pr_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) fr' at line 1
+===========================================================================================
+
+=== [2009/01/22 14:13:17] =================================================================
+filename: /common/ajax_tail_board.php?tkind=P&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.pr_idx, , A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) from tblPrComment where pr_idx=A.pr_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) fr' at line 1
+===========================================================================================
+
+=== [2009/01/22 14:13:44] =================================================================
+filename: /common/ajax_tail_board.php?tkind=P&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.pr_idx, , A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) from tblPrComment where pr_idx=A.pr_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) fr' at line 1
+===========================================================================================
+
+=== [2009/01/22 14:16:10] =================================================================
+filename: /common/ajax_tail_board.php?tkind=P&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.pr_idx, , A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) from tblPrComment where pr_idx=A.pr_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) fr' at line 1
+===========================================================================================
+
+=== [2009/01/22 14:16:14] =================================================================
+filename: /common/ajax_tail_board.php?tkind=P&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.pr_idx, , A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) from tblPrComment where pr_idx=A.pr_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) fr' at line 1
+===========================================================================================
+
+=== [2009/01/22 14:17:04] =================================================================
+filename: /common/ajax_tail_board.php?tkind=P&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.pr_idx, , A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) from tblPrComment where pr_idx=A.pr_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) fr' at line 1
+===========================================================================================
+
+=== [2009/01/22 14:17:27] =================================================================
+filename: /common/ajax_tail_board.php?tkind=P&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.pr_idx, , A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) from tblPrComment where pr_idx=A.pr_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) fr' at line 1
+===========================================================================================
+
+=== [2009/01/22 14:17:46] =================================================================
+filename: /common/ajax_tail_board.php?tkind=P&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.pr_idx, , A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) from tblPrComment where pr_idx=A.pr_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) fr' at line 1
+===========================================================================================
+
+=== [2009/01/22 14:17:58] =================================================================
+filename: /common/ajax_tail_board.php?tkind=P&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.pr_idx, , A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) from tblPrComment where pr_idx=A.pr_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) fr' at line 1
+===========================================================================================
+
+=== [2009/01/22 14:18:16] =================================================================
+filename: /common/ajax_tail_board.php?tkind=P&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.pr_idx, , A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) from tblPrComment where pr_idx=A.pr_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) fr' at line 1
+===========================================================================================
+
+=== [2009/01/22 14:18:58] =================================================================
+filename: /common/ajax_tail_board.php?tkind=P&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.pr_idx, , A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) from tblPrComment where pr_idx=A.pr_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) fr' at line 1
+===========================================================================================
+
+=== [2009/01/22 14:20:31] =================================================================
+filename: /common/ajax_tail_board.php?tkind=P&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.pr_idx, , A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) from tblPrComment where pr_idx=A.pr_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) fr' at line 1
+===========================================================================================
+
+=== [2009/01/22 14:48:35] =================================================================
+filename: /common/ajax_tail_board.php?tkind=P&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.pr_idx, , A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) from tblPrComment where pr_idx=A.pr_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.pr_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' A.mem_id, A.pr_title, A.pr_view, A.pr_reg_dt, 
+B.mem_name, 
+(select count(*) fr' at line 1
+===========================================================================================
+
+=== [2009/01/22 16:58:11] =================================================================
+filename: /board/bad_shop_list.php
+
+select A.bad_idx, A.shop_idx, A.mem_id, A.bad_title, A.bad_view, A.bad_reg_dt, 
+B.mem_name, C.shop_name,(select count(*) from tblBadShopComment where bad_idx=A.bad_idx) as comment_cnt
+from tblBadShop A, tblMember B, tblShop C
+ where 1 and A.mem_id = B.mem_id and A.shop_idx = C.shop_idx and A.mem_id = 'goodshop'   order by A.bad_reg_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'A.bad_view' in 'field list'
+===========================================================================================
+
+=== [2009/01/22 17:00:36] =================================================================
+filename: /board/bad_shop_list.php
+
+select A.bad_idx, A.shop_idx, A.mem_id, A.bad_title, A.bad_view, A.bad_reg_dt, 
+B.mem_name, C.shop_name,(select count(*) from tblBadShopComment where bad_idx=A.bad_idx) as comment_cnt
+from tblBadShop A, tblMember B, tblShop C
+ where 1 and A.mem_id = B.mem_id and A.shop_idx = C.shop_idx and A.mem_id = 'goodshop'   order by A.bad_reg_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'A.bad_view' in 'field list'
+===========================================================================================
+

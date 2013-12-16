@@ -1,0 +1,21 @@
+=== [2009/08/04 17:47:34] =================================================================
+filename: /product/visit_proc.php
+select count(*) from tblProductVisit where p_e_idx =  and p_v_ip = '116.42.4.12' and unix_timestamp() - unix_timestamp(p_v_reg_dt) < 3600 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and p_v_ip = '116.42.4.12' and unix_timestamp() - unix_timestamp(p_v_reg_dt) < 3' at line 1
+===========================================================================================
+
+=== [2009/08/04 17:47:34] =================================================================
+filename: /product/visit_proc.php
+select count(*) from tblProductVisit where p_e_idx =  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+===========================================================================================
+
+=== [2009/08/04 17:47:34] =================================================================
+filename: /product/visit_proc.php
+insert into tblProductVisit (p_idx, p_e_idx, mem_id, p_v_ip, p_v_reg_dt) values (16, , 'anonymous', '116.42.4.12', now()) 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 'anonymous', '116.42.4.12', now())' at line 1
+===========================================================================================
+

@@ -1,0 +1,69 @@
+=== [2009/02/24 11:25:48] =================================================================
+filename: /common/ajax_tail_board.php?tkind=
+select count(*) from  A, tblMember B  where 1 and A.mem_id = B.mem_id  
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.A' doesn't exist
+===========================================================================================
+
+=== [2009/02/24 11:25:48] =================================================================
+filename: /common/ajax_tail_board.php?tkind=
+
+select A._idx,  A.mem_id, A._title, A._view, A._reg_dt, unix_timestamp(A._reg_dt) as stamp,
+B.mem_name, 
+(select count(*) from  where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A._reg_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B' at line 3
+===========================================================================================
+
+=== [2009/02/24 11:25:49] =================================================================
+filename: /common/ajax_tail_board.php
+select count(*) from  A, tblMember B  where 1 and A.mem_id = B.mem_id  
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.A' doesn't exist
+===========================================================================================
+
+=== [2009/02/24 11:25:49] =================================================================
+filename: /common/ajax_tail_board.php
+
+select A._idx,  A.mem_id, A._title, A._view, A._reg_dt, unix_timestamp(A._reg_dt) as stamp,
+B.mem_name, 
+(select count(*) from  where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A._reg_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B' at line 3
+===========================================================================================
+
+=== [2009/02/24 11:25:54] =================================================================
+filename: /common/ajax_comment.php?kind=
+select count(*) from  A,  B, tblMember C where 1  and A.idx = B.idx and B.mem_id = C.mem_id and A.idx =   
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+===========================================================================================
+
+=== [2009/02/24 11:25:54] =================================================================
+filename: /common/ajax_comment.php?kind=
+
+select 
+B.idx, B.comment, B.reg_dt, C.mem_kind, C.mem_id, C.mem_name, C.mem_grade,
+ifnull((select shop_idx from tblShop where mem_id = C.mem_id and shop_kind = 'I'),0) as s_idx,
+ifnull((select shop_url from tblShop where mem_id = C.mem_id and shop_kind = 'I'),'') as shop_url,
+ifnull((select rs_total_rank from tblRankShop where shop_idx=s_idx order by rs_idx desc limit 1),0) as rs_total_rank
+from  A,  B, tblMember C
+where 1  and A.idx = B.idx and B.mem_id = C.mem_id and A.idx =  
+order by B.reg_dt desc
+limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by B.reg_dt desc
+limit 1, 10' at line 8
+===========================================================================================
+

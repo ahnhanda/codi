@@ -1,0 +1,311 @@
+=== [2008/10/24 01:19:03] =================================================================
+filename: /product/visit_proc.php
+select count(*) from tblProductVisit where p_e_idx = 85 and p_v_ip = '61.102.177.126' and unix_timestamp() - unix_timestamp(s_reg_dt) < 3600 
+------------------------------------------------------------------------------------------
+1054 : Unknown column 's_reg_dt' in 'where clause'
+===========================================================================================
+
+=== [2008/10/24 01:19:03] =================================================================
+filename: /product/visit_proc.php
+
+	insert into tblCash (mem_id, cc_cid, cc_cval, cash_io, cash, cash_reg_dt)
+		values
+	('goodshop','CC53','','O',,now())
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'now())' at line 3
+===========================================================================================
+
+=== [2008/10/24 01:19:03] =================================================================
+filename: /product/visit_proc.php
+update tblMember set mem_cash = mem_cash -  where mem_id = 'goodshop'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where mem_id = 'goodshop'' at line 1
+===========================================================================================
+
+=== [2008/10/24 01:22:21] =================================================================
+filename: /product/visit_proc.php
+
+	insert into tblCash (mem_id, cc_cid, cc_cval, cash_io, cash, cash_reg_dt)
+		values
+	('anna','CC53','','O',,now())
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'now())' at line 3
+===========================================================================================
+
+=== [2008/10/24 01:22:21] =================================================================
+filename: /product/visit_proc.php
+update tblMember set mem_cash = mem_cash -  where mem_id = 'anna'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where mem_id = 'anna'' at line 1
+===========================================================================================
+
+=== [2008/10/24 01:26:37] =================================================================
+filename: /product/visit_proc.php
+
+	insert into tblCash (mem_id, cc_cid, cc_cval, cash_io, cash, cash_reg_dt)
+		values
+	('goodshop','CC53','','O',,now())
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'now())' at line 3
+===========================================================================================
+
+=== [2008/10/24 01:26:37] =================================================================
+filename: /product/visit_proc.php
+update tblMember set mem_cash = mem_cash -  where mem_id = 'goodshop'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where mem_id = 'goodshop'' at line 1
+===========================================================================================
+
+=== [2008/10/24 01:30:34] =================================================================
+filename: /product/visit_proc.php
+
+	insert into tblCash (mem_id, cc_cid, cc_cval, cash_io, cash, cash_reg_dt)
+		values
+	('goodshop','CC53','','O',,now())
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'now())' at line 3
+===========================================================================================
+
+=== [2008/10/24 01:30:34] =================================================================
+filename: /product/visit_proc.php
+update tblMember set mem_cash = mem_cash -  where mem_id = 'goodshop'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where mem_id = 'goodshop'' at line 1
+===========================================================================================
+
+=== [2008/10/24 01:34:26] =================================================================
+filename: /product/visit_proc.php
+
+	insert into tblCash (mem_id, cc_cid, cc_cval, cash_io, cash, cash_reg_dt)
+		values
+	('mlbpark','CC53','','O',,now())
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'now())' at line 3
+===========================================================================================
+
+=== [2008/10/24 01:34:26] =================================================================
+filename: /product/visit_proc.php
+update tblMember set mem_cash = mem_cash -  where mem_id = 'mlbpark'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where mem_id = 'mlbpark'' at line 1
+===========================================================================================
+
+=== [2008/10/24 12:44:43] =================================================================
+filename: /product/product_view.php?p_idx=15
+select ifnull(sum(A.score),0) from tblScoreConfig A, tblScore B where A.sc_cid = B.sc_cid and B.p_e_idx =  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+===========================================================================================
+
+=== [2008/10/24 12:44:43] =================================================================
+filename: /product/product_view.php?p_idx=15
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 15
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and now() between B.start_dt and B.end_dt' at line 7
+===========================================================================================
+
+=== [2008/10/24 12:44:43] =================================================================
+filename: /product/ajax_product_gift_tracking.php?p_idx=15&pe_idx=&shop_idx=&giftpage=1
+
+SELECT count(*)
+FROM tblProduct A, tblProductEach B, tblGiftTracking C
+WHERE 1
+AND A.p_idx = B.p_idx
+AND B.p_e_idx = C.p_e_idx
+AND A.shop_idx = 
+GROUP BY C.p_e_idx
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY C.p_e_idx' at line 7
+===========================================================================================
+
+=== [2008/10/24 12:44:43] =================================================================
+filename: /product/ajax_product_gift_tracking.php?p_idx=15&pe_idx=&shop_idx=&giftpage=1
+
+SELECT A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.p_e_idx, B.end_dt
+FROM tblProduct A, tblProductEach B, tblGiftTracking C
+WHERE 1
+AND A.p_idx = B.p_idx
+AND B.p_e_idx = C.p_e_idx
+AND A.shop_idx = 
+GROUP BY C.p_e_idx
+ order by B.p_e_idx desc  limit 1, 10 
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY C.p_e_idx
+ order by B.p_e_idx desc  limit 1, 10' at line 7
+===========================================================================================
+
+=== [2008/10/24 14:14:07] =================================================================
+filename: /product/product_view.php?p_idx=
+
+select count(*) from tblRankProduct where 1
+and p_idx =  and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_s' at line 2
+===========================================================================================
+
+=== [2008/10/24 14:14:07] =================================================================
+filename: /product/product_view.php?p_idx=
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and now() between B.start_dt and B.end_dt' at line 15
+===========================================================================================
+
+=== [2008/10/24 14:14:07] =================================================================
+filename: /product/product_view.php?p_idx=
+select ifnull(sum(A.score),0) from tblScoreConfig A, tblScore B where A.sc_cid = B.sc_cid and B.p_e_idx =  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+===========================================================================================
+
+=== [2008/10/24 14:14:07] =================================================================
+filename: /product/product_view.php?p_idx=
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and A.shop_idx = 
+and now() between B.start_dt and B.end_dt' at line 6
+===========================================================================================
+
+=== [2008/10/24 14:14:07] =================================================================
+filename: /product/product_view.php?p_idx=
+update tblProduct set p_view = p_view + 1 where p_idx = 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+===========================================================================================
+
+=== [2008/10/24 14:14:18] =================================================================
+filename: /product/product_view.php
+
+select count(*) from tblRankProduct where 1
+and p_idx =  and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_s' at line 2
+===========================================================================================
+
+=== [2008/10/24 14:14:18] =================================================================
+filename: /product/product_view.php
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and now() between B.start_dt and B.end_dt' at line 15
+===========================================================================================
+
+=== [2008/10/24 14:14:18] =================================================================
+filename: /product/product_view.php
+select ifnull(sum(A.score),0) from tblScoreConfig A, tblScore B where A.sc_cid = B.sc_cid and B.p_e_idx =  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+===========================================================================================
+
+=== [2008/10/24 14:14:18] =================================================================
+filename: /product/product_view.php
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and A.shop_idx = 
+and now() between B.start_dt and B.end_dt' at line 6
+===========================================================================================
+
+=== [2008/10/24 14:14:18] =================================================================
+filename: /product/product_view.php
+update tblProduct set p_view = p_view + 1 where p_idx = 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+===========================================================================================
+
+=== [2008/10/24 16:10:44] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=B
+
+	select A.*, B.start_dt, B.end_dt,
+	(select shop_name from tblShop where shop_idx=A.shop_idx) as shop_name,
+	(select shop_url from tblShop where shop_idx=A.shop_idx) as shop_url,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),0) as rp_total_score
+	from tblProduct A, tblProductEach B
+	where A.p_idx = B.p_idx and A.p_judgment != 'R' and now() between B.start_dt and B.end_dt 
+	  order by B.p_end_dt asc 
+	
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'B.p_end_dt' in 'order clause'
+===========================================================================================
+
+=== [2008/10/24 16:10:55] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=B
+
+	select A.*, B.start_dt, B.end_dt,
+	(select shop_name from tblShop where shop_idx=A.shop_idx) as shop_name,
+	(select shop_url from tblShop where shop_idx=A.shop_idx) as shop_url,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),0) as rp_total_score
+	from tblProduct A, tblProductEach B
+	where A.p_idx = B.p_idx and A.p_judgment != 'R' and now() between B.start_dt and B.end_dt 
+	  order by B.p_end_dt asc 
+	
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'B.p_end_dt' in 'order clause'
+===========================================================================================
+

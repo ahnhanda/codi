@@ -1,0 +1,50 @@
+=== [2008/10/21 05:57:14] =================================================================
+filename: /product/product_view.php?p_idx=22
+
+select A.*, B.p_e_idx, B.end_dt,
+(select shop_name from tblShop where shop_idx=A.shop_idx) as shop_name,
+(select shop_medal from tblShop where shop_idx=A.shop_idx) as shop_medal,
+
+
+(select ifnull(sum(B.score),0) from tblScore, tblScoreConfig where tblScore.sc_cid=tblScoreConfig.sc_cid and tblScore.p_e_idx = B.p_e_idx) as score,
+
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),100000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B
+where 1
+and A.p_idx = B.p_idx and A.p_idx = 22
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'B.score' in 'field list'
+===========================================================================================
+
+=== [2008/10/21 06:24:46] =================================================================
+filename: /product/up_down_proc.php
+
+	insert into tblProductUpDown (p_idx, p_e_idx, mem_id, p_u_val, p_u_reg_dt)
+		values
+	(23, 74, 'goodshop', , now())
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' now())' at line 3
+===========================================================================================
+
+=== [2008/10/21 06:27:41] =================================================================
+filename: /product/up_down_proc.php
+
+	insert into tblProductUpDown (p_idx, p_e_idx, mem_id, p_u_val, p_u_reg_dt)
+		values
+	(15, 46, 'goodshop', , now())
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' now())' at line 3
+===========================================================================================
+

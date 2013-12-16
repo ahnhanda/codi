@@ -1,0 +1,189 @@
+=== [2013/12/13 09:19:51] =================================================================
+filename: /member/login_ok.php
+select count(*) from tblMember where mem_id = 'a' and mem_pwd = 'a' and mem_status = 'Y' 
+------------------------------------------------------------------------------------------
+1046 : No database selected
+===========================================================================================
+
+=== [2013/12/13 09:25:32] =================================================================
+filename: /member/login_ok.php
+select count(*) from tblMember where mem_id = 'goodshop' and mem_pwd = '123456' and mem_status = 'Y' 
+------------------------------------------------------------------------------------------
+1046 : No database selected
+===========================================================================================
+
+=== [2013/12/13 09:28:00] =================================================================
+filename: /member/login_ok.php
+select count(*) from tblMember where mem_id = 'goodshop' and mem_pwd = '123456' and mem_status = 'Y' 
+------------------------------------------------------------------------------------------
+1046 : No database selected
+===========================================================================================
+
+=== [2013/12/13 09:36:34] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=A&s_key=A&keyword=%EC%BD%94%EB%94%94
+select count(*) from tblProduct A, tblShop B where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and (A.p_title like '%ì½”ë””%' or B.shop_name like '%ì½”ë””%')  
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:36:34] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=A&s_key=A&keyword=%EC%BD%94%EB%94%94
+
+	select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_name, B.shop_url,
+	ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_rank,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_score,
+	ifnull((select start_dt from tblProductEach where p_idx=A.p_idx and now() between start_dt and end_dt),0) as start_dt,
+	ifnull((select end_dt from tblProductEach where p_idx=A.p_idx and now() between start_dt and end_dt),0) as end_dt
+	from tblProduct A, tblShop B
+	where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and (A.p_title like '%ì½”ë””%' or B.shop_name like '%ì½”ë””%')   order by A.p_reg_dt desc  limit 1, 15
+	
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:37:25] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=A&s_key=A&keyword=%EC%BD%94%EB%94%94
+select count(*) from tblProduct A, tblShop B where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and (A.p_title like '%ì½”ë””%' or B.shop_name like '%ì½”ë””%')  
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:37:25] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=A&s_key=A&keyword=%EC%BD%94%EB%94%94
+
+	select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_name, B.shop_url,
+	ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_rank,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_score,
+	ifnull((select start_dt from tblProductEach where p_idx=A.p_idx and now() between start_dt and end_dt),0) as start_dt,
+	ifnull((select end_dt from tblProductEach where p_idx=A.p_idx and now() between start_dt and end_dt),0) as end_dt
+	from tblProduct A, tblShop B
+	where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and (A.p_title like '%ì½”ë””%' or B.shop_name like '%ì½”ë””%')   order by A.p_reg_dt desc  limit 1, 15
+	
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:37:38] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=B&s_key=A&keyword=%E8%82%84%EB%B6%BE%EB%B5%92
+select count(*) from tblProduct A, tblShop B, tblProductEach C where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and (A.p_title like '%è‚„ë¶¾ëµ’%' or B.shop_name like '%è‚„ë¶¾ëµ’%')   and A.p_idx=C.p_idx and now() between C.start_dt and C.end_dt  
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:37:38] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=B&s_key=A&keyword=%E8%82%84%EB%B6%BE%EB%B5%92
+
+	select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_name, B.shop_url, C.start_dt, C.end_dt,
+	ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_rank,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_score
+	from tblProduct A, tblShop B, tblProductEach C
+	where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and (A.p_title like '%è‚„ë¶¾ëµ’%' or B.shop_name like '%è‚„ë¶¾ëµ’%')   and A.p_idx=C.p_idx and now() between C.start_dt and C.end_dt   order by C.end_dt asc  limit 1, 15
+	
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:37:41] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=C&s_key=A&keyword=%EF%BF%BD%EA%BE%A8%EB%97%80%E9%80%BE%EF%BF%BD
+select count(*) from tblProduct A, tblShop B, tblProductEach C where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and (A.p_title like '%ï¿½ê¾¨ë—€é€¾ï¿½%' or B.shop_name like '%ï¿½ê¾¨ë—€é€¾ï¿½%')   and A.p_idx=C.p_idx and now() between C.start_dt and C.end_dt  
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:37:41] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=C&s_key=A&keyword=%EF%BF%BD%EA%BE%A8%EB%97%80%E9%80%BE%EF%BF%BD
+
+	select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_name, B.shop_url, C.start_dt, C.end_dt,
+	ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_rank,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_score
+	from tblProduct A, tblShop B, tblProductEach C
+	where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and (A.p_title like '%ï¿½ê¾¨ë—€é€¾ï¿½%' or B.shop_name like '%ï¿½ê¾¨ë—€é€¾ï¿½%')   and A.p_idx=C.p_idx and now() between C.start_dt and C.end_dt   order by rp_total_score desc  limit 1, 15
+	
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:39:30] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=A&s_key=S&keyword=(%C1%D6)%B8%C0%C0%D6%B4%C2%B0%ED%B1%E2
+select count(*) from tblProduct A, tblShop B where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and B.shop_name like '%(ÁÖ)¸ÀÀÖ´Â°í±â%'  
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:39:30] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=A&s_key=S&keyword=(%C1%D6)%B8%C0%C0%D6%B4%C2%B0%ED%B1%E2
+
+	select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_name, B.shop_url,
+	ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_rank,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_score,
+	ifnull((select start_dt from tblProductEach where p_idx=A.p_idx and now() between start_dt and end_dt),0) as start_dt,
+	ifnull((select end_dt from tblProductEach where p_idx=A.p_idx and now() between start_dt and end_dt),0) as end_dt
+	from tblProduct A, tblShop B
+	where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and B.shop_name like '%(ÁÖ)¸ÀÀÖ´Â°í±â%'   order by A.p_reg_dt desc  limit 1, 15
+	
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:39:35] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=B&s_key=S&keyword=(%C1%D6)%B8%C0%C0%D6%B4%C2%B0%ED%B1%E2
+select count(*) from tblProduct A, tblShop B, tblProductEach C where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and B.shop_name like '%(ÁÖ)¸ÀÀÖ´Â°í±â%'   and A.p_idx=C.p_idx and now() between C.start_dt and C.end_dt  
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:39:35] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=B&s_key=S&keyword=(%C1%D6)%B8%C0%C0%D6%B4%C2%B0%ED%B1%E2
+
+	select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_name, B.shop_url, C.start_dt, C.end_dt,
+	ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_rank,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_score
+	from tblProduct A, tblShop B, tblProductEach C
+	where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and B.shop_name like '%(ÁÖ)¸ÀÀÖ´Â°í±â%'   and A.p_idx=C.p_idx and now() between C.start_dt and C.end_dt   order by C.end_dt asc  limit 1, 15
+	
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:39:36] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=C&s_key=S&keyword=(%C1%D6)%B8%C0%C0%D6%B4%C2%B0%ED%B1%E2
+select count(*) from tblProduct A, tblShop B, tblProductEach C where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and B.shop_name like '%(ÁÖ)¸ÀÀÖ´Â°í±â%'   and A.p_idx=C.p_idx and now() between C.start_dt and C.end_dt  
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:39:36] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=C&s_key=S&keyword=(%C1%D6)%B8%C0%C0%D6%B4%C2%B0%ED%B1%E2
+
+	select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_name, B.shop_url, C.start_dt, C.end_dt,
+	ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_rank,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_score
+	from tblProduct A, tblShop B, tblProductEach C
+	where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and B.shop_name like '%(ÁÖ)¸ÀÀÖ´Â°í±â%'   and A.p_idx=C.p_idx and now() between C.start_dt and C.end_dt   order by rp_total_score desc  limit 1, 15
+	
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:40:54] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=A&s_key=S&keyword=(%C1%D6)%B8%C0%C0%D6%B4%C2%B0%ED%B1%E2
+select count(*) from tblProduct A, tblShop B where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and B.shop_name like '%(ÁÖ)¸ÀÀÖ´Â°í±â%'  
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+
+=== [2013/12/13 09:40:54] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=A&s_key=S&keyword=(%C1%D6)%B8%C0%C0%D6%B4%C2%B0%ED%B1%E2
+
+	select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_name, B.shop_url,
+	ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_rank,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2013-12-01' and rp_end_dt = '2013-12-07'),0) as rp_total_score,
+	ifnull((select start_dt from tblProductEach where p_idx=A.p_idx and now() between start_dt and end_dt),0) as start_dt,
+	ifnull((select end_dt from tblProductEach where p_idx=A.p_idx and now() between start_dt and end_dt),0) as end_dt
+	from tblProduct A, tblShop B
+	where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and B.shop_name like '%(ÁÖ)¸ÀÀÖ´Â°í±â%'   order by A.p_reg_dt desc  limit 1, 15
+	
+------------------------------------------------------------------------------------------
+1267 : Illegal mix of collations (euckr_korean_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation 'like'
+===========================================================================================
+

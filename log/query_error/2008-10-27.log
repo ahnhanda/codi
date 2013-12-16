@@ -1,0 +1,28 @@
+=== [2008/10/27 11:55:02] =================================================================
+filename: /manage/product/ing_list.php
+select A.*, B.shop_name, ifnull( (SELECT sum( E.li_score ) FROM tblMemberScore D, tblLottoItem E WHERE D.li_cid = E.li_cid AND D.p_e_idx = C.p_e_idx),0 ) AS score_sum, C.start_dt, C.end_dt from tblProduct A,tblShop B,tblProductEach C  where 1 AND A.shop_idx = B.shop_idx AND A.p_idx = C.p_idx AND ( now() BETWEEN C.start_dt AND C.end_dt )   ORDER BY A.p_reg_dt DESC  limit 0, 20 
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.tblMemberScore' doesn't exist
+===========================================================================================
+
+=== [2008/10/27 11:55:59] =================================================================
+filename: /manage/product/ing_list.php
+select A.*, B.shop_name, ifnull( (SELECT sum( E.li_score ) FROM tblMemberScore D, tblLottoItem E WHERE D.li_cid = E.li_cid AND D.p_e_idx = C.p_e_idx),0 ) AS score_sum, C.start_dt, C.end_dt from tblProduct A,tblShop B,tblProductEach C  where 1 AND A.shop_idx = B.shop_idx AND A.p_idx = C.p_idx AND ( now() BETWEEN C.start_dt AND C.end_dt )   ORDER BY A.p_reg_dt DESC  limit 0, 20 
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.tblMemberScore' doesn't exist
+===========================================================================================
+
+=== [2008/10/27 12:45:19] =================================================================
+filename: /manage/product/ed_list.php
+select A.*, B.shop_name, ifnull( (SELECT sum( E.li_score ) FROM tblMemberScore D, tblLottoItem E WHERE D.li_cid = E.li_cid AND D.p_e_idx = C.p_e_idx),0 ) AS score_sum, C.start_dt, C.end_dt from tblProduct A,tblShop B,tblProductEach C  where 1 AND A.shop_idx = B.shop_idx AND A.p_idx = C.p_idx AND ( now() > C.end_dt )   ORDER BY A.p_reg_dt DESC  limit 0, 20 
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.tblMemberScore' doesn't exist
+===========================================================================================
+
+=== [2008/10/27 12:48:10] =================================================================
+filename: /manage/product/all_list.php
+select A.*, B.shop_name, ifnull( (SELECT sum( E.li_score ) FROM tblMemberScore D, tblLottoItem E WHERE D.li_cid = E.li_cid AND D.p_e_idx = C.p_e_idx),0 ) AS score_sum, C.start_dt, C.end_dt from tblProduct A,tblShop B,tblProductEach C  where 1 AND A.shop_idx = B.shop_idx AND A.p_idx = C.p_idx AND ( now() BETWEEN C.start_dt AND C.end_dt or now() > C.end_dt )   ORDER BY A.p_reg_dt DESC  limit 0, 20 
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.tblMemberScore' doesn't exist
+===========================================================================================
+

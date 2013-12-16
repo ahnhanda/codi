@@ -1,0 +1,79 @@
+=== [2008/08/25 10:23:51] =================================================================
+filename: /manage/board/pr_list.php
+select count(*) from tblPr a, tblShop b  where 1 a.shop_idx = b.shop_idx  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a.shop_idx = b.shop_idx' at line 1
+===========================================================================================
+
+=== [2008/08/25 10:23:51] =================================================================
+filename: /manage/board/pr_list.php
+select a.*,(select mem_name from tblMember where mem_id=a.mem_id) as mem_name,b.shop_name,shop_url from tblPr a, tblShop b  where 1 a.shop_idx = b.shop_idx   order by a.pr_reg_dt desc  limit 1, 20 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a.shop_idx = b.shop_idx   order by a.pr_reg_dt desc  limit 1, 20' at line 1
+===========================================================================================
+
+=== [2008/08/25 11:03:18] =================================================================
+filename: /manage/board/pr_write_ok.php
+
+		update tblPr set 
+			shop_idx = 2, pr_title = '(주)좋은샵을 소개합니다..', pr_content = '너무나 좋은 샵입니다.<br><br>있는건 다 있고 없는건 없습니다...<br><br>한번 방문해 주삼... ^^<br>', pr_file = '200808/105510za9ix3zywq.jpg;',
+			pr_ip = '61.102.174.151', pr_categ = ''
+		where pr_idx = 1
+		
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'pr_categ' in 'field list'
+===========================================================================================
+
+=== [2008/08/25 11:14:58] =================================================================
+filename: /manage/board/bad_list.php
+select *,(select mem_name from tblMember where mem_id=tblBadShop.mem_id) as mem_name from tblBadShop  where 1   order by bad_reg_dt desc  limit 1, 20 
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'bad_reg_dt' in 'order clause'
+===========================================================================================
+
+=== [2008/08/25 11:34:31] =================================================================
+filename: /manage/board/bad_write_ok.php
+
+		insert into tblBadShop (mem_id,shop_idx,bad_title,bad_content,bad_file,bad_ip,bad_reg_dt) values 
+		('',3,'ㄷㄷㅅㄱㄷㄳㄱㄷㅅ','ㄷㄳ','','61.102.174.151',now())
+		
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'bad_file' in 'field list'
+===========================================================================================
+
+=== [2008/08/25 11:34:51] =================================================================
+filename: /manage/board/bad_write_ok.php
+
+		insert into tblBadShop (mem_id,shop_idx,bad_title,bad_content,bad_file,bad_ip,bad_reg_dt) values 
+		('',2,'퓨','ㅇㅀ','','61.102.174.151',now())
+		
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'bad_file' in 'field list'
+===========================================================================================
+
+=== [2008/08/25 17:22:33] =================================================================
+filename: /manage/contents/popup_write_ok.php
+
+		update tblPopup set 
+			pop_title = '폰트이용 안내입니다.', pop_content = '<br>', notice_file = '200808/171859d47l3iozf3.gif;',
+			pop_start_dt = '2008-08-24', pop_end_dt = '2008-09-30', pop_kind = 'U',
+			pop_display_opt = 'M', pop_today_opt = 'Y', pop_width = 600, pop_height= 800
+		where notice_idx = 1
+		
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'notice_idx' in 'where clause'
+===========================================================================================
+
+=== [2008/08/25 17:27:00] =================================================================
+filename: /manage/contents/popup_write_ok.php
+
+		update tblPopup set 
+			pop_title = '폰트이용 안내입니다.', pop_content = '<br>', notice_file = '200808/171859d47l3iozf3.gif;',
+			pop_start_dt = '2008-08-24', pop_end_dt = '2008-09-30', pop_kind = 'U',
+			pop_display_opt = 'M', pop_today_opt = 'Y', pop_width = 600, pop_height= 800
+		where pop_idx = 1
+		
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'notice_file' in 'field list'
+===========================================================================================
+

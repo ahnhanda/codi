@@ -1,0 +1,48 @@
+=== [2009/01/20 12:01:48] =================================================================
+filename: /common/ajax_comment.php?kind=U&p_idx=3&page=1
+select count(*) from from tblUcc A, tblUccComment B, tblMember C where 1  and A.ucc_idx = B.ucc_idx and B.mem_id = C.mem_id and A.ucc_idx = 3  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from tblUcc A, tblUccComment B, tblMember C where 1  and A.ucc_idx = B.ucc_idx a' at line 1
+===========================================================================================
+
+=== [2009/01/20 12:02:21] =================================================================
+filename: /common/ajax_comment.php?kind=U&p_idx=3&page=1
+select count(*) from from tblUcc A, tblUccComment B, tblMember C where 1  and A.ucc_idx = B.ucc_idx and B.mem_id = C.mem_id and A.ucc_idx = 3  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from tblUcc A, tblUccComment B, tblMember C where 1  and A.ucc_idx = B.ucc_idx a' at line 1
+===========================================================================================
+
+=== [2009/01/20 12:22:59] =================================================================
+filename: /common/ajax_comment.php?kind=U&p_idx=3&page=/common/ajax_comment.php?p_idx=3
+
+select 
+B.ucc_c_idx, B.ucc_c_comment, B.ucc_c_reg_dt, C.mem_kind, C.mem_id, C.mem_name, C.mem_grade,
+ifnull((select shop_idx from tblShop where mem_id = C.mem_id and shop_kind = 'I'),0) as s_idx,
+ifnull((select shop_url from tblShop where mem_id = C.mem_id and shop_kind = 'I'),'') as shop_url,
+(select rs_total_rank from tblRankShop where shop_idx=s_idx order by rs_idx desc limit 1) as rs_total_rank
+from tblUcc A, tblUccComment B, tblMember C
+where 1  and A.ucc_idx = B.ucc_idx and B.mem_id = C.mem_id and A.ucc_idx = 3 
+order by B.ucc_c_reg_dt desc
+limit -10, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 9
+===========================================================================================
+
+=== [2009/01/20 12:24:44] =================================================================
+filename: /common/ajax_comment.php?kind=U&p_idx=3&page=/common/ajax_comment.php?p_idx=3
+
+select 
+B.ucc_c_idx, B.ucc_c_comment, B.ucc_c_reg_dt, C.mem_kind, C.mem_id, C.mem_name, C.mem_grade,
+ifnull((select shop_idx from tblShop where mem_id = C.mem_id and shop_kind = 'I'),0) as s_idx,
+ifnull((select shop_url from tblShop where mem_id = C.mem_id and shop_kind = 'I'),'') as shop_url,
+(select rs_total_rank from tblRankShop where shop_idx=s_idx order by rs_idx desc limit 1) as rs_total_rank
+from tblUcc A, tblUccComment B, tblMember C
+where 1  and A.ucc_idx = B.ucc_idx and B.mem_id = C.mem_id and A.ucc_idx = 3 
+order by B.ucc_c_reg_dt desc
+limit -10, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 9
+===========================================================================================
+

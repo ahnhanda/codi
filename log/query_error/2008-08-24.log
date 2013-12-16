@@ -1,0 +1,14 @@
+=== [2008/08/24 23:02:51] =================================================================
+filename: /common/ajax_comment.php?kind=N&mode=D&pc_idx=52
+select a.*,b.mem_name,b.mem_grade,b.mem_kind, ifnull( (SELECT shop_url FROM tblShop WHERE mem_id = b.mem_id AND shop_kind = 'I'), '' ) AS shop_url from tblNoticeComment a,tblMember b where a.mem_id=b.mem_id and a.notice_idx =  order by a.notice_c_idx 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by a.notice_c_idx' at line 1
+===========================================================================================
+
+=== [2008/08/24 23:04:40] =================================================================
+filename: /common/ajax_comment.php?kind=N&mode=D&pc_idx=50
+select a.*,b.mem_name,b.mem_grade,b.mem_kind, ifnull( (SELECT shop_url FROM tblShop WHERE mem_id = b.mem_id AND shop_kind = 'I'), '' ) AS shop_url from tblNoticeComment a,tblMember b where a.mem_id=b.mem_id and a.notice_idx =  order by a.notice_c_idx 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by a.notice_c_idx' at line 1
+===========================================================================================
+

@@ -1,0 +1,85 @@
+=== [2008/08/29 11:01:24] =================================================================
+filename: /manage/board/qna_write_ok.php
+select qna_depth,right(qna_depth,1) as r_depth from tblQna where qna_f_idx =  and length(qna_depth) = length('')+1 and locate('',qna_depth) = 1 order by qna_depth desc limit 1
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and length(qna_depth) = length('')+1 and locate('',qna_depth) = 1 order by qna_d' at line 1
+===========================================================================================
+
+=== [2008/08/29 11:01:24] =================================================================
+filename: /manage/board/qna_write_ok.php
+
+		insert into tblQna (qna_f_idx,qna_depth,qna_categ,mem_id,qna_title,qna_content,qna_file,qna_ip,qna_reg_dt) values 
+		(,'A','QNA_Z','admin','테스트...',':12ㅇㄴㄹ마넝라머니ㅏ럼나ㅣ러아ㅣㄴ멀ㅇ<br><br>ㅁㄴㅇ러ㅏㅣㅁㄴ어라ㅣ*(&amp;ㅏㅣㄴ어라ㅣㄴ어라ㅣㅓㄴ\\\'<br><br>ㅏㅣㄴㅁ얼;ㅣㅏㅁ\\\"<br><br><br>ㅋㅋㅋ<br><br><br><br>답변...<br>ㅋㅋㅋ<br>','200808/110013n8iczuy7wy.gif;','61.102.174.151',now())
+		
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''A','QNA_Z','admin','테스트...',':12ㅇㄴㄹ마넝라머니ㅏ럼나ㅣ러아ㅣㄴ멀ㅇ<br><br>' at line 2
+===========================================================================================
+
+=== [2008/08/29 11:02:37] =================================================================
+filename: /manage/board/qna_write_ok.php
+select qna_depth,right(qna_depth,1) as r_depth from tblQna where qna_f_idx =  and length(qna_depth) = length('')+1 and locate('',qna_depth) = 1 order by qna_depth desc limit 1
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and length(qna_depth) = length('')+1 and locate('',qna_depth) = 1 order by qna_d' at line 1
+===========================================================================================
+
+=== [2008/08/29 11:02:37] =================================================================
+filename: /manage/board/qna_write_ok.php
+
+		insert into tblQna (qna_f_idx,qna_depth,qna_categ,mem_id,qna_title,qna_content,qna_file,qna_ip,qna_reg_dt) values 
+		(,'A','QNA_Z','admin','테스트...',':12ㅇㄴㄹ마넝라머니ㅏ럼나ㅣ러아ㅣㄴ멀ㅇ<br><br>ㅁㄴㅇ러ㅏㅣㅁㄴ어라ㅣ*(&amp;ㅏㅣㄴ어라ㅣㄴ어라ㅣㅓㄴ\\\'<br><br>ㅏㅣㄴㅁ얼;ㅣㅏㅁ\\\"<br><br><br>ㅋㅋㅋ<br><br><br>답변..<br>ㅋㅋ<br>','200808/110013n8iczuy7wy.gif;','61.102.174.151',now())
+		
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''A','QNA_Z','admin','테스트...',':12ㅇㄴㄹ마넝라머니ㅏ럼나ㅣ러아ㅣㄴ멀ㅇ<br><br>' at line 2
+===========================================================================================
+
+=== [2008/08/29 11:03:02] =================================================================
+filename: /manage/board/qna_write_ok.php
+select qna_depth,right(qna_depth,1) as r_depth from tblQna where qna_f_idx =  and length(qna_depth) = length('')+1 and locate('',qna_depth) = 1 order by qna_depth desc limit 1
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and length(qna_depth) = length('')+1 and locate('',qna_depth) = 1 order by qna_d' at line 1
+===========================================================================================
+
+=== [2008/08/29 11:03:02] =================================================================
+filename: /manage/board/qna_write_ok.php
+
+		insert into tblQna (qna_f_idx,qna_depth,qna_categ,mem_id,qna_title,qna_content,qna_file,qna_ip,qna_reg_dt) values 
+		(,'A','QNA_Z','admin','테스트...',':12ㅇㄴㄹ마넝라머니ㅏ럼나ㅣ러아ㅣㄴ멀ㅇ<br><br>ㅁㄴㅇ러ㅏㅣㅁㄴ어라ㅣ*(&ㅏㅣㄴ어라ㅣㄴ어라ㅣㅓㄴ\\\'<br><br>ㅏㅣㄴㅁ얼;ㅣㅏㅁ\\\"<br><br><br>ㅋㅋㅋ<br>','200808/110013n8iczuy7wy.gif;','61.102.174.151',now())
+		
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''A','QNA_Z','admin','테스트...',':12ㅇㄴㄹ마넝라머니ㅏ럼나ㅣ러아ㅣㄴ멀ㅇ<br><br>' at line 2
+===========================================================================================
+
+=== [2008/08/29 11:04:58] =================================================================
+filename: /manage/board/qna_write_ok.php
+select qna_depth,right(qna_depth,1) as r_depth from tblQna where qna_f_idx =  and length(qna_depth) = length('')+1 and locate('',qna_depth) = 1 order by qna_depth desc limit 1
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and length(qna_depth) = length('')+1 and locate('',qna_depth) = 1 order by qna_d' at line 1
+===========================================================================================
+
+=== [2008/08/29 11:04:58] =================================================================
+filename: /manage/board/qna_write_ok.php
+
+		insert into tblQna (qna_f_idx,qna_depth,qna_categ,mem_id,qna_title,qna_content,qna_file,qna_ip,qna_reg_dt) values 
+		(,'A','QNA_Z','admin','테스트...',':12ㅇㄴㄹ마넝라머니ㅏ럼나ㅣ러아ㅣㄴ멀ㅇ<br><br>ㅁㄴㅇ러ㅏㅣㅁㄴ어라ㅣ*(&amp;ㅏㅣㄴ어라ㅣㄴ어라ㅣㅓㄴ\\\'<br><br>ㅏㅣㄴㅁ얼;ㅣㅏㅁ\\\"<br><br><br>ㅋㅋㅋ<br><br>답변..<br>ㅋㅋ<br>','200808/110013n8iczuy7wy.gif;','61.102.174.151',now())
+		
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''A','QNA_Z','admin','테스트...',':12ㅇㄴㄹ마넝라머니ㅏ럼나ㅣ러아ㅣㄴ멀ㅇ<br><br>' at line 2
+===========================================================================================
+
+=== [2008/08/29 11:05:26] =================================================================
+filename: /manage/board/qna_write_ok.php
+select qna_depth,right(qna_depth,1) as r_depth from tblQna where qna_f_idx =  and length(qna_depth) = length('')+1 and locate('',qna_depth) = 1 order by qna_depth desc limit 1
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and length(qna_depth) = length('')+1 and locate('',qna_depth) = 1 order by qna_d' at line 1
+===========================================================================================
+
+=== [2008/08/29 11:05:26] =================================================================
+filename: /manage/board/qna_write_ok.php
+
+		insert into tblQna (qna_f_idx,qna_depth,qna_categ,mem_id,qna_title,qna_content,qna_file,qna_ip,qna_reg_dt) values 
+		(,'A','QNA_Z','admin','테스트...',':12ㅇㄴㄹ마넝라머니ㅏ럼나ㅣ러아ㅣㄴ멀ㅇ<br><br>ㅁㄴㅇ러ㅏㅣㅁㄴ어라ㅣ*(&ㅏㅣㄴ어라ㅣㄴ어라ㅣㅓㄴ\\\'<br><br>ㅏㅣㄴㅁ얼;ㅣㅏㅁ\\\"<br><br><br>ㅋㅋㅋ<br>','200808/110013n8iczuy7wy.gif;','61.102.174.151',now())
+		
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''A','QNA_Z','admin','테스트...',':12ㅇㄴㄹ마넝라머니ㅏ럼나ㅣ러아ㅣㄴ멀ㅇ<br><br>' at line 2
+===========================================================================================
+

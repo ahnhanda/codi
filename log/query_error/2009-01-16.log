@@ -1,0 +1,93 @@
+=== [2009/01/16 15:25:46] =================================================================
+filename: /board/ucc_list.php
+
+select A.ucc_idx, A.ucc_categ, A.mem_id, A.ucc_title, A.ucc_view, A.ucc_reg_dt, 
+B.mem_name,
+(select ifnull(sum(ucc_c_score),0) from tblUccComment where ucc_idx=A.ucc_idx) as score,
+(select count(*) from tblUccComment where ucc_idx=A.ucc_idx) as comment_cnt
+from tblUcc A, tblMember B
+where 1 
+ where 1 and A.mem_id = B.mem_id   order by A.ucc_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where 1 and A.mem_id = B.mem_id   order by A.ucc_reg_dt desc  limit 0, 10' at line 7
+===========================================================================================
+
+=== [2009/01/16 15:26:40] =================================================================
+filename: /board/ucc_list.php
+
+select A.ucc_idx, A.ucc_categ, A.mem_id, A.ucc_title, A.ucc_view, A.ucc_reg_dt, 
+B.mem_name,
+(select ifnull(sum(ucc_c_score),0) from tblUccComment where ucc_idx=A.ucc_idx) as score,
+(select count(*) from tblUccComment where ucc_idx=A.ucc_idx) as comment_cnt
+from tblUcc A, tblMember B
+where 1 
+ where 1 and A.mem_id = B.mem_id   order by A.ucc_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where 1 and A.mem_id = B.mem_id   order by A.ucc_reg_dt desc  limit 0, 10' at line 7
+===========================================================================================
+
+=== [2009/01/16 15:30:20] =================================================================
+filename: /board/ucc_list.php
+select count(*) from tblUcc A, tblMember B  where 1 and A.mem_id = B.mem_id  and ( A.ucc_title like '%명박%' or and A.ucc_content like '%명박%' )  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and A.ucc_content like '%명박%' )' at line 1
+===========================================================================================
+
+=== [2009/01/16 15:30:20] =================================================================
+filename: /board/ucc_list.php
+
+select A.ucc_idx, A.ucc_categ, A.mem_id, A.ucc_title, A.ucc_view, A.ucc_reg_dt, 
+B.mem_name,
+(select ifnull(sum(ucc_c_score),0) from tblUccComment where ucc_idx=A.ucc_idx) as score,
+(select count(*) from tblUccComment where ucc_idx=A.ucc_idx) as comment_cnt
+from tblUcc A, tblMember B
+ where 1 and A.mem_id = B.mem_id  and ( A.ucc_title like '%명박%' or and A.ucc_content like '%명박%' )   order by A.ucc_reg_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and A.ucc_content like '%명박%' )   order by A.ucc_reg_dt desc  limit 1, 10' at line 6
+===========================================================================================
+
+=== [2009/01/16 15:30:39] =================================================================
+filename: /board/ucc_list.php
+select count(*) from tblUcc A, tblMember B  where 1 and A.mem_id = B.mem_id  and ( A.ucc_title like '%명박%' or and A.ucc_content like '%명박%' )  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and A.ucc_content like '%명박%' )' at line 1
+===========================================================================================
+
+=== [2009/01/16 15:30:39] =================================================================
+filename: /board/ucc_list.php
+
+select A.ucc_idx, A.ucc_categ, A.mem_id, A.ucc_title, A.ucc_view, A.ucc_reg_dt, 
+B.mem_name,
+(select ifnull(sum(ucc_c_score),0) from tblUccComment where ucc_idx=A.ucc_idx) as score,
+(select count(*) from tblUccComment where ucc_idx=A.ucc_idx) as comment_cnt
+from tblUcc A, tblMember B
+ where 1 and A.mem_id = B.mem_id  and ( A.ucc_title like '%명박%' or and A.ucc_content like '%명박%' )   order by A.ucc_reg_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and A.ucc_content like '%명박%' )   order by A.ucc_reg_dt desc  limit 1, 10' at line 6
+===========================================================================================
+
+=== [2009/01/16 15:31:05] =================================================================
+filename: /board/ucc_list.php
+select count(*) from tblUcc A, tblMember B  where 1 and A.mem_id = B.mem_id  and ( A.ucc_title like '%명박%' or and A.ucc_content like '%명박%' )  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and A.ucc_content like '%명박%' )' at line 1
+===========================================================================================
+
+=== [2009/01/16 15:31:05] =================================================================
+filename: /board/ucc_list.php
+
+select A.ucc_idx, A.ucc_categ, A.mem_id, A.ucc_title, A.ucc_view, A.ucc_reg_dt, 
+B.mem_name,
+(select ifnull(sum(ucc_c_score),0) from tblUccComment where ucc_idx=A.ucc_idx) as score,
+(select count(*) from tblUccComment where ucc_idx=A.ucc_idx) as comment_cnt
+from tblUcc A, tblMember B
+ where 1 and A.mem_id = B.mem_id  and ( A.ucc_title like '%명박%' or and A.ucc_content like '%명박%' )   order by A.ucc_reg_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and A.ucc_content like '%명박%' )   order by A.ucc_reg_dt desc  limit 1, 10' at line 6
+===========================================================================================
+

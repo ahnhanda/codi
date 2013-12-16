@@ -1,0 +1,217 @@
+=== [2008/10/22 05:21:23] =================================================================
+filename: /common/ajax_product_comment.php?p_idx=XElDXQERBBwWQUpYVkJREDhHW1xAH0JfFFsWNhwMAktRVEgIHRsPDw==&pe_idx=28&page=93
+
+select count(*)
+from tblProductComment A, tblProduct B, tblMember C, tblProductEach D
+where 1
+and A.p_idx = B.p_idx 
+and A.p_e_idx = D.p_e_idx 
+and A.mem_id = C.mem_id 
+and B.p_idx = XElDXQERBBwWQUpYVkJREDhHW1xAH0JfFFsWNhwMAktRVEgIHRsPDw== 
+and A.p_c_status = 'Y'
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 
+and A.p_c_status = 'Y'' at line 7
+===========================================================================================
+
+=== [2008/10/22 05:21:23] =================================================================
+filename: /common/ajax_product_comment.php?p_idx=XElDXQERBBwWQUpYVkJREDhHW1xAH0JfFFsWNhwMAktRVEgIHRsPDw==&pe_idx=28&page=93
+
+select A.p_c_idx, A.p_c_comment, A.p_c_reg_dt, C.mem_id, C.mem_name,
+ifnull((select p_u_val from tblProductUpDown where p_e_idx=D.p_e_idx),0) as p_u_val
+from tblProductComment A, tblProduct B, tblMember C, tblProductEach D
+where 1
+and A.p_idx = B.p_idx 
+and A.p_e_idx = D.p_e_idx 
+and A.mem_id = C.mem_id 
+and B.p_idx = XElDXQERBBwWQUpYVkJREDhHW1xAH0JfFFsWNhwMAktRVEgIHRsPDw== 
+and A.p_c_status = 'Y'
+ order by A.p_c_reg_dt desc  limit 1, 10 
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 
+and A.p_c_status = 'Y'
+ order by A.p_c_reg_dt desc  limit 1, 10' at line 8
+===========================================================================================
+
+=== [2008/10/22 06:13:22] =================================================================
+filename: /common/ajax_product_comment.php?p_idx=28&pe_idx=93&page=1&rurl=XElDXQERBBwWQUpYVkJREDhHW1xAH0JfFFsWNhwMAktRVEgIHRsPDw==
+
+select A.p_c_idx, A.p_c_comment, A.p_c_reg_dt, C.mem_id, C.mem_name,
+ifnull((select p_u_val from tblProductUpDown where p_e_idx=D.p_e_idx),0) as p_u_val
+from tblProductComment A, tblProduct B, tblMember C, tblProductEach D
+where 1
+and A.p_idx = B.p_idx 
+and A.p_e_idx = D.p_e_idx 
+and A.mem_id = C.mem_id 
+and B.p_idx = 28 
+and A.p_c_status = 'Y'
+ order by A.p_c_reg_dt desc  limit 0, 10 
+
+------------------------------------------------------------------------------------------
+1242 : Subquery returns more than 1 row
+===========================================================================================
+
+=== [2008/10/22 07:26:05] =================================================================
+filename: /product/ajax_product_comment.php?p_idx=27&pe_idx=89&page=1&rurl=XElDXQERBBwWQUpYVkJREDhHW1xAH0JfFFsWNhwMAktRW0gIHRsPDw==
+
+select A.p_c_idx, A.p_c_comment, A.p_c_reg_dt, C.mem_id, C.mem_name,
+ifnull((select p_u_val from tblProductUpDown where p_e_idx=D.p_e_idx),0) as p_u_val
+from tblProductComment A, tblProduct B, tblMember C, tblProductEach D
+where 1
+and A.p_idx = B.p_idx 
+and A.p_e_idx = D.p_e_idx 
+and A.mem_id = C.mem_id 
+and B.p_idx = 27 
+and A.p_c_status = 'Y'
+ order by A.p_c_reg_dt desc  limit 0, 10 
+
+------------------------------------------------------------------------------------------
+1242 : Subquery returns more than 1 row
+===========================================================================================
+
+=== [2008/10/22 07:27:29] =================================================================
+filename: /product/ajax_product_comment.php?p_idx=27&pe_idx=89&page=1&rurl=XElDXQERBBwWQUpYVkJREDhHW1xAH0JfFFsWNhwMAktRW0gIHRsPDw==
+
+select A.p_c_idx, A.p_c_comment, A.p_c_reg_dt, C.mem_id, C.mem_name,
+ifnull((select p_u_val from tblProductUpDown where p_e_idx=D.p_e_idx),0) as p_u_val
+from tblProductComment A, tblProduct B, tblMember C, tblProductEach D
+where 1
+and A.p_idx = B.p_idx 
+and A.p_e_idx = D.p_e_idx 
+and A.mem_id = C.mem_id 
+and B.p_idx = 27 
+and A.p_c_status = 'Y'
+ order by A.p_c_reg_dt desc  limit 0, 10 
+
+------------------------------------------------------------------------------------------
+1242 : Subquery returns more than 1 row
+===========================================================================================
+
+=== [2008/10/22 07:28:35] =================================================================
+filename: /product/ajax_product_comment.php?p_idx=27&pe_idx=89&page=1
+
+select A.p_c_idx, A.p_c_comment, A.p_c_reg_dt, C.mem_id, C.mem_name,
+ifnull((select p_u_val from tblProductUpDown where p_e_idx=D.p_e_idx),0) as p_u_val
+from tblProductComment A, tblProduct B, tblMember C, tblProductEach D
+where 1
+and A.p_idx = B.p_idx 
+and A.p_e_idx = D.p_e_idx 
+and A.mem_id = C.mem_id 
+and B.p_idx = 27 
+and A.p_c_status = 'Y'
+ order by A.p_c_reg_dt desc  limit 0, 10 
+
+------------------------------------------------------------------------------------------
+1242 : Subquery returns more than 1 row
+===========================================================================================
+
+=== [2008/10/22 07:28:57] =================================================================
+filename: /product/ajax_product_comment.php?p_idx=27&pe_idx=89&page=1
+
+select A.p_c_idx, A.p_c_comment, A.p_c_reg_dt, C.mem_id, C.mem_name,
+ifnull((select p_u_val from tblProductUpDown where p_e_idx=D.p_e_idx),0) as p_u_val
+from tblProductComment A, tblProduct B, tblMember C, tblProductEach D
+where 1
+and A.p_idx = B.p_idx 
+and A.p_e_idx = D.p_e_idx 
+and A.mem_id = C.mem_id 
+and B.p_idx = 27 
+and A.p_c_status = 'Y'
+ order by A.p_c_reg_dt desc  limit 0, 10 
+
+------------------------------------------------------------------------------------------
+1242 : Subquery returns more than 1 row
+===========================================================================================
+
+=== [2008/10/22 07:29:24] =================================================================
+filename: /product/ajax_product_comment.php?p_idx=27&pe_idx=89&page=1
+
+select A.p_c_idx, A.p_c_comment, A.p_c_reg_dt, C.mem_id, C.mem_name,
+ifnull((select p_u_val from tblProductUpDown where p_e_idx=D.p_e_idx),0) as p_u_val
+from tblProductComment A, tblProduct B, tblMember C, tblProductEach D
+where 1
+and A.p_idx = B.p_idx 
+and A.p_e_idx = D.p_e_idx 
+and A.mem_id = C.mem_id 
+and B.p_idx = 27 
+and A.p_c_status = 'Y'
+ order by A.p_c_reg_dt desc  limit 0, 10 
+
+------------------------------------------------------------------------------------------
+1242 : Subquery returns more than 1 row
+===========================================================================================
+
+=== [2008/10/22 22:40:59] =================================================================
+filename: /product/ajax_product_gift_tracking.php?p_idx=22&pe_idx=73&shop_idx=6&giftpage=1
+
+	select gt_status, user_mem_id, 
+	(select mem_name from tblMember where mem_id=tblGiftTracking.user_mem_id) as user_mem_name 
+	from tblGiftTracking
+	p_e_idx = 71
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 71' at line 4
+===========================================================================================
+
+=== [2008/10/22 22:40:59] =================================================================
+filename: /product/ajax_product_gift_tracking.php?p_idx=22&pe_idx=73&shop_idx=6&giftpage=1
+
+	select gt_status, user_mem_id, 
+	(select mem_name from tblMember where mem_id=tblGiftTracking.user_mem_id) as user_mem_name 
+	from tblGiftTracking
+	p_e_idx = 71
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 71' at line 4
+===========================================================================================
+
+=== [2008/10/22 22:41:35] =================================================================
+filename: /product/ajax_product_gift_tracking.php?p_idx=22&pe_idx=73&shop_idx=6&giftpage=1
+
+	select gt_status, user_mem_id, 
+	(select mem_name from tblMember where mem_id=tblGiftTracking.user_mem_id) as user_mem_name 
+	from tblGiftTracking
+	p_e_idx = 71
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 71' at line 4
+===========================================================================================
+
+=== [2008/10/22 22:41:35] =================================================================
+filename: /product/ajax_product_gift_tracking.php?p_idx=22&pe_idx=73&shop_idx=6&giftpage=1
+
+	select gt_status, user_mem_id, 
+	(select mem_name from tblMember where mem_id=tblGiftTracking.user_mem_id) as user_mem_name 
+	from tblGiftTracking
+	p_e_idx = 71
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 71' at line 4
+===========================================================================================
+
+=== [2008/10/22 22:44:58] =================================================================
+filename: /product/ajax_product_gift_tracking.php?p_idx=22&pe_idx=73&shop_idx=6&giftpage=1
+
+	select gt_status, user_mem_id, 
+	(select mem_name from tblMember where mem_id=tblGiftTracking.user_mem_id) as user_mem_name 
+	from tblGiftTracking
+	p_e_idx = 71
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 71' at line 4
+===========================================================================================
+
+=== [2008/10/22 22:45:32] =================================================================
+filename: /product/ajax_product_gift_tracking.php?p_idx=22&pe_idx=73&shop_idx=6&giftpage=1
+
+	select gt_status, user_mem_id, 
+	(select mem_name from tblMember where mem_id=tblGiftTracking.user_mem_id) as user_mem_name 
+	from tblGiftTracking
+	p_e_idx = 71
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 71' at line 4
+===========================================================================================
+

@@ -1,0 +1,54 @@
+=== [2008/11/06 15:25:36] =================================================================
+filename: /product/product_view.php?p_idx=28
+select ifnull(sum(A.score),0) from tblScoreConfig A, tblScore B where A.sc_cid = B.sc_cid and B.p_e_idx =  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+===========================================================================================
+
+=== [2008/11/06 15:25:36] =================================================================
+filename: /product/product_view.php?p_idx=28
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 28
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and now() between B.start_dt and B.end_dt' at line 7
+===========================================================================================
+
+=== [2008/11/06 15:25:37] =================================================================
+filename: /product/ajax_product_gift_tracking.php?p_idx=28&pe_idx=&shop_idx=&giftpage=1
+
+SELECT count(*)
+FROM tblProduct A, tblProductEach B, tblGiftTracking C
+WHERE 1
+AND A.p_idx = B.p_idx
+AND B.p_e_idx = C.p_e_idx
+AND A.shop_idx = 
+GROUP BY C.p_e_idx
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY C.p_e_idx' at line 7
+===========================================================================================
+
+=== [2008/11/06 15:25:37] =================================================================
+filename: /product/ajax_product_gift_tracking.php?p_idx=28&pe_idx=&shop_idx=&giftpage=1
+
+SELECT A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.p_e_idx, B.end_dt
+FROM tblProduct A, tblProductEach B, tblGiftTracking C
+WHERE 1
+AND A.p_idx = B.p_idx
+AND B.p_e_idx = C.p_e_idx
+AND A.shop_idx = 
+GROUP BY C.p_e_idx
+ order by B.p_e_idx desc  limit 1, 10 
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY C.p_e_idx
+ order by B.p_e_idx desc  limit 1, 10' at line 7
+===========================================================================================
+

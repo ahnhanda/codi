@@ -1,0 +1,15 @@
+=== [2009/03/06 18:08:33] =================================================================
+filename: /member/shop_edit_ok.php
+
+			update tblShop set 
+				mem_id='',shop_name='티티샵_통영분점',shop_kind='D',shop_url='http://tt.co.kr/',
+				shop_person='김티티',shop_mobile='019-612-2632',shop_phone='055-644-0487',shop_fax='055-644-6555',
+				shop_email='kill_9@naver.com',shop_logo='200903/20090306180833i3nbq.jpg',shop_medal='',shop_num='6549871230',
+				shop_tax='N',zipcode='650-754',shop_addr1='경남 통영시 북신동 진우마리나아파트',shop_addr2='410',
+				shop_etc1='서비스',shop_etc2='인터넷,컨설턴트' 
+			where shop_idx = 
+			
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 7
+===========================================================================================
+

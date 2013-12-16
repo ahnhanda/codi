@@ -1,0 +1,21 @@
+=== [2008/10/26 18:32:00] =================================================================
+filename: /msg/msg_recv_list.php
+select count(*) from tblmsg where 1  and recv_mem_id = 'goodshop'  
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.tblmsg' doesn't exist
+===========================================================================================
+
+=== [2008/10/26 18:32:42] =================================================================
+filename: /msg/msg_recv_list.php
+select *,(select mem_name from tblMember where mem_id=tblMsg.send_mem_id) as send_mem_name from tblMsg where 1  and recv_mem_id = 'goodshop'   order by msg_idx desc  limit -10, 10 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 1
+===========================================================================================
+
+=== [2008/10/26 18:33:54] =================================================================
+filename: /msg/msg_recv_list.php
+select *,(select mem_name from tblMember where mem_id=tblMsg.send_mem_id) as send_mem_name from tblMsg where 1  and recv_mem_id = 'goodshop'   order by msg_idx desc  limit -10, 10 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 1
+===========================================================================================
+

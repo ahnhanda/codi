@@ -1,0 +1,49 @@
+=== [2008/08/20 13:22:49] =================================================================
+filename: /manage/product/product_write_ok.php
+delete from tblProduct where p_idx = undefined
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'undefined' in 'where clause'
+===========================================================================================
+
+=== [2008/08/20 13:22:49] =================================================================
+filename: /manage/product/product_write_ok.php
+select p_e_idx from tblProductEach where p_idx = undefined
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'undefined' in 'where clause'
+===========================================================================================
+
+=== [2008/08/20 13:22:49] =================================================================
+filename: /manage/product/product_write_ok.php
+delete from tblProductEach where p_e_idx in (  ) 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+===========================================================================================
+
+=== [2008/08/20 13:22:49] =================================================================
+filename: /manage/product/product_write_ok.php
+delete from tblGiftTracking where p_e_idx in (  ) 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+===========================================================================================
+
+=== [2008/08/20 13:22:49] =================================================================
+filename: /manage/product/product_write_ok.php
+delete from tblMemberScore where p_e_idx in (  ) 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+===========================================================================================
+
+=== [2008/08/20 13:22:49] =================================================================
+filename: /manage/product/product_write_ok.php
+delete from tblProductComment where p_idx = undefined 
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'undefined' in 'where clause'
+===========================================================================================
+
+=== [2008/08/20 15:07:57] =================================================================
+filename: /manage/product/codi_config.php
+select * from tblCashConfig  where 1 and cash_status = 'Y'   order by cc_cid 
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'cash_status' in 'where clause'
+===========================================================================================
+

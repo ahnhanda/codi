@@ -1,0 +1,87 @@
+=== [2008/10/14 04:10:06] =================================================================
+filename: /mypage/product_in02_ok.php
+select p_pay_cash from tblProductTmp where p_idx=
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+===========================================================================================
+
+=== [2008/10/14 04:10:06] =================================================================
+filename: /mypage/product_in02_ok.php
+
+		update tblProductTmp set 
+		p_categ='U',p_title='하악하악 패션코디..ㅋㅋ',p_info='ㅋㅋㅋ',p_desc='처음 gentoo 설치시 timezone을 GMT로 지정하고 설치했었다.
+나중에 KST로 고치니 현재 시각과 9시간 차이가 나는것이다.
+
+참조 url
+http://kldp.org/node/78688
+http://forums.gentoo.org/viewtopic-t-579129.html
+
+# rdate -s time.bora.net
+# rm -f /etc/adjtime
+# rm -f /etc/localtime
+# ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+# hwclock -w
+
+# cat /etc/conf.d/clock
+CLOCK=\\\"local\\\"
+TIMEZONE=\\\"\\\"
+CLOCK_SYSTOHC=\\\"yes\\\"
+SRM=\\\"no\\\"
+ARC=\\\"no\\\"
+
+# reboot',p_price=4900,
+		p_url='http://innu.pe.kr/tt?page=3',p_style_kwd='로맨틱,섹시',p_item_kwd='브라',
+		p_theme_kwd='야시시',p_etc_kwd='',p_main_img='200810/20081013113448zqxgj1bb1m.gif',
+		p_base_img='200810/200810131134480rxge8q9us.gif;200810/20081014041006tprgccor6l.jpg;200810/20081013113449v9hrp0t0bu.jpg;;',p_etc_img='',p_desc_img='http://blogfile.paran.com/BLOG_102363/200805/1210574220_%EC%88%98%EC%82%AC%EB%A7%88%ED%95%98%EC%95%8502.jpg;http://kuls.net/~hyangii/tt/thumbnail/1/4803629016.w311-h400.jpg;http://pds8.egloos.com/pds/200805/28/63/c0071063_483d1bbbf02e1.jpg;',
+		p_auto_extend=1,p_judgment='N',p_pay_cash=300
+		where p_idx=
+		
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 7
+===========================================================================================
+
+=== [2008/10/14 04:14:06] =================================================================
+filename: /mypage/product_in02_ok.php
+select p_pay_cash from tblProductTmp where p_idx=
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+===========================================================================================
+
+=== [2008/10/14 14:56:40] =================================================================
+filename: /manage/member/member_write_ok.php
+insert into tblCash (mem_id,cid,cash_io,cash_reg_dt) values ('iruri','SCASH001','I',now())
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'cid' in 'field list'
+===========================================================================================
+
+=== [2008/10/14 15:06:17] =================================================================
+filename: /manage/member/member_write_ok.php
+insert into tblCash (mem_id,cid,cash_io,cash_reg_dt) values ('suya','SCASH001','I',now())
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'cid' in 'field list'
+===========================================================================================
+
+=== [2008/10/14 15:10:42] =================================================================
+filename: /manage/member/member_write_ok.php
+insert into tblCash (mem_id,cid,cash_io,cash_reg_dt) values ('simsim','SCASH001','I',now())
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'cid' in 'field list'
+===========================================================================================
+
+=== [2008/10/14 22:39:40] =================================================================
+filename: /mypage/Mcodi.php?page=0&key=&kwd=
+
+	select *,
+	(select start_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx asc limit 1) as start_dt,
+	(select end_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx desc limit 1) as end_dt,
+	(select count(*) from tblProductComment where p_idx = tblProduct.p_idx and p_c_score = 1) as up,
+	(select count(*) from tblProductComment where p_idx = tblProduct.p_idx and p_c_score = -1) as down,
+	(select count(*) from tblProductComment where p_idx = tblProduct.p_idx) as comment_cnt,
+	(select count(*) from tblVisit where p_idx = tblProduct.p_idx) as visit
+	from tblProduct
+	 where 1 and mem_id = 'goodshop'   order by p_idx desc  limit -10, 10
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 9
+===========================================================================================
+

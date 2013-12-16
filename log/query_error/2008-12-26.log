@@ -1,0 +1,117 @@
+=== [2008/12/26 15:28:54] =================================================================
+filename: /mypage/pop_extend_ok.php
+insert into tblProductEach (p_idx, start_dt, end_dt) values (, '2008-12-26 15:28:54', '2009-01-02 15:28:53')
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '2008-12-26 15:28:54', '2009-01-02 15:28:53')' at line 1
+===========================================================================================
+
+=== [2008/12/26 15:28:54] =================================================================
+filename: /mypage/pop_extend_ok.php
+insert into tblProductEach (p_idx, start_dt, end_dt) values (, '2009-01-02 15:28:54', '2009-01-09 15:28:53')
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '2009-01-02 15:28:54', '2009-01-09 15:28:53')' at line 1
+===========================================================================================
+
+=== [2008/12/26 15:28:54] =================================================================
+filename: /mypage/pop_extend_ok.php
+insert into tblProductEach (p_idx, start_dt, end_dt) values (, '2009-01-09 15:28:54', '2009-01-16 15:28:53')
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '2009-01-09 15:28:54', '2009-01-16 15:28:53')' at line 1
+===========================================================================================
+
+=== [2008/12/26 16:50:54] =================================================================
+filename: /mypage/Mgift.php
+select count(*) from tblProduct  where 1 and shop_mem_id = 'goodshop'  
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'shop_mem_id' in 'where clause'
+===========================================================================================
+
+=== [2008/12/26 16:50:54] =================================================================
+filename: /mypage/Mgift.php
+
+	select *,
+	(select start_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx asc limit 1) as start_dt,
+	(select end_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx desc limit 1) as end_dt,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_val = 1) as up,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_val = -1) as down,
+	(select count(*) from tblProductComment where p_idx = tblProduct.p_idx) as comment_cnt,
+	(select count(*) from tblProductVisit where p_idx = tblProduct.p_idx) as visit
+	from tblProduct
+	 where 1 and shop_mem_id = 'goodshop'   order by p_idx desc  limit 1, 10
+	
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'shop_mem_id' in 'where clause'
+===========================================================================================
+
+=== [2008/12/26 16:51:31] =================================================================
+filename: /mypage/Mgift.php
+select count(*) from tblProduct  where 1 and shop_mem_id = 'goodshop'  
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'shop_mem_id' in 'where clause'
+===========================================================================================
+
+=== [2008/12/26 16:51:31] =================================================================
+filename: /mypage/Mgift.php
+
+	select *,
+	(select start_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx asc limit 1) as start_dt,
+	(select end_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx desc limit 1) as end_dt,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_val = 1) as up,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_val = -1) as down,
+	(select count(*) from tblProductComment where p_idx = tblProduct.p_idx) as comment_cnt,
+	(select count(*) from tblProductVisit where p_idx = tblProduct.p_idx) as visit
+	from tblProduct
+	 where 1 and shop_mem_id = 'goodshop'   order by p_idx desc  limit 1, 10
+	
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'shop_mem_id' in 'where clause'
+===========================================================================================
+
+=== [2008/12/26 16:52:57] =================================================================
+filename: /mypage/Mgift.php
+select count(*) from tblProduct  where 1 and shop_mem_id = 'goodshop'  
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'shop_mem_id' in 'where clause'
+===========================================================================================
+
+=== [2008/12/26 16:52:57] =================================================================
+filename: /mypage/Mgift.php
+
+	select *,
+	(select start_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx asc limit 1) as start_dt,
+	(select end_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx desc limit 1) as end_dt,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_val = 1) as up,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_val = -1) as down,
+	(select count(*) from tblProductComment where p_idx = tblProduct.p_idx) as comment_cnt,
+	(select count(*) from tblProductVisit where p_idx = tblProduct.p_idx) as visit
+	from tblProduct
+	 where 1 and shop_mem_id = 'goodshop'   order by p_idx desc  limit 1, 10
+	
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'shop_mem_id' in 'where clause'
+===========================================================================================
+
+=== [2008/12/26 16:53:00] =================================================================
+filename: /mypage/Mgift.php
+select count(*) from tblProduct  where 1 and shop_mem_id = 'goodshop'  
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'shop_mem_id' in 'where clause'
+===========================================================================================
+
+=== [2008/12/26 16:53:00] =================================================================
+filename: /mypage/Mgift.php
+
+	select *,
+	(select start_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx asc limit 1) as start_dt,
+	(select end_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx desc limit 1) as end_dt,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_val = 1) as up,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_val = -1) as down,
+	(select count(*) from tblProductComment where p_idx = tblProduct.p_idx) as comment_cnt,
+	(select count(*) from tblProductVisit where p_idx = tblProduct.p_idx) as visit
+	from tblProduct
+	 where 1 and shop_mem_id = 'goodshop'   order by p_idx desc  limit 1, 10
+	
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'shop_mem_id' in 'where clause'
+===========================================================================================
+

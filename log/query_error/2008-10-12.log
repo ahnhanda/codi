@@ -1,0 +1,21 @@
+=== [2008/10/12 05:16:24] =================================================================
+filename: /member/shop_member_ok.php
+insert into tblCash (mem_id,cc_cid,cash_io,cash,cash_reg_dt) values ('tt511','CC01','I',now())
+------------------------------------------------------------------------------------------
+1136 : Column count doesn't match value count at row 1
+===========================================================================================
+
+=== [2008/10/12 05:28:17] =================================================================
+filename: /test.php
+insert into tblCode values ('DD',)
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+===========================================================================================
+
+=== [2008/10/12 05:29:33] =================================================================
+filename: /test.php
+insert into tblCode values ('DD',)
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+===========================================================================================
+

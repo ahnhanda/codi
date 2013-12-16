@@ -1,0 +1,36 @@
+=== [2008/08/21 23:06:36] =================================================================
+filename: /common/ajax_comment_ok.php
+
+			insert into tblNoticeComment 
+			(notice_idx,mem_id,notice_c_comment,notice_c_ip,notice_c_reg_dt)
+			values
+			(4,'admin','33',61.102.174.151,now())
+			
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.174.151,now())' at line 4
+===========================================================================================
+
+=== [2008/08/21 23:08:31] =================================================================
+filename: /common/ajax_comment_ok.php
+
+			insert into tblNoticeComment 
+			(notice_idx,mem_id,notice_c_comment,notice_c_ip,notice_c_reg_dt)
+			values
+			(4,'admin','1212',61.102.174.151,now())
+			
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.174.151,now())' at line 4
+===========================================================================================
+
+=== [2008/08/21 23:11:37] =================================================================
+filename: /common/ajax_comment_ok.php?pc_comment=1212&p_idx=4&kind=N&mode=I
+
+			insert into tblNoticeComment 
+			(notice_idx,mem_id,notice_c_comment,notice_c_ip,notice_c_reg_dt)
+			values
+			(4,'admin','1212',61.102.174.151,now())
+			
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.174.151,now())' at line 4
+===========================================================================================
+

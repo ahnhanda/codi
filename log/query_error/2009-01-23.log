@@ -1,0 +1,92 @@
+=== [2009/01/23 11:33:18] =================================================================
+filename: /common/ajax_comment.php?kind=B&p_idx=5&page=1&v_url=/common/ajax_comment.php?p_idx=5&w_url=/common/ajax_comment_ok.php
+select count(*) from  A,  B, tblMember C where 1  and A.idx = B.idx and B.mem_id = C.mem_id and A.idx = 5  
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.A' doesn't exist
+===========================================================================================
+
+=== [2009/01/23 11:33:18] =================================================================
+filename: /common/ajax_comment.php?kind=B&p_idx=5&page=1&v_url=/common/ajax_comment.php?p_idx=5&w_url=/common/ajax_comment_ok.php
+
+select 
+B.idx, B.comment, B.reg_dt, C.mem_kind, C.mem_id, C.mem_name, C.mem_grade,
+ifnull((select shop_idx from tblShop where mem_id = C.mem_id and shop_kind = 'I'),0) as s_idx,
+ifnull((select shop_url from tblShop where mem_id = C.mem_id and shop_kind = 'I'),'') as shop_url,
+ifnull((select rs_total_rank from tblRankShop where shop_idx=s_idx order by rs_idx desc limit 1),0) as rs_total_rank
+from  A,  B, tblMember C
+where 1  and A.idx = B.idx and B.mem_id = C.mem_id and A.idx = 5 
+order by B.reg_dt desc
+limit 1, 10
+
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.A' doesn't exist
+===========================================================================================
+
+=== [2009/01/23 11:33:18] =================================================================
+filename: /common/ajax_tail_board.php?tkind=B&ttkind=&tkey=&tpage=1&tkwd=
+select count(*) from  A, tblMember B  where 1 and A.mem_id = B.mem_id  
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.A' doesn't exist
+===========================================================================================
+
+=== [2009/01/23 11:33:18] =================================================================
+filename: /common/ajax_tail_board.php?tkind=B&ttkind=&tkey=&tpage=1&tkwd=
+
+select A._idx,  A.mem_id, A._title, A._view, A._reg_dt, 
+B.mem_name, 
+(select count(*) from  where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A._reg_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B' at line 3
+===========================================================================================
+
+=== [2009/01/23 11:35:30] =================================================================
+filename: /common/ajax_tail_board.php?tkind=B&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.bad_idx,  A.mem_id, A.bad_title, A.bad_view, A.bad_reg_dt, 
+B.mem_name, 
+(select count(*) from tblBadShopComment where bad_idx=A.bad_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.bad_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'A.bad_idx' in 'field list'
+===========================================================================================
+
+=== [2009/01/23 11:35:55] =================================================================
+filename: /common/ajax_tail_board.php?tkind=B&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.bad_idx,  A.mem_id, A.bad_title, A.bad_view, A.bad_reg_dt, 
+B.mem_name, 
+(select count(*) from tblBadShopComment where bad_idx=A.bad_idx) as comment_cnt
+from tblPr A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A.bad_reg_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'A.bad_idx' in 'field list'
+===========================================================================================
+
+=== [2009/01/23 11:38:48] =================================================================
+filename: /common/ajax_tail_board.php?tkind=B&ttkind=&tkey=&tpage=1&tkwd=
+select count(*) from tblBadShop A, tblMember B  where 1 and A.mem_id = B.mem_id  A.mem_id = 'hong'  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'A.mem_id = 'hong'' at line 1
+===========================================================================================
+
+=== [2009/01/23 11:38:48] =================================================================
+filename: /common/ajax_tail_board.php?tkind=B&ttkind=&tkey=&tpage=1&tkwd=
+
+select A.bad_idx,  A.mem_id, A.bad_title, A.bad_view, A.bad_reg_dt, 
+B.mem_name, 
+(select count(*) from tblBadShopComment where bad_idx=A.bad_idx) as comment_cnt
+from tblBadShop A, tblMember B
+ where 1 and A.mem_id = B.mem_id  A.mem_id = 'hong'   order by A.bad_reg_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'A.mem_id = 'hong'   order by A.bad_reg_dt desc  limit 1, 10' at line 5
+===========================================================================================
+

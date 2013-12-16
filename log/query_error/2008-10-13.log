@@ -1,0 +1,95 @@
+=== [2008/10/13 10:38:26] =================================================================
+filename: /mypage/product_in02_ok.php
+
+	insert into tblProduct 
+		(mem_id,shop_idx,p_categ,p_title,p_info,p_desc,p_price,p_url,
+		p_style_kwd,p_item_kwd,p_theme_pwd,p_etc_kwd,p_gift,p_gift_cond,p_gift_cnt,
+		p_main_img,p_base_img,p_etc_img,p_desc_img,p_auto_extend,p_judgment,p_pay_cash,p_reg_dt) 
+	values 
+		('goodshop',5,'O','미팅 코디추천 !!!','좋은 코디 입니다.ㅋㅋ','주의
+첫 라인의 $ORIGIN 에 /etc/bind/named.conf에서 지정해준 reverse zone 영역명칭이 와야한다. 만약 ddong.ac.kr. 이되면 named 구동시 아래와 같은 메시지가 나온다
+# tail -f /var/log/messages
+...
+Aug 29 00:42:31 ddong named[29017]: zone/ddong.ac.kr.rev.zone:3: ignoring out-of-zone data (ddong.ac.kr)
+Aug 29 00:42:31 ddong named[29017]: zone/ddong.ac.kr.rev.zone:14: ignoring out-of-zone data (200.1.ddong.ac.kr)
+Aug 29 00:42:31 ddong named[29017]: zone/ddong.ac.kr.rev.zone:15: ignoring out-of-zone data (200.2.ddong.ac.kr)
+Aug 29 00:42:31 ddong named[29017]: zone/ddong.ac.kr.rev.zone:16: ignoring out-of-zone data (200.1.ddong.ac.kr)',13000,'http://innu.pe.kr/tt?page=9',
+		'보이쉬','가죽/모피','면접,클럽','',
+		'','A',2,
+		'200810/20081013103826qher4lsi7k.jpg','200810/20081013103826lvcndpd9m.jpg;200810/200810131038264zbi8vyeos.jpg;200810/200810131038266d9l4d5xvc.png;','200810/20081013103826gf7t1lifuh.jpg;200810/200810131038261ygcfo6c2v.jpg;','200810/20081013103826488dtcrz9l.jpg;200810/20081013103826bp0ih22hw.jpg;',
+		3,'N',900,now() )
+	
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'p_theme_pwd' in 'field list'
+===========================================================================================
+
+=== [2008/10/13 10:38:26] =================================================================
+filename: /mypage/product_in02_ok.php
+insert into tblProductEach (p_idx, start_dt, end_dt) values (0, Array[0], Array[1])
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[0], Array[1])' at line 1
+===========================================================================================
+
+=== [2008/10/13 10:38:26] =================================================================
+filename: /mypage/product_in02_ok.php
+insert into tblProductEach (p_idx, start_dt, end_dt) values (0, Array[0], Array[1])
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[0], Array[1])' at line 1
+===========================================================================================
+
+=== [2008/10/13 10:38:26] =================================================================
+filename: /mypage/product_in02_ok.php
+insert into tblProductEach (p_idx, start_dt, end_dt) values (0, Array[0], Array[1])
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[0], Array[1])' at line 1
+===========================================================================================
+
+=== [2008/10/13 10:51:05] =================================================================
+filename: /mypage/product_in02_ok.php
+insert into tblProductEach (p_idx, start_dt, end_dt) values (1, Array[0], Array[1])
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[0], Array[1])' at line 1
+===========================================================================================
+
+=== [2008/10/13 10:51:05] =================================================================
+filename: /mypage/product_in02_ok.php
+insert into tblProductEach (p_idx, start_dt, end_dt) values (1, Array[0], Array[1])
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[0], Array[1])' at line 1
+===========================================================================================
+
+=== [2008/10/13 10:51:05] =================================================================
+filename: /mypage/product_in02_ok.php
+insert into tblProductEach (p_idx, start_dt, end_dt) values (1, Array[0], Array[1])
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[0], Array[1])' at line 1
+===========================================================================================
+
+=== [2008/10/13 11:21:23] =================================================================
+filename: /mypage/product_in02_ok.php
+insert into tblProductEach (p_idx, start_dt, end_dt) values (2, 2008-10-13 11:21:23, 2008-10-20 11:21:22)
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11:21:23, 2008-10-20 11:21:22)' at line 1
+===========================================================================================
+
+=== [2008/10/13 11:34:49] =================================================================
+filename: /mypage/product_in02_ok.php
+insert into tblProductEach (p_idx, start_dt, end_dt) values (1, 2008-10-13 11:34:49, 2008-10-20 11:34:48)
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11:34:49, 2008-10-20 11:34:48)' at line 1
+===========================================================================================
+
+=== [2008/10/13 18:10:59] =================================================================
+filename: /mypage/product_in01.php
+select * from tblProduct where p_idx = 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+===========================================================================================
+
+=== [2008/10/13 18:11:07] =================================================================
+filename: /mypage/product_in01.php
+select * from tblProductTmp where p_idx = 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+===========================================================================================
+

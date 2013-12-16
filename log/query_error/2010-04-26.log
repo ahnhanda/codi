@@ -1,0 +1,88 @@
+=== [2010/04/26 03:53:47] =================================================================
+filename: /common/ajax_tail_board.php?tkind=
+select count(*) from  A, tblMember B  where 1 and A.mem_id = B.mem_id  
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.A' doesn't exist
+===========================================================================================
+
+=== [2010/04/26 03:53:47] =================================================================
+filename: /common/ajax_tail_board.php?tkind=
+
+select A._idx,  A.mem_id, A._title, A._view, A._reg_dt, unix_timestamp(A._reg_dt) as stamp,
+B.mem_name, 
+(select count(*) from  where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A._reg_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B' at line 3
+===========================================================================================
+
+=== [2010/04/26 03:53:50] =================================================================
+filename: /common/ajax_tail_board.php
+select count(*) from  A, tblMember B  where 1 and A.mem_id = B.mem_id  
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.A' doesn't exist
+===========================================================================================
+
+=== [2010/04/26 03:53:50] =================================================================
+filename: /common/ajax_tail_board.php
+
+select A._idx,  A.mem_id, A._title, A._view, A._reg_dt, unix_timestamp(A._reg_dt) as stamp,
+B.mem_name, 
+(select count(*) from  where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A._reg_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B' at line 3
+===========================================================================================
+
+=== [2010/04/26 03:54:15] =================================================================
+filename: /common/ajax_tail_board.php?tkind=
+select count(*) from  A, tblMember B  where 1 and A.mem_id = B.mem_id  
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.A' doesn't exist
+===========================================================================================
+
+=== [2010/04/26 03:54:15] =================================================================
+filename: /common/ajax_tail_board.php?tkind=
+
+select A._idx,  A.mem_id, A._title, A._view, A._reg_dt, unix_timestamp(A._reg_dt) as stamp,
+B.mem_name, 
+(select count(*) from  where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A._reg_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B' at line 3
+===========================================================================================
+
+=== [2010/04/26 03:54:16] =================================================================
+filename: /common/ajax_tail_board.php
+select count(*) from  A, tblMember B  where 1 and A.mem_id = B.mem_id  
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.A' doesn't exist
+===========================================================================================
+
+=== [2010/04/26 03:54:16] =================================================================
+filename: /common/ajax_tail_board.php
+
+select A._idx,  A.mem_id, A._title, A._view, A._reg_dt, unix_timestamp(A._reg_dt) as stamp,
+B.mem_name, 
+(select count(*) from  where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B.mem_id   order by A._reg_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where _idx=A._idx) as comment_cnt
+from  A, tblMember B
+ where 1 and A.mem_id = B' at line 3
+===========================================================================================
+

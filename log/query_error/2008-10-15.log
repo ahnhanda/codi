@@ -1,0 +1,96 @@
+=== [2008/10/15 13:50:57] =================================================================
+filename: /mypage/Mcodi.php
+
+	select *,
+	(select start_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx asc limit 1) as start_dt,
+	(select end_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx desc limit 1) as end_dt,
+	(select count(*) from tblProductComment where p_idx = tblProduct.p_idx and p_c_score = 1) as up,
+	(select count(*) from tblProductComment where p_idx = tblProduct.p_idx and p_c_score = -1) as down,
+	(select count(*) from tblProductComment where p_idx = tblProduct.p_idx) as comment_cnt,
+	(select count(*) from tblVisit where p_idx = tblProduct.p_idx) as visit
+	from tblProduct
+	 where 1 and mem_id = 'goodshop'   order by p_idx desc  limit 0, 10
+	
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'p_c_score' in 'where clause'
+===========================================================================================
+
+=== [2008/10/15 14:27:00] =================================================================
+filename: /manage/member/member_lotto_grade_config_ok.php
+update tblScoreConfig set sc_score = 2 where sc_cid = 'SC02'
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'sc_score' in 'field list'
+===========================================================================================
+
+=== [2008/10/15 14:27:21] =================================================================
+filename: /manage/member/member_lotto_grade_config_ok.php
+update tblScoreConfig set sc_score = 2 where sc_cid = 'SC02'
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'sc_score' in 'field list'
+===========================================================================================
+
+=== [2008/10/15 14:40:21] =================================================================
+filename: /mypage/Mcodi.php
+
+	select *,
+	(select start_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx asc limit 1) as start_dt,
+	(select end_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx desc limit 1) as end_dt,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_score = 1) as up,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_score = -1) as down,
+	(select count(*) from tblProductComment where p_idx = tblProduct.p_idx) as comment_cnt,
+	(select count(*) from tblProductVisit where p_idx = tblProduct.p_idx) as visit
+	from tblProduct
+	 where 1 and mem_id = 'goodshop'   order by p_idx desc  limit 0, 10
+	
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'p_u_score' in 'where clause'
+===========================================================================================
+
+=== [2008/10/15 14:40:55] =================================================================
+filename: /mypage/Mcodi.php
+
+	select *,
+	(select start_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx asc limit 1) as start_dt,
+	(select end_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx desc limit 1) as end_dt,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_score = 1) as up,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_score = -1) as down,
+	(select count(*) from tblProductComment where p_idx = tblProduct.p_idx) as comment_cnt,
+	(select count(*) from tblProductVisit where p_idx = tblProduct.p_idx) as visit
+	from tblProduct
+	 where 1 and mem_id = 'goodshop'   order by p_idx desc  limit 0, 10
+	
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'p_u_score' in 'where clause'
+===========================================================================================
+
+=== [2008/10/15 14:41:17] =================================================================
+filename: /mypage/Mcodi.php
+
+	select *,
+	(select start_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx asc limit 1) as start_dt,
+	(select end_dt from tblProductEach where p_idx = tblProduct.p_idx order by p_e_idx desc limit 1) as end_dt,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_score = 1) as up,
+	(select count(*) from tblProductUpDown where p_idx = tblProduct.p_idx and p_u_score = -1) as down,
+	(select count(*) from tblProductComment where p_idx = tblProduct.p_idx) as comment_cnt,
+	(select count(*) from tblProductVisit where p_idx = tblProduct.p_idx) as visit
+	from tblProduct
+	 where 1 and mem_id = 'goodshop'   order by p_idx desc  limit 0, 10
+	
+------------------------------------------------------------------------------------------
+1054 : Unknown column 'p_u_score' in 'where clause'
+===========================================================================================
+
+=== [2008/10/15 14:42:31] =================================================================
+filename: /mypage/pop_codi_view.php
+select count(DISTINCT(v_ip)) from tblVisit  where 1 and shop_idx = 6 and p_idx = 22  
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.tblVisit' doesn't exist
+===========================================================================================
+
+=== [2008/10/15 14:42:31] =================================================================
+filename: /mypage/pop_codi_view.php
+SELECT v_ip, min(v_reg_dt) as first, max(v_reg_dt) as last, count(*) AS cnt FROM tblVisit  where 1 and shop_idx = 6 and p_idx = 22  GROUP BY v_ip limit 1, 10
+------------------------------------------------------------------------------------------
+1146 : Table 'coditop.tblVisit' doesn't exist
+===========================================================================================
+

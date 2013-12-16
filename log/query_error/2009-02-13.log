@@ -1,0 +1,607 @@
+=== [2009/02/13 03:42:19] =================================================================
+filename: /product/product_view.php?p_idx=26%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+update tblProduct set p_view = p_view + 1 where p_idx = 26 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:19] =================================================================
+filename: /product/product_view.php?p_idx=26%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+
+select count(*) from tblRankProduct where 1
+and p_idx = 26 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 and rp_rank > 0 and rp_r' at line 2
+===========================================================================================
+
+=== [2009/02/13 03:42:19] =================================================================
+filename: /product/product_view.php?p_idx=26%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 26 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and now() between B.star' at line 14
+===========================================================================================
+
+=== [2009/02/13 03:42:19] =================================================================
+filename: /product/product_view.php?p_idx=26%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+select A.*, unix_timestamp(A.p_reg_dt) as stamp,B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 26 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:19] =================================================================
+filename: /product/product_view.php?p_idx=26%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 26 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and A.shop_idx = 
+and no' at line 5
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+update tblProduct set p_view = p_view + 1 where p_idx = 26\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\' 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+
+select count(*) from tblRankProduct where 1
+and p_idx = 26\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\' and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 2
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 26\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 14
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+select A.*, unix_timestamp(A.p_reg_dt) as stamp,B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 26\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 26\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 5
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+update tblProduct set p_view = p_view + 1 where p_idx = 26%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\' 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+
+select count(*) from tblRankProduct where 1
+and p_idx = 26%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\' and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 2
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 26%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 14
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+select A.*, unix_timestamp(A.p_reg_dt) as stamp,B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 26%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 26%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 5
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20'1'='1
+update tblProduct set p_view = p_view + 1 where p_idx = 26\' AnD \'1\'=\'1 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD \'1\'=\'1' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20'1'='1
+
+select count(*) from tblRankProduct where 1
+and p_idx = 26\' AnD \'1\'=\'1 and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD \'1\'=\'1 and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTER' at line 2
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20'1'='1
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 26\' AnD \'1\'=\'1
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD \'1\'=\'1
+and now() between B.start_dt and B.end_dt' at line 14
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20'1'='1
+select A.*, unix_timestamp(A.p_reg_dt) as stamp,B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 26\' AnD \'1\'=\'1
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD \'1\'=\'1' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20'1'='1
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 26\' AnD \'1\'=\'1
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD \'1\'=\'1
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt' at line 5
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+update tblProduct set p_view = p_view + 1 where p_idx = 26 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+
+select count(*) from tblRankProduct where 1
+and p_idx = 26 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 and rp_rank > 0 and rp_r' at line 2
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 26 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and now() between B.star' at line 14
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+select A.*, unix_timestamp(A.p_reg_dt) as stamp,B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 26 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 26 AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0
+and A.shop_idx = 
+and no' at line 5
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+update tblProduct set p_view = p_view + 1 where p_idx = 26\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\' 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+
+select count(*) from tblRankProduct where 1
+and p_idx = 26\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\' and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 2
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 26\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 14
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+select A.*, unix_timestamp(A.p_reg_dt) as stamp,B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 26\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20AnD%20''='
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 26\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 AnD \'\'=\'
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 5
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+update tblProduct set p_view = p_view + 1 where p_idx = 26%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\' 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+
+select count(*) from tblRankProduct where 1
+and p_idx = 26%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\' and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 2
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 26%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 14
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+select A.*, unix_timestamp(A.p_reg_dt) as stamp,B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 26%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26%25'%20AnD%20(sElEcT%20ChAr(94)%2BcAsT(CoUnT(1)%20aS%20VaRcHaR(100))%2bChAr(94)%20fRoM%20[mAsTeR]..[sYsDaTaBaSeS])>0%20And%20'%25'='
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 26%\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[sYsDaTaBaSeS])>0 And \'%\'=\'
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD (sElEcT ChAr(94)+cAsT(CoUnT(1) aS VaRcHaR(100))+ChAr(94) fRoM [mAsTeR]..[' at line 5
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20'1'='1
+update tblProduct set p_view = p_view + 1 where p_idx = 26\' AnD \'1\'=\'1 
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD \'1\'=\'1' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20'1'='1
+
+select count(*) from tblRankProduct where 1
+and p_idx = 26\' AnD \'1\'=\'1 and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTERVAL 6 DAY) = rp_start_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD \'1\'=\'1 and rp_rank > 0 and rp_rank <= 10
+and date_sub(rp_end_dt, INTER' at line 2
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20'1'='1
+
+select A.*, B.p_e_idx, B.end_dt, C.shop_name, C.shop_medal, C.shop_url,
+ifnull((select rp_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_rank,
+ifnull((select rp_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_last_rank,
+ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_rank,
+ifnull((select rp_total_last_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rp_total_last_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as rpc_rank,
+ifnull((select rpc_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-02-01' and rp_end_dt = '2009-02-07'),10000) as best_codi_cnt,
+ifnull((select sum(p_u_val) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val > 0),0) as up_cnt,
+ifnull((select abs(sum(p_u_val)) from tblProductUpDown where p_idx=A.p_idx and p_u_reg_dt between B.start_dt and B.end_dt and p_u_val < 0),0) as down_cnt,
+ifnull((select count(*) from tblProductComment where p_idx=A.p_idx and p_c_reg_dt between B.start_dt and B.end_dt ),0) as comment_cnt
+from tblProduct A, tblProductEach B, tblShop C
+where 1
+and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx
+and A.p_idx = 26\' AnD \'1\'=\'1
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD \'1\'=\'1
+and now() between B.start_dt and B.end_dt' at line 14
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20'1'='1
+select A.*, unix_timestamp(A.p_reg_dt) as stamp,B.shop_name, B.shop_medal, B.shop_url from tblProduct A, tblShop B where A.shop_idx = B.shop_idx and A.p_idx = 26\' AnD \'1\'=\'1
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD \'1\'=\'1' at line 1
+===========================================================================================
+
+=== [2009/02/13 03:42:20] =================================================================
+filename: /product/product_view.php?p_idx=26'%20AnD%20'1'='1
+
+select A.p_idx, B.p_e_idx, A.p_main_img
+from tblProduct A, tblProductEach B
+where 1 
+and A.p_idx = B.p_idx
+and A.p_idx != 26\' AnD \'1\'=\'1
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' AnD \'1\'=\'1
+and A.shop_idx = 
+and now() between B.start_dt and B.end_dt' at line 5
+===========================================================================================
+
+=== [2009/02/13 13:31:54] =================================================================
+filename: /board/shop_pr_list.php
+select count(*) from tblPr A, tblMember B, tblShop C, tblRankShop  where 1 and A.mem_id = B.mem_id and A.shop_idx = C.shop_idx and A.shop_idx = D.shop_idx  
+------------------------------------------------------------------------------------------
+1109 : Unknown table 'D' in where clause
+===========================================================================================
+
+=== [2009/02/13 13:32:01] =================================================================
+filename: /board/shop_pr_list.php
+select count(*) from tblPr A, tblMember B, tblShop C, tblRankShop  where 1 and A.mem_id = B.mem_id and A.shop_idx = C.shop_idx and A.shop_idx = D.shop_idx  
+------------------------------------------------------------------------------------------
+1109 : Unknown table 'D' in where clause
+===========================================================================================
+
+=== [2009/02/13 13:32:23] =================================================================
+filename: /board/shop_pr_list.php
+select count(*) from tblPr A, tblMember B, tblShop C, tblRankShop  where 1 and A.mem_id = B.mem_id and A.shop_idx = C.shop_idx and A.shop_idx = D.shop_idx  
+------------------------------------------------------------------------------------------
+1109 : Unknown table 'D' in where clause
+===========================================================================================
+
+=== [2009/02/13 14:00:40] =================================================================
+filename: /board/luck_list.php
+
+select A.p_idx, A.p_title, A.p_main_img, A.p_top10_num, A.p_gift,
+B.p_e_idx, B.end_dt, C.mem_id, C.shop_name, C.shop_url,
+ifnull((select rs_total_rank from tblRankShop where shop_idx=C.shop_idx order by rs_idx desc limit 1),0) as rs_total_rank,
+from tblProduct A, tblProductEach B, tblShop C, tblGiftTracking D
+ where 1 and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx and B.p_e_idx = D.p_e_idx   group by D.p_e_idx   order by B.end_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from tblProduct A, tblProductEach B, tblShop C, tblGiftTracking D
+ where 1 and A' at line 4
+===========================================================================================
+
+=== [2009/02/13 14:00:58] =================================================================
+filename: /board/luck_list.php
+
+select A.p_idx, A.p_title, A.p_main_img, A.p_top10_num, A.p_gift,
+B.p_e_idx, B.end_dt, C.mem_id, C.shop_name, C.shop_url,
+ifnull((select rs_total_rank from tblRankShop where shop_idx=C.shop_idx order by rs_idx desc limit 1),0) as rs_total_rank,
+from tblProduct A, tblProductEach B, tblShop C, tblGiftTracking D
+ where 1 and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx and B.p_e_idx = D.p_e_idx   group by D.p_e_idx   order by B.end_dt desc  limit 0, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from tblProduct A, tblProductEach B, tblShop C, tblGiftTracking D
+ where 1 and A' at line 4
+===========================================================================================
+
+=== [2009/02/13 14:29:14] =================================================================
+filename: /board/luck_list.php
+select count(*) from tblProduct A, tblProductEach B, tblShop C  where 1 and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx and B.end_dt < 2009-02-13 14:29:14  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '14:29:14' at line 1
+===========================================================================================
+
+=== [2009/02/13 14:29:14] =================================================================
+filename: /board/luck_list.php
+
+select A.p_idx, A.p_title, A.p_main_img, A.p_top10_num, A.p_gift,
+B.p_e_idx, B.end_dt, C.mem_id, C.shop_name, C.shop_url,
+ifnull((select rs_total_rank from tblRankShop where shop_idx=C.shop_idx order by rs_idx desc limit 1),0) as rs_total_rank
+from tblProduct A, tblProductEach B, tblShop C
+ where 1 and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx and B.end_dt < 2009-02-13 14:29:14   order by B.end_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '14:29:14   order by B.end_dt desc  limit 1, 10' at line 5
+===========================================================================================
+
+=== [2009/02/13 14:29:28] =================================================================
+filename: /board/luck_list.php
+select count(*) from tblProduct A, tblProductEach B, tblShop C  where 1 and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx and B.end_dt < 2009-02-13 14:29:28  
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '14:29:28' at line 1
+===========================================================================================
+
+=== [2009/02/13 14:29:28] =================================================================
+filename: /board/luck_list.php
+
+select A.p_idx, A.p_title, A.p_main_img, A.p_top10_num, A.p_gift,
+B.p_e_idx, B.end_dt, C.mem_id, C.shop_name, C.shop_url,
+ifnull((select rs_total_rank from tblRankShop where shop_idx=C.shop_idx order by rs_idx desc limit 1),0) as rs_total_rank
+from tblProduct A, tblProductEach B, tblShop C
+ where 1 and A.p_idx = B.p_idx and A.shop_idx = C.shop_idx and B.end_dt < 2009-02-13 14:29:28   order by B.end_dt desc  limit 1, 10
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '14:29:28   order by B.end_dt desc  limit 1, 10' at line 5
+===========================================================================================
+

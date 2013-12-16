@@ -1,0 +1,16 @@
+=== [2008/10/19 20:54:25] =================================================================
+filename: /proc/make_main_codi_list.php?
+
+select A.p_idx, A.p_title, A.shop_idx, A.p_categ, A.p_gift, A.p_judgment, A.p_main_img, B.p_e_idx,
+(select shop_name from tblShop where shop_idx=A.shop_idx) as shop_name,
+ifnull((select rp_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2008-10-12' and rp_end_dt = '2008-10-18'),0) as rp_score
+from tblProduct A, tblProductEach B
+where 1
+and A.p_idx = B.p_idx and A.p_judgment != 'R'
+and now() between B.start_dt and B.end_dt
+ order by A.p_reg_dt desc  limit 0,  
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 8
+===========================================================================================
+

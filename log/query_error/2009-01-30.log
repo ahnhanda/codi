@@ -1,0 +1,70 @@
+=== [2009/01/30 14:48:37] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=B&s_key=undefined&keyword=undefined
+
+	select 
+	select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_name, B.shop_url, C.start_dt, C.end_dt,
+	ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-01-18' and rp_end_dt = '2009-01-24'),0) as rp_total_rank,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-01-18' and rp_end_dt = '2009-01-24'),0) as rp_total_score
+	from tblProduct A, tblShop B, tblProductEach C
+	where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and (A.p_title like '%undefined%' or B.shop_name like '%undefined%')   and A.p_idx=C.p_idx and now() between C.start_dt and C.end_dt   order by C.end_dt asc 
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_' at line 2
+===========================================================================================
+
+=== [2009/01/30 14:48:41] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=C&s_key=undefined&keyword=undefined
+
+	select 
+	select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_name, B.shop_url, C.start_dt, C.end_dt,
+	ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-01-18' and rp_end_dt = '2009-01-24'),0) as rp_total_rank,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-01-18' and rp_end_dt = '2009-01-24'),0) as rp_total_score
+	from tblProduct A, tblShop B, tblProductEach C
+	where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and (A.p_title like '%undefined%' or B.shop_name like '%undefined%')   and A.p_idx=C.p_idx and now() between C.start_dt and C.end_dt   order by rp_total_score desc 
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_' at line 2
+===========================================================================================
+
+=== [2009/01/30 14:48:44] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=B&s_key=undefined&keyword=undefined
+
+	select 
+	select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_name, B.shop_url, C.start_dt, C.end_dt,
+	ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-01-18' and rp_end_dt = '2009-01-24'),0) as rp_total_rank,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-01-18' and rp_end_dt = '2009-01-24'),0) as rp_total_score
+	from tblProduct A, tblShop B, tblProductEach C
+	where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and (A.p_title like '%undefined%' or B.shop_name like '%undefined%')   and A.p_idx=C.p_idx and now() between C.start_dt and C.end_dt   order by C.end_dt asc 
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_' at line 2
+===========================================================================================
+
+=== [2009/01/30 14:49:04] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=B&s_key=undefined&keyword=undefined
+
+	select 
+	select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_name, B.shop_url, C.start_dt, C.end_dt,
+	ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-01-18' and rp_end_dt = '2009-01-24'),0) as rp_total_rank,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-01-18' and rp_end_dt = '2009-01-24'),0) as rp_total_score
+	from tblProduct A, tblShop B, tblProductEach C
+	where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'  and (A.p_title like '%undefined%' or B.shop_name like '%undefined%')   and A.p_idx=C.p_idx and now() between C.start_dt and C.end_dt   order by C.end_dt asc 
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_' at line 2
+===========================================================================================
+
+=== [2009/01/30 14:55:57] =================================================================
+filename: /product/ajax_categ_kwd_list.php?kwd_categ=&kwd_kind=&kwd=&page=1&order=B&s_key=&keyword=
+
+	select 
+	select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_name, B.shop_url, C.start_dt, C.end_dt,
+	ifnull((select rp_total_rank from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-01-18' and rp_end_dt = '2009-01-24'),0) as rp_total_rank,
+	ifnull((select rp_total_score from tblRankProduct where p_idx=A.p_idx and rp_start_dt = '2009-01-18' and rp_end_dt = '2009-01-24'),0) as rp_total_score
+	from tblProduct A, tblShop B, tblProductEach C
+	where 1  and A.shop_idx = B.shop_idx and A.p_judgment != 'R'   and A.p_idx=C.p_idx and now() between C.start_dt and C.end_dt   order by C.end_dt asc 
+	
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select A.mem_id, A.p_idx, A.p_title, A.p_main_img, A.p_gift, B.shop_idx, B.shop_' at line 2
+===========================================================================================
+

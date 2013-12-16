@@ -1,0 +1,18 @@
+=== [2009/02/04 16:24:41] =================================================================
+filename: /mypage/pop_gift_view.php
+select 
+SELECT count(*)
+FROM tblProduct A, tblProductEach B, tblGiftTracking C
+WHERE 1
+AND A.p_idx = B.p_idx
+AND B.p_e_idx = C.p_e_idx
+AND C.shop_mem_id = 'goodshop'
+GROUP BY C.p_e_idx
+
+------------------------------------------------------------------------------------------
+1064 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT count(*)
+FROM tblProduct A, tblProductEach B, tblGiftTracking C
+WHERE 1
+A' at line 2
+===========================================================================================
+
