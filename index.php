@@ -51,7 +51,7 @@ else
 
 //		exit;
 }
-//echo  __FILE__ . __LINE__ ; exit; 
+echo  __FILE__ . __LINE__ . "Go_URL:" . $Go_URL ; exit; 
 if(substr($_SERVER["REQUEST_URI"], 2, 2) == "ad")
 	$request = $_SERVER["SCRIPT_URL"]."?ad";
 else if($_COOKIE["Go_URL"])

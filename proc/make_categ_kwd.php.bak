@@ -6,6 +6,7 @@
  * desc   : "평가해주세요" 상단 카테고리/키워드
  *******************************************************/
 require_once "/coditop/inc/common.inc.php";
+require_once "/coditop/config/config.php";
 $mainconn->open();
 
 
@@ -33,12 +34,12 @@ foreach ( $P_CATEG as $k => $v ) {
 	<div id='categ_{$k}_area' style='display:none;'>
 	<table width='645' height='48' border='0' cellpadding='0' cellspacing='0'>
 		<tr>
-			<td><a href='#' onClick=\"loadCategKwdList('','','',1,'A','','');\" onmouseover=\"chg_main_categ('');\"><img src='/img/list_01.gif' width='113' height='48' border='0' /></a></td>
-			<td><a href='#' onClick=\"loadCategKwdList('T','','',1,'A','','');\" onmouseover=\"chg_main_categ('T');\"><img src='/img/{$ct_img}' width='87' height='48' border='0' /></td>
-			<td><a href='#' onClick=\"loadCategKwdList('B','','',1,'A','','');\" onmouseover=\"chg_main_categ('B');\"><img src='/img/{$cb_img}' width='89' height='48' border='0'></a></td>
-			<td><a href='#' onClick=\"loadCategKwdList('O','','',1,'A','','');\" onmouseover=\"chg_main_categ('O');\"><img src='/img/{$co_img}' width='130' height='48' border='0'></a></td>
-			<td><a href='#' onClick=\"loadCategKwdList('U','','',1,'A','','');\" onmouseover=\"chg_main_categ('U');\"><img src='/img/{$cu_img}' width='133' height='48' border='0'></a></td>
-			<td><a href='#' onClick=\"loadCategKwdList('A','','',1,'A','','');\" onmouseover=\"chg_main_categ('A');\"><img src='/img/{$ca_img}' width='93' height='48' border='0'></a></td>
+			<td><a href='#' onClick=\"loadCategKwdList('','','',1,'A','','');\" onmouseover=\"chg_main_categ('');\"><img src='" . _HTTPURL_  . "/img/list_01.gif' width='113' height='48' border='0' /></a></td>
+			<td><a href='#' onClick=\"loadCategKwdList('T','','',1,'A','','');\" onmouseover=\"chg_main_categ('T');\"><img src='" . _HTTPURL_  . "/img/{$ct_img}' width='87' height='48' border='0' /></td>
+			<td><a href='#' onClick=\"loadCategKwdList('B','','',1,'A','','');\" onmouseover=\"chg_main_categ('B');\"><img src='" . _HTTPURL_  . "/img/{$cb_img}' width='89' height='48' border='0'></a></td>
+			<td><a href='#' onClick=\"loadCategKwdList('O','','',1,'A','','');\" onmouseover=\"chg_main_categ('O');\"><img src='" . _HTTPURL_  . "/img/{$co_img}' width='130' height='48' border='0'></a></td>
+			<td><a href='#' onClick=\"loadCategKwdList('U','','',1,'A','','');\" onmouseover=\"chg_main_categ('U');\"><img src='" . _HTTPURL_  . "/img/{$cu_img}' width='133' height='48' border='0'></a></td>
+			<td><a href='#' onClick=\"loadCategKwdList('A','','',1,'A','','');\" onmouseover=\"chg_main_categ('A');\"><img src='" . _HTTPURL_  . "/img/{$ca_img}' width='93' height='48' border='0'></a></td>
 		</tr>
 	</table>
 	";
@@ -69,21 +70,21 @@ foreach ( $P_CATEG as $k => $v ) {
 			<td align='center' valign='top'><br>
 			<table width='600' border='0' cellspacing='0' cellpadding='0'>
 				<tr>
-					<td width='80'><b><font color='#333333'><img src='/img/icon001.gif' align='absmiddle'> 스타일별</font></b></td>
+					<td width='80'><b><font color='#333333'><img src='" . _HTTPURL_  . "/img/icon001.gif' align='absmiddle'> 스타일별</font></b></td>
 					<td style='padding-top:8;padding-bottom:8' class=evmem>$style_kwd_list</td>
 				</tr>
 				<tr>
 					<td height='1' colspan='2' background='/img/dot00.gif'></td>
 				</tr>
 				<tr>
-					<td><b><font color='#333333'><img src='/img/icon002.gif' align='absmiddle'> 아이템별</font></b></td>
+					<td><b><font color='#333333'><img src='" . _HTTPURL_  . "/img/icon002.gif' align='absmiddle'> 아이템별</font></b></td>
 					<td style='padding-top:8;padding-bottom:8' class=evmem>$item_kwd_list</td>
 				</tr>
 				<tr>
 					<td height='1' colspan='2' background='/img/dot00.gif'></td>
 				</tr>
 				<tr>
-					<td><b><font color='#333333'><img src='/img/icon003.gif' align='absmiddle'> 테 마 별</font></b></td>
+					<td><b><font color='#333333'><img src='" . _HTTPURL_  . "/img/icon003.gif' align='absmiddle'> 테 마 별</font></b></td>
 					<td style='padding-top:8;padding-bottom:8' class=evmem>$theme_kwd_list</td>
 				</tr>
 			</table>
@@ -104,12 +105,12 @@ $str .= "
 <div id='categ__area' style='display:none;'>
 <table width='645' height='48' border='0' cellpadding='0' cellspacing='0'>
 	<tr>
-		<td><a href='#' onClick=\"loadCategKwdList('','','',1,'A','','');\" onmouseover=\"chg_main_categ('');\"><img src='/img/list01_ov_01.gif' width='113' height='48' border='0' /></a></td>
-		<td><a href='#' onClick=\"loadCategKwdList('T','','',1,'A','','');\" onmouseover=\"chg_main_categ('T');\"><img src='/img/list_02.gif' width='87' height='48' border='0' /></td>
-		<td><a href='#' onClick=\"loadCategKwdList('B','','',1,'A','','');\" onmouseover=\"chg_main_categ('B');\"><img src='/img/list_03.gif' width='89' height='48' border='0'></a></td>
-		<td><a href='#' onClick=\"loadCategKwdList('O','','',1,'A','','');\" onmouseover=\"chg_main_categ('O');\"><img src='/img/list_04.gif' width='130' height='48' border='0'></a></td>
-		<td><a href='#' onClick=\"loadCategKwdList('U','','',1,'A','','');\" onmouseover=\"chg_main_categ('U');\"><img src='/img/list_05.gif' width='133' height='48' border='0'></a></td>
-		<td><a href='#' onClick=\"loadCategKwdList('A','','',1,'A','','');\" onmouseover=\"chg_main_categ('A');\"><img src='/img/list_06.gif' width='93' height='48' border='0'></a></td>
+		<td><a href='#' onClick=\"loadCategKwdList('','','',1,'A','','');\" onmouseover=\"chg_main_categ('');\"><img src='" . _HTTPURL_  . "/img/list01_ov_01.gif' width='113' height='48' border='0' /></a></td>
+		<td><a href='#' onClick=\"loadCategKwdList('T','','',1,'A','','');\" onmouseover=\"chg_main_categ('T');\"><img src='" . _HTTPURL_  . "/img/list_02.gif' width='87' height='48' border='0' /></td>
+		<td><a href='#' onClick=\"loadCategKwdList('B','','',1,'A','','');\" onmouseover=\"chg_main_categ('B');\"><img src='" . _HTTPURL_  . "/img/list_03.gif' width='89' height='48' border='0'></a></td>
+		<td><a href='#' onClick=\"loadCategKwdList('O','','',1,'A','','');\" onmouseover=\"chg_main_categ('O');\"><img src='" . _HTTPURL_  . "/img/list_04.gif' width='130' height='48' border='0'></a></td>
+		<td><a href='#' onClick=\"loadCategKwdList('U','','',1,'A','','');\" onmouseover=\"chg_main_categ('U');\"><img src='" . _HTTPURL_  . "/img/list_05.gif' width='133' height='48' border='0'></a></td>
+		<td><a href='#' onClick=\"loadCategKwdList('A','','',1,'A','','');\" onmouseover=\"chg_main_categ('A');\"><img src='" . _HTTPURL_  . "/img/list_06.gif' width='93' height='48' border='0'></a></td>
 	</tr>
 </table>
 <table width='645' border='0' cellspacing='0' cellpadding='0'>
@@ -118,21 +119,21 @@ $str .= "
 		<td align='center' valign='top'><br>
 		<table width='600' border='0' cellspacing='0' cellpadding='0'>
 			<tr>
-				<td width='80'><b><font color='#333333'><img src='/img/icon001.gif' align='absmiddle'> 스타일별</font></b></td>
+				<td width='80'><b><font color='#333333'><img src='" . _HTTPURL_  . "/img/icon001.gif' align='absmiddle'> 스타일별</font></b></td>
 				<td style='padding-top:8;padding-bottom:8' class=evmem>$all_style_kwd_list</td>
 			</tr>
 			<tr>
 				<td height='1' colspan='2' background='/img/dot00.gif'></td>
 			</tr>
 			<tr>
-				<td><b><font color='#333333'><img src='/img/icon002.gif' align='absmiddle'> 아이템별</font></b></td>
+				<td><b><font color='#333333'><img src='" . _HTTPURL_  . "/img/icon002.gif' align='absmiddle'> 아이템별</font></b></td>
 				<td style='padding-top:8;padding-bottom:8' class=evmem>$all_item_kwd_list</td>
 			</tr>
 			<tr>
 				<td height='1' colspan='2' background='/img/dot00.gif'></td>
 			</tr>
 			<tr>
-				<td><b><font color='#333333'><img src='/img/icon003.gif' align='absmiddle'> 테 마 별</font></b></td>
+				<td><b><font color='#333333'><img src='" . _HTTPURL_  . "/img/icon003.gif' align='absmiddle'> 테 마 별</font></b></td>
 				<td style='padding-top:8;padding-bottom:8' class=evmem>$all_theme_kwd_list</td>
 			</tr>
 		</table>

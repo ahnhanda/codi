@@ -6,6 +6,7 @@
  * desc   : 오늘의 추천코디 html 생성
  *******************************************************/
 require_once "/coditop/inc/common.inc.php";
+require_once "/coditop/config/config.php";
 $mainconn->open();
 
 $today = date("Y-m-d", time());
@@ -27,8 +28,8 @@ for ( $i=1; $i<=$total_page; $i++ ) {
 			<td height='41' align='right' background='/img/today_codi01.gif' style='padding-right:6'>
 			<table border='0' cellspacing='0' cellpadding='0'>
 				<tr>
-					<td width='20'><a href=\"javascript:sub_today_recom_page_view('$total_page','".($i-1)."');\"><img src='/img/btn_pre007.gif' width='18' height='13' border='0'></a></td>
-					<td width='18'><a href=\"javascript:sub_today_recom_page_view('$total_page','".($i+1)."');\"><img src='/img/btn_next007.gif' width='18' height='13' border='0'></a></td>
+					<td width='20'><a href=\"javascript:sub_today_recom_page_view('$total_page','".($i-1)."');\"><img src='" . __HTTPURL__  . "/img/btn_pre007.gif' width='18' height='13' border='0'></a></td>
+					<td width='18'><a href=\"javascript:sub_today_recom_page_view('$total_page','".($i+1)."');\"><img src='" . __HTTPURL__  . "/img/btn_next007.gif' width='18' height='13' border='0'></a></td>
 				</tr>
 			</table>
 			</td>
@@ -40,7 +41,7 @@ for ( $i=1; $i<=$total_page; $i++ ) {
 					<td height='10'></td>
 				</tr>
 				<tr>
-					<td align='center'><img src='/img/icon_calender.gif'  align='absmiddle'><b><font color='#333333'>Today</font><font color='#FF0033'> $today_str</font></b> </td>
+					<td align='center'><img src='" . __HTTPURL__  . "/img/icon_calender.gif'  align='absmiddle'><b><font color='#333333'>Today</font><font color='#FF0033'> $today_str</font></b> </td>
 				</tr>
 				<tr>
 					<td height='5'></td>
@@ -82,7 +83,7 @@ for ( $i=1; $i<=$total_page; $i++ ) {
 			<td width='60'>
 			<table width='50' border='0' cellpadding='0' cellspacing='1' bgcolor='#CCCCCC'>
 				<tr>
-					<td bgcolor='#FFFFFF'><a href='#' onClick=\"codi_view('$p_idx');\"><img src='$p_main_img' width='50' height='50' border='0'></a></td>
+					<td bgcolor='#FFFFFF'><a href='#' onClick=\"codi_view('$p_idx');\"><img src='" . __HTTPURL__  . "$p_main_img' width='50' height='50' border='0'></a></td>
 				</tr>
 			</table>
 			</td>
@@ -99,7 +100,7 @@ for ( $i=1; $i<=$total_page; $i++ ) {
 			</td>
 		</tr>
 		<tr>
-			<td><img src='/img/week_codi04.gif' width='200' height='13' /></td>
+			<td><img src='" . __HTTPURL__  . "/img/week_codi04.gif' width='200' height='13' /></td>
 		</tr>
 	</table>
 	</div>

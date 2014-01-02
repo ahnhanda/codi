@@ -4,6 +4,7 @@ require_once "../inc/common.inc.php";
 require_once "../inc/chk_frame.inc.php";
 
 $rurl = trim($_REQUEST['rurl']);
+//die("FILE:" . __FILE__ . " LINE:" . __LINE__ . " __HTTPURL__:" . __HTTPURL__ . "<br>"); 
 ?>
 
 <? include "../include/_head.php"; ?>
@@ -24,7 +25,7 @@ function sub_login() {
 		f.pwd.focus();
 		return;
 	}
-	f.action = "/member/login_ok.php";
+	f.action = "<?=__HTTPURL__?>/member/login_ok.php";
 	f.submit();
 }
 
@@ -134,7 +135,7 @@ function sub_login() {
               <td height="5" background="../img/dot_lint_big.gif" ></td>
             </tr>
             <tr>
-              <td height="30" align="center" valign="bottom"><a href="#"  onClick="sub_login();"><img src="img/btn_login_go.gif" width="100" height="20" border="0" /></a> <a href="/main.php"><img src="img/btn_join_cancle.gif" width="100" height="20" border="0" /></a></td>
+              <td height="30" align="center" valign="bottom"><a href="#"  onClick="sub_login();"><img src="img/btn_login_go.gif" width="100" height="20" border="0" /></a> <a href="<?=__HTTPURL__?>/main.php"><img src="img/btn_join_cancle.gif" width="100" height="20" border="0" /></a></td>
             </tr>
           </table>
           </td>

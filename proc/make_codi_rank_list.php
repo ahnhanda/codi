@@ -14,6 +14,7 @@
  * tpl 파일의 갱신주기는 1시간이다.
  *******************************************************/
 require_once "/coditop/inc/common.inc.php";
+require_once "/coditop/config/config.php";
 
 // 인증여부 체크
 //auth_chk( my64encode($_SERVER['REQUEST_URI']) );
@@ -59,17 +60,17 @@ $str .= "
 				<td height='27'>
 				<table width='645' border='0' cellspacing='0' cellpadding='0'>
 					<tr>
-						<td align='center'><img src='/img/title01.gif' width='70' height='20'></td>
-						<td width='3'><img src='/img/title_line.gif' width='3' height='9'></td>
-						<td width='100' align='center'><img src='/img/title45.gif' width='70' height='20'></td>
-						<td width='3'><img src='/img/title_line.gif' width='3' height='9'></td>
-						<td width='100' align='center'><img src='/img/title03.gif' width='70' height='20'></td>
-						<td width='3'><img src='/img/title_line.gif' width='3' height='9'></td>
-						<td width='70' align='center'><img src='/img/title07.gif' width='70' height='20'></td>
-						<td width='3'><img src='/img/title_line.gif' width='3' height='9'></td>
-						<td width='70' align='center'><img src='/img/title08.gif' width='70' height='20'></td>
-						<td width='3' align='center'><img src='/img/title_line.gif' width='3' height='9'></td>
-						<td width='70' align='center'><img src='/img/title09.gif' width='70' height='20'></td>
+						<td align='center'><img src='" . __HTTPURL__  . "/img/title01.gif' width='70' height='20'></td>
+						<td width='3'><img src='" . __HTTPURL__  . "/img/title_line.gif' width='3' height='9'></td>
+						<td width='100' align='center'><img src='" . __HTTPURL__  . "/img/title45.gif' width='70' height='20'></td>
+						<td width='3'><img src='" . __HTTPURL__  . "/img/title_line.gif' width='3' height='9'></td>
+						<td width='100' align='center'><img src='" . __HTTPURL__  . "/img/title03.gif' width='70' height='20'></td>
+						<td width='3'><img src='" . __HTTPURL__  . "/img/title_line.gif' width='3' height='9'></td>
+						<td width='70' align='center'><img src='" . __HTTPURL__  . "/img/title07.gif' width='70' height='20'></td>
+						<td width='3'><img src='" . __HTTPURL__  . "/img/title_line.gif' width='3' height='9'></td>
+						<td width='70' align='center'><img src='" . __HTTPURL__  . "/img/title08.gif' width='70' height='20'></td>
+						<td width='3' align='center'><img src='" . __HTTPURL__  . "/img/title_line.gif' width='3' height='9'></td>
+						<td width='70' align='center'><img src='" . __HTTPURL__  . "/img/title09.gif' width='70' height='20'></td>
 					</tr>
 				</table>
 				</td>
@@ -143,14 +144,14 @@ while ( $row = $mainconn->fetch($res) ) {
 
 	// 인증샵 마크
 	if ( $shop_medal == "Y" ) {
-		$shop_medal_mark = "<img src='/img_seri/icon_ks.gif' border='0'>";
+		$shop_medal_mark = "<img src='" . __HTTPURL__  . "/img_seri/icon_ks.gif' border='0'>";
 	} else {
 		$shop_medal_mark = "&nbsp;";
 	}
 
 	// 베스트 코디 마크
 	if ( $p_top10_num > 0 ) {
-		$codi_mark = "<img src='/img_seri/icon_bestshop2.gif' align='absmiddle'>";
+		$codi_mark = "<img src='" . __HTTPURL__  . "/img_seri/icon_bestshop2.gif' align='absmiddle'>";
 	} else {
 		$codi_mark = "&nbsp;";
 	}
@@ -175,7 +176,7 @@ while ( $row = $mainconn->fetch($res) ) {
 			<td width='100'>
 			<table width='96' height='96' border='0' cellpadding='0' cellspacing='1' bgcolor='#CCCCCC'>
 				<tr>
-					<td bgcolor='#3D3D3D'><a href='#' onClick=\"codi_view('$p_idx');\"><img src='$p_main_img' width='95' height='95' border='0'></a></td>
+					<td bgcolor='#3D3D3D'><a href='#' onClick=\"codi_view('$p_idx');\"><img src='" . __HTTPURL__  . "$p_main_img' width='95' height='95' border='0'></a></td>
 				</tr>
 			</table>
 			</td>

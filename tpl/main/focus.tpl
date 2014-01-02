@@ -12,7 +12,7 @@
 			<td height='8' colspan='5'></td>
 		</tr>
 		<tr>
-			<td colspan='5'><a href='http://seoul.pm.org/' target='_blank' ><img src='/upload/attach/200901/1326545uuf8tdtw1.jpg' width='200' height='344' border='0' /></a></td>
+			<td colspan='5'><a href='http://seoul.pm.org/' target='_blank' ><img src='/coditop/upload/attach/200901/1326545uuf8tdtw1.jpg' width='200' height='344' border='0' /></a></td>
 		</tr>
 	</table>
 	</div>
@@ -26,7 +26,7 @@
 			<td height='8' colspan='5'></td>
 		</tr>
 		<tr>
-			<td colspan='5'><a href='http://www.superboard.com/'  ><img src='/upload/attach/200902/16590234l27c25dc.jpg' width='200' height='344' border='0' /></a></td>
+			<td colspan='5'><a href='http://www.superboard.com/'  ><img src='/coditop/upload/attach/200902/16590234l27c25dc.jpg' width='200' height='344' border='0' /></a></td>
 		</tr>
 	</table>
 	</div>
@@ -40,7 +40,7 @@
 			<td height='8' colspan='5'></td>
 		</tr>
 		<tr>
-			<td colspan='5'><a href='http://freebsd.org/' target='_blank' ><img src='/upload/attach/200809/1659039pnuxktvv.jpg' width='200' height='344' border='0' /></a></td>
+			<td colspan='5'><a href='http://freebsd.org/' target='_blank' ><img src='/coditop/upload/attach/200809/1659039pnuxktvv.jpg' width='200' height='344' border='0' /></a></td>
 		</tr>
 	</table>
 	</div>
@@ -54,7 +54,7 @@
 			<td height='8' colspan='5'></td>
 		</tr>
 		<tr>
-			<td colspan='5'><a href='http://innu.pe.kr/'  ><img src='/upload/attach/200809/165954t8d4107r4.jpg' width='200' height='344' border='0' /></a></td>
+			<td colspan='5'><a href='http://innu.pe.kr/'  ><img src='/coditop/upload/attach/200809/165954t8d4107r4.jpg' width='200' height='344' border='0' /></a></td>
 		</tr>
 	</table>
 	</div>
@@ -68,7 +68,7 @@
 			<td height='8' colspan='5'></td>
 		</tr>
 		<tr>
-			<td colspan='5'><a href='http://innu.pe.kr/'  ><img src='/upload/attach/200809/164524b7xu4vjha.jpg' width='200' height='344' border='0' /></a></td>
+			<td colspan='5'><a href='http://innu.pe.kr/'  ><img src='/coditop/upload/attach/200809/164524b7xu4vjha.jpg' width='200' height='344' border='0' /></a></td>
 		</tr>
 	</table>
 	</div>

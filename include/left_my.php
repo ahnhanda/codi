@@ -66,13 +66,13 @@ if ( $php_self == "/mypage/mypage.php" ) {
 
 <table width="200" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><img src="/img/left_my_title.gif" ></td>
+    <td><img src="/coditop/img/left_my_title.gif" ></td>
   </tr>
   <tr>
-    <td align="center" background="/img/left_bg01.gif">
+    <td align="center" background="/coditop/img/left_bg01.gif">
 	<table width="170" border="0" cellpadding="0" cellspacing="1" bgcolor="DCDCDC">
       <tr>
-        <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/img/<?=$left_icon_mypage?>" width="10" height="10" align="absmiddle"> <a href="/mypage/mypage.php">기본정보관리 </a></td>
+        <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/coditop/img/<?=$left_icon_mypage?>" width="10" height="10" align="absmiddle"> <a href="/mypage/mypage.php">기본정보관리 </a></td>
       </tr>
 
     </table>
@@ -87,7 +87,7 @@ if ( $php_self == "/mypage/mypage.php" ) {
 
 	  <table width="170" border="0" cellpadding="0" cellspacing="1" bgcolor="DCDCDC">
         <tr>
-          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/img/<?=$left_icon_level?>" width="10" height="10" align="absmiddle"> <a href="/mypage/level.php">당첨등급 </a></td>
+          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/coditop/img/<?=$left_icon_level?>" width="10" height="10" align="absmiddle"> <a href="/mypage/level.php">당첨등급 </a></td>
         </tr>
       </table>
       <table width="100" height="4" border="0" cellpadding="0" cellspacing="0">
@@ -97,7 +97,7 @@ if ( $php_self == "/mypage/mypage.php" ) {
       </table>
       <table width="170" border="0" cellpadding="0" cellspacing="1" bgcolor="DCDCDC">
         <tr>
-          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/img/<?=$left_icon_history?>" width="10" height="10" align="absmiddle"> <a href="/mypage/history.php">당첨내역 </a></td>
+          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/coditop/img/<?=$left_icon_history?>" width="10" height="10" align="absmiddle"> <a href="/mypage/history.php">당첨내역 </a></td>
         </tr>
       </table>
       <table width="100" height="4" border="0" cellpadding="0" cellspacing="0">
@@ -107,7 +107,7 @@ if ( $php_self == "/mypage/mypage.php" ) {
       </table>
       <table width="170" border="0" cellpadding="0" cellspacing="1" bgcolor="DCDCDC">
         <tr>
-          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/img/<?=$left_icon_comment?>" width="10" height="10" align="absmiddle"> <a href="/mypage/comment.php">평가한 코디 </a></td>
+          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/coditop/img/<?=$left_icon_comment?>" width="10" height="10" align="absmiddle"> <a href="/mypage/comment.php">평가한 코디 </a></td>
         </tr>
       </table>
 
@@ -115,7 +115,7 @@ if ( $php_self == "/mypage/mypage.php" ) {
 
       <table width="170" border="0" cellpadding="0" cellspacing="1" bgcolor="DCDCDC">
         <tr>
-          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/img/<?=$left_icon_Mshop?>" width="10" height="10" align="absmiddle"> <a href="/mypage/Mshop.php">샵관리 </a></td>
+          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/coditop/img/<?=$left_icon_Mshop?>" width="10" height="10" align="absmiddle"> <a href="/mypage/Mshop.php">샵관리 </a></td>
         </tr>
       </table>
       <table width="100" height="4" border="0" cellpadding="0" cellspacing="0">
@@ -125,7 +125,7 @@ if ( $php_self == "/mypage/mypage.php" ) {
       </table>
       <table width="170" border="0" cellpadding="0" cellspacing="1" bgcolor="DCDCDC">
         <tr>
-          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/img/<?=$left_icon_Mcodi?>" width="10" height="10" align="absmiddle"> <a href="/mypage/Mcodi.php">코디상품관리 </a></td>
+          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/coditop/img/<?=$left_icon_Mcodi?>" width="10" height="10" align="absmiddle"> <a href="/mypage/Mcodi.php">코디상품관리 </a></td>
         </tr>
       </table>
       <table width="100" height="4" border="0" cellpadding="0" cellspacing="0">
@@ -135,7 +135,7 @@ if ( $php_self == "/mypage/mypage.php" ) {
       </table>
       <table width="170" border="0" cellpadding="0" cellspacing="1" bgcolor="DCDCDC">
         <tr>
-          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/img/<?=$left_icon_Mgift?>" width="10" height="10" align="absmiddle"> <a href="/mypage/Mgift.php">경품지급관리 </a></td>
+          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/coditop/img/<?=$left_icon_Mgift?>" width="10" height="10" align="absmiddle"> <a href="/mypage/Mgift.php">경품지급관리 </a></td>
         </tr>
       </table>
 	  
@@ -146,7 +146,7 @@ if ( $php_self == "/mypage/mypage.php" ) {
       </table>      
       <table width="170" border="0" cellpadding="0" cellspacing="1" bgcolor="DCDCDC">
         <tr>
-          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/img/<?=$left_icon_Mcash?>" width="10" height="10" align="absmiddle"> <a href="/mypage/Mcash.php">캐쉬관리 </a></td>
+          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/coditop/img/<?=$left_icon_Mcash?>" width="10" height="10" align="absmiddle"> <a href="/mypage/Mcash.php">캐쉬관리 </a></td>
         </tr>
       </table>
       <table width="100" height="4" border="0" cellpadding="0" cellspacing="0">
@@ -156,7 +156,7 @@ if ( $php_self == "/mypage/mypage.php" ) {
       </table>
       <table width="170" border="0" cellpadding="0" cellspacing="1" bgcolor="DCDCDC">
         <tr>
-          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/img/<?=$left_icon_Mtax?>" width="10" height="10" align="absmiddle"> <a href="/mypage/Mtax.php">세금계산서 </a></td>
+          <td height="26" bgcolor="F6F6F6" style="padding-left:10"><img src="/coditop/img/<?=$left_icon_Mtax?>" width="10" height="10" align="absmiddle"> <a href="/mypage/Mtax.php">세금계산서 </a></td>
         </tr>
       </table>
 <? } ?>
@@ -169,7 +169,7 @@ if ( $php_self == "/mypage/mypage.php" ) {
         </table>
       <table width="170" border="0" cellpadding="0" cellspacing="1" bgcolor="FF5B5C">
           <tr>
-            <td height="26" bgcolor="FFDBDB" style="padding-left:10"><img src="/img/icon_memo02.gif" width="12" height="14" align="absmiddle"> <a href="#" onClick="go_recv_msg();">쪽지함 </a></td>
+            <td height="26" bgcolor="FFDBDB" style="padding-left:10"><img src="/coditop/img/icon_memo02.gif" width="12" height="14" align="absmiddle"> <a href="#" onClick="go_recv_msg();">쪽지함 </a></td>
           </tr>
         </table>
       <table width="100" height="4" border="0" cellpadding="0" cellspacing="0">
@@ -179,23 +179,23 @@ if ( $php_self == "/mypage/mypage.php" ) {
         </table>
       <table width="136" border="0" cellspacing="0" cellpadding="0">
           <tr>
-            <td><a href="#" onClick="go_recv_msg();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('memo01','','/img/meno_title01ov.gif',1)"><img src="/img/<?=$memo_img_1?>" name="memo01" border="0" id="memo01" /></a></td>
+            <td><a href="#" onClick="go_recv_msg();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('memo01','','/coditop/img/meno_title01ov.gif',1)"><img src="/coditop/img/<?=$memo_img_1?>" name="memo01" border="0" id="memo01" /></a></td>
           </tr>
           <tr>
-            <td><a href="#" onClick="go_send_msg();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('memo02','','/img/meno_title02ov.gif',1)"><img src="/img/<?=$memo_img_2?>" name="memo02" width="66" height="18" border="0" id="memo02" /></a></td>
+            <td><a href="#" onClick="go_send_msg();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('memo02','','/coditop/img/meno_title02ov.gif',1)"><img src="/coditop/img/<?=$memo_img_2?>" name="memo02" width="66" height="18" border="0" id="memo02" /></a></td>
           </tr>
           <tr>
-            <td><a href="#" onClick="go_forever_msg();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('memo03','','/img/meno_title03ov.gif',1)"><img src="/img/<?=$memo_img_3?>" name="memo03" width="66" height="18" border="0" id="memo03" /></a></td>
+            <td><a href="#" onClick="go_forever_msg();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('memo03','','/coditop/img/meno_title03ov.gif',1)"><img src="/coditop/img/<?=$memo_img_3?>" name="memo03" width="66" height="18" border="0" id="memo03" /></a></td>
           </tr>
           <tr>
-            <td><a href="#" onClick="go_write_msg();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('memo04','','/img/meno_title04ov.gif',1)"><img src="/img/<?=$memo_img_4?>" name="memo04" width="66" height="18" border="0" id="memo04" /></a></td>
+            <td><a href="#" onClick="go_write_msg();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('memo04','','/coditop/img/meno_title04ov.gif',1)"><img src="/coditop/img/<?=$memo_img_4?>" name="memo04" width="66" height="18" border="0" id="memo04" /></a></td>
           </tr>
       </table> 
 
     </td>
   </tr>
   <tr>
-    <td><img src="/img/left_bg02.gif" width="200" height="16"></td>
+    <td><img src="/coditop/img/left_bg02.gif" width="200" height="16"></td>
   </tr>
 </table>
 

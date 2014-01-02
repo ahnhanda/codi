@@ -1,6 +1,9 @@
 <?
 define('MYSQL_LOG_DIR',   "../log");         // MYSQL로그 디렉토리
 
+//require_once "config/config.php";
+require_once $_SERVER[DOCUMENT_ROOT] . "/config/config.php";
+
 require_once "const.inc.php";
 require_once "public.inc.php";
 require_once "CMySQL.inc.php";
@@ -76,7 +79,7 @@ if($TestServer)
 	$mainconn = new CMySQL();
 //	$mainconn->set("localhost", "coditop", "@coditop~!", "coditop");
 	$mainconn->set("localhost", "root", "", "coditop");
-
+print __FILE__ . __LINE__ ;
 	$SuperBoard = "testcgi.superboard.com:8000";
 }
 else

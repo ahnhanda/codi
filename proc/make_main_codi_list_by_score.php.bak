@@ -6,6 +6,7 @@
  * desc   : 메인 "평가 대기중인 코디" 만드는 proc 스크립트
  *******************************************************/
 require_once "/coditop/inc/common.inc.php";
+require_once "/coditop/config/config.php";
 $mainconn->open();
 
 $page = $_REQUEST['page'];
@@ -15,7 +16,7 @@ $pr_4 = "
 <td width='106' align='left' valign='middle'>
 <table width='96' height='96' border='0' cellpadding='0' cellspacing='1' bgcolor='#DEDEDE'>
 	<tr>
-		<td align='center' valign='middle' bgcolor='#FFFFFF'><img src='/img/view_icon_01.jpg' width='95' height='95' border='0'></td>
+		<td align='center' valign='middle' bgcolor='#FFFFFF'><img src='" . _HTTPURL_  . "/img/view_icon_01.jpg' width='95' height='95' border='0'></td>
 	</tr>
 </table>
 </td>
@@ -25,7 +26,7 @@ $pr_8 = "
 <td width='106' align='left' valign='middle'>
 <table width='96' height='96' border='0' cellpadding='0' cellspacing='1' bgcolor='#DEDEDE'>
 	<tr>
-		<td align='center' valign='middle' bgcolor='#FFFFFF'><img src='/img/view_icon_02.jpg' width='95' height='95' border='0'></td>
+		<td align='center' valign='middle' bgcolor='#FFFFFF'><img src='" . _HTTPURL_  . "/img/view_icon_02.jpg' width='95' height='95' border='0'></td>
 	</tr>
 </table>
 </td>
@@ -35,7 +36,7 @@ $pr_18 = "
 <td width='106' align='left' valign='middle'>
 <table width='96' height='96' border='0' cellpadding='0' cellspacing='1' bgcolor='#DEDEDE'>
 	<tr>
-		<td align='center' valign='middle' bgcolor='#FFFFFF'><a href='#' onClick=\"location.href='/product/product_list.php';\"><img src='/img/view_icon_03.gif' width='95' height='95' border='0'></a></td>
+		<td align='center' valign='middle' bgcolor='#FFFFFF'><a href='#' onClick=\"location.href='/product/product_list.php';\"><img src='" . _HTTPURL_  . "/img/view_icon_03.gif' width='95' height='95' border='0'></a></td>
 	</tr>
 </table>
 </td>
@@ -78,7 +79,7 @@ for ( $k=1; $k<=$total_page; $k++ ) {
 	<div id='main_codi_page_$k' style='display:none;'>
 	<table width='645' border='0' cellspacing='0' cellpadding='0'>
 		<tr>
-			<td><img src='/img/title_ingcodi.gif' width='645' height='30'></td>
+			<td><img src='" . _HTTPURL_  . "/img/title_ingcodi.gif' width='645' height='30'></td>
 		</tr>
 		<tr>
 			<td>
@@ -145,7 +146,7 @@ for ( $k=1; $k<=$total_page; $k++ ) {
 			<td width='106' align='left' valign='middle'>
 			<table width='96' height='96' border='0' cellpadding='0' cellspacing='1' bgcolor='#DEDEDE'>
 				<tr>
-					<td align='right' valign='middle' bgcolor='#FFFFFF'><a href='#'  onClick=\"MM_showHideLayers($param_show);\"><img src='$main_img' width='95' height='95' border='0'></a>
+					<td align='right' valign='middle' bgcolor='#FFFFFF'><a href='#'  onClick=\"MM_showHideLayers($param_show);\"><img src='" . _HTTPURL_  . "$main_img' width='95' height='95' border='0'></a>
 					<div id='main_codi_detail_$cnt' style='position:relative; z-index:1; left:-402px; top:-130px; visibility: hidden;'> 
 					<div STYLE='position: absolute;  '>
 					<table border='0' cellpadding='0' cellspacing='0'>
@@ -156,7 +157,7 @@ for ( $k=1; $k<=$total_page; $k++ ) {
 									<td bgcolor='#FFFFFF' >
 									<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 										<tr>
-											<td rowspan='2' class='title' style='PADDING-top: 10px;PADDING-bottom: 10px;PADDING-left: 10px;PADDING-right: 10px;' ><a href='#' onClick=\"codi_view('$p_idx');\"><img src='$main_img' width='130' height='130' border='0'></a></td>
+											<td rowspan='2' class='title' style='PADDING-top: 10px;PADDING-bottom: 10px;PADDING-left: 10px;PADDING-right: 10px;' ><a href='#' onClick=\"codi_view('$p_idx');\"><img src='" . _HTTPURL_  . "$main_img' width='130' height='130' border='0'></a></td>
 											<td valign='bottom'  class='evmem'  style='PADDING-top: 6px;PADDING-bottom: 4px;'><a href='#' onClick=\"codi_view('$p_idx');\">$p_title</a></td>
 										</tr>
 										<tr>
@@ -166,7 +167,7 @@ for ( $k=1; $k<=$total_page; $k++ ) {
 													<td height='1' colspan='2' background='/img/dot_garo_mini.gif'></td>
 												</tr>
 												<tr>
-													<td width='48' height='25'><font color='#FF3300'><img src='/img/icon_presnt.jpg' width='44' height='19' align='absmiddle'></font> </td>
+													<td width='48' height='25'><font color='#FF3300'><img src='" . _HTTPURL_  . "/img/icon_presnt.jpg' width='44' height='19' align='absmiddle'></font> </td>
 													<td class='evfont'  style='PADDING-top: 4px;PADDING-bottom: 4px;'><font color='#FF3300'>$p_gift </font></td>
 												</tr>
 												<tr>
@@ -178,13 +179,13 @@ for ( $k=1; $k<=$total_page; $k++ ) {
 											</table>
 											<table width='100%' border='0' cellpadding='0' cellspacing='0'>
 												<tr>
-													<td height='21' class='shopname'><img src='/img/box_shop.gif' width='44' height='19' align='absmiddle'> <b><a href='#' onClick=\"shop_view('$shop_idx');\">$shop_name</a> </b></td>
+													<td height='21' class='shopname'><img src='" . _HTTPURL_  . "/img/box_shop.gif' width='44' height='19' align='absmiddle'> <b><a href='#' onClick=\"shop_view('$shop_idx');\">$shop_name</a> </b></td>
 												</tr>
 												<tr>
-													<td height='21'  class='evfont'><span class='shopname'><img src='/img/box_jumsu.gif' width='44' height='19' align='absmiddle'> <b><font color='#CC3300'>$score</font></b></span></td>
+													<td height='21'  class='evfont'><span class='shopname'><img src='" . _HTTPURL_  . "/img/box_jumsu.gif' width='44' height='19' align='absmiddle'> <b><font color='#CC3300'>$score</font></b></span></td>
 												</tr>
 												<tr>
-													<td  class='evfont' align=right><span class='shopname'><a href='#'  onClick=\"MM_showHideLayers($param_hide);\"><img src='/img/btn_pop_close.gif' align='absmiddle' border=0></a> &nbsp; </td>
+													<td  class='evfont' align=right><span class='shopname'><a href='#'  onClick=\"MM_showHideLayers($param_hide);\"><img src='" . _HTTPURL_  . "/img/btn_pop_close.gif' align='absmiddle' border=0></a> &nbsp; </td>
 												</tr>
 											</table>
 											</td>
@@ -194,7 +195,7 @@ for ( $k=1; $k<=$total_page; $k++ ) {
 								</tr>
 							</table>
 							</td>
-							<td width='6' align='left'><img src='/img/arr_orage_right.gif'></td>
+							<td width='6' align='left'><img src='" . _HTTPURL_  . "/img/arr_orage_right.gif'></td>
 						</tr>
 					</table>
 					</div>
@@ -211,20 +212,20 @@ for ( $k=1; $k<=$total_page; $k++ ) {
 			<td width='106' align='left' valign='middle'>
 			<table width='96' height='96' border='0' cellpadding='0' cellspacing='1' bgcolor='#DEDEDE'>
 				<tr>
-					<td align='right' valign='middle' bgcolor='#FFFFFF'><a href='#'  onClick=\"MM_showHideLayers($param_show);\"><img src='$main_img' width='95' height='95' border='0'></a>
+					<td align='right' valign='middle' bgcolor='#FFFFFF'><a href='#'  onClick=\"MM_showHideLayers($param_show);\"><img src='" . _HTTPURL_  . "$main_img' width='95' height='95' border='0'></a>
 					<div id='main_codi_detail_$cnt' style='position:relative; z-index:2; left:0px; top: -130px;visibility: hidden;' > 
 					
 					<div STYLE='position: absolute;  '>
 					<table width='350' height='180'  border='0' cellpadding='0' cellspacing='0'>
 						<tr>
-							<td width='6' align='right'><img src='/img/arr_orage.gif'></td>
+							<td width='6' align='right'><img src='" . _HTTPURL_  . "/img/arr_orage.gif'></td>
 							<td>
 							<table width='344' height='180' border='1' cellpadding='0' cellspacing='5'  bordercolor='#FFFFFF' bgcolor='#FF6600'>
 								<tr>
 									<td bgcolor='#FFFFFF' >
 									<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 										<tr>
-											<td rowspan='2' class='title' style='PADDING-top: 10px;PADDING-bottom: 10px;PADDING-left: 10px;PADDING-right: 10px;' ><a href='#' onClick=\"codi_view('$p_idx');\"><img src='$main_img' width='130' height='130' border='0'></a></td>
+											<td rowspan='2' class='title' style='PADDING-top: 10px;PADDING-bottom: 10px;PADDING-left: 10px;PADDING-right: 10px;' ><a href='#' onClick=\"codi_view('$p_idx');\"><img src='" . _HTTPURL_  . "$main_img' width='130' height='130' border='0'></a></td>
 											<td valign='bottom'  class='evmem'  style='PADDING-top: 6px;PADDING-bottom: 4px;'><a href='#' onClick=\"codi_view('$p_idx');\">$p_title</a></td>
 										</tr>
 										<tr>
@@ -234,7 +235,7 @@ for ( $k=1; $k<=$total_page; $k++ ) {
 													<td height='1' colspan='2' background='/img/dot_garo_mini.gif'></td>
 												</tr>
 												<tr>
-													<td width='48' height='30'><font color='#FF3300'><img src='/img/icon_presnt.jpg' width='44' height='19' align='absmiddle'></font> </td>
+													<td width='48' height='30'><font color='#FF3300'><img src='" . _HTTPURL_  . "/img/icon_presnt.jpg' width='44' height='19' align='absmiddle'></font> </td>
 													<td class='evfont'  style='PADDING-top: 4px;PADDING-bottom: 4px;'><font color='#FF3300'>$p_gift </font></td>
 												</tr>
 												<tr>
@@ -246,13 +247,13 @@ for ( $k=1; $k<=$total_page; $k++ ) {
 											</table>
 											<table width='100%' border='0' cellpadding='0' cellspacing='0'>
 												<tr>
-													<td height='23' class='shopname'><img src='/img/box_shop.gif' width='44' height='19' align='absmiddle'> <b><a href='#' onClick=\"shop_view('$shop_idx');\">$shop_name</a> </b></td>
+													<td height='23' class='shopname'><img src='" . _HTTPURL_  . "/img/box_shop.gif' width='44' height='19' align='absmiddle'> <b><a href='#' onClick=\"shop_view('$shop_idx');\">$shop_name</a> </b></td>
 												</tr>
 												<tr>
-													<td height='23'  class='evfont'><span class='shopname'><img src='/img/box_jumsu.gif' width='44' height='19' align='absmiddle'> <b><font color='#CC3300'>$score</font></b></span></td>
+													<td height='23'  class='evfont'><span class='shopname'><img src='" . _HTTPURL_  . "/img/box_jumsu.gif' width='44' height='19' align='absmiddle'> <b><font color='#CC3300'>$score</font></b></span></td>
 												</tr>   
 												<tr>
-													<td  class='evfont' align=right><span class='shopname'><a href='#'  onClick=\"MM_showHideLayers($param_hide);\"><img src='/img/btn_pop_close.gif' align='absmiddle' border=0></a> &nbsp; </td>
+													<td  class='evfont' align=right><span class='shopname'><a href='#'  onClick=\"MM_showHideLayers($param_hide);\"><img src='" . _HTTPURL_  . "/img/btn_pop_close.gif' align='absmiddle' border=0></a> &nbsp; </td>
 												</tr>
 											</table>
 											</td>

@@ -1,4 +1,6 @@
 <? 
+//print "__ROOT__ ==>" . __ROOT__; exit;
+
 if ( strlen($_SESSION['mem_id']) >= 4 ) { 
 	$welcome_info = "";
 	if ( $_SESSION['mem_kind'] == "U" ) {
@@ -57,7 +59,7 @@ function main_login() {
 		f.pwd.focus();
 		return;
 	}
-	f.action = "/member/login_ok.php";
+	f.action = "<?=__HTTPURL__?>/member/login_ok.php";
 	f.submit();
 }
 </script>
@@ -72,7 +74,7 @@ function main_login() {
 			<input type="checkbox" id="idsave" name="idsave" value="Y" />
 			ID저장&nbsp; <input name="id" id="id" type="text" value="<?=$_COOKIE['idsave']?>" class="logbox" style="width:110px;" tabindex="1" />
 			<input name="pwd" id="pwd" type="password" class="logbox" style="width:110px; BACKGROUND-IMAGE: url(/img/pw.gif); BACKGROUND-REPEAT: no-repeat;" onFocus="this.style.backgroundImage = 'url(none)'" onKeyPress="javascript:if(event.keyCode==13) main_login();" tabindex="2" />
-			<a href="#" onClick="main_login();"><img src="<?=__HTTPURL__?>/img/btn_login.gif" alt="로그인하기" width="64" height="20" border="0" align="absmiddle" tabindex="3"></a>
+			<a href="#" onClick="main_login();"><img src="<?=__HTTPURL__?>/img/btn_login.gif" alt="3로그인하기" width="64" height="20" border="0" align="absmiddle" tabindex="3"></a>
 			<!--
 			<img src="<?=__HTTPURL__?>/img/arr_gray_box.gif" width="6" height="7">  <a href="/member/real_chk.php"><b>무료회원가입</b></a>&nbsp; <img src="<?=__HTTPURL__?>/img/arr_gray_box.gif" width="6" height="7"> <a href="#" onclick="find_IDPWD();" class="evlink">ID/PW?</a>
 			-->

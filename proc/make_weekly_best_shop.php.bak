@@ -10,6 +10,8 @@
  *			현재는 사용하지 않음.....
  *******************************************************/
 require_once "/coditop/inc/common.inc.php";
+require_once "/coditop/config/config.php";
+die (__FILE__ . __LINE__ . "__HTTPURL__:" . __HTTPURL__ . "<br>"):
 $mainconn->open();
 
 $ret_arr = getWeekDay("last", time());
@@ -30,7 +32,7 @@ if ( $record_cnt == 0 ) {
 $str = "
 <table width='200' border='0' cellpadding='0' cellspacing='0'>
 	<tr>
-		<td height='36'><a href='#' onClick=\"go_best_shop();\"><img src='<?=__HTTPURL__?>/images/week_bestshop_01.gif' alt='주간 베스트샵' width='200' height='36' border='0'></a></td>
+		<td height='36'><a href='#' onClick=\"go_best_shop();\"><img src='" . __HTTPURL__  . "/images/week_bestshop_01.gif' alt='주간 베스트샵' width='200' height='36' border='0'></a></td>
 	</tr>
 	<tr>
 		<td align='center' background='/images/week_bestshop_02.gif'>
@@ -67,9 +69,9 @@ while ( $rows = $mainconn->fetch($res) ) {
 
 	$str .= "
 			<tr>
-				<td width='17' height='20'><img src='<?=__HTTPURL__?>/img/nomber_0{$rs_rank}.gif' width='12' height='12'></td>
+				<td width='17' height='20'><img src='" . __HTTPURL__  . "/img/nomber_0{$rs_rank}.gif' width='12' height='12'></td>
 				<td class='shopname'><b><font color='#333333'><a href='#'>$shop_name</a></font></b></td>
-				<td width='20' align='center'><img src='<?=__HTTPURL__?>/img/$rank_icon' width='10' height='10'></td>
+				<td width='20' align='center'><img src='" . __HTTPURL__  . "/img/$rank_icon' width='10' height='10'></td>
 				<td width='30' align='center' class='nomber'>$abs</td>
 			</tr>
 			<tr>
@@ -84,7 +86,7 @@ $str .= "
 		</td>
 	</tr>
 	<tr>
-		<td height='13'><img src='<?=__HTTPURL__?>/images/week_bestshop_03.gif' width='200' height='13' alt=''></td>
+		<td height='13'><img src='" . __HTTPURL__  . "/images/week_bestshop_03.gif' width='200' height='13' alt=''></td>
 	</tr>
 </table>
 ";

@@ -23,7 +23,9 @@ $rurl = trim($_POST['rurl']);
 if ( $rurl != "" ) {
 	$rurl = my64decode($rurl);
 } else {
-	$rurl = "/main.php";
+	//die("FILE:" . __FILE__ . " LINE:" . __LINE__ . " __HTTPURL__:" . __HTTPURL__ . "<br>"); 
+
+	$rurl = __HTTPURL__. "/main.php";
 }
 
 // sql injection check

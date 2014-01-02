@@ -22,7 +22,7 @@ $info_f = $my_dir."/".$_SESSION['mem_id'].".info";
 
 //$rurl = trim($_POST['rurl']);
 //if ( strlen($rurl) < 1 ) {
-	$rurl = "/main.php";
+	$rurl = "<?=__HTTPURL__?>/main.php";
 //}
 
 session_destroy(); 

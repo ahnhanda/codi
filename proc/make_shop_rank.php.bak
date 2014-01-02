@@ -14,6 +14,7 @@
  * tpl 파일의 갱신주기는 1시간이다.
  *******************************************************/
 require_once "/coditop/inc/common.inc.php";
+require_once "/coditop/config/config.php";
 $mainconn->open();
 
 $term = "weekly";
@@ -60,7 +61,7 @@ $str .= "
 		<tr>
 		  <td style='padding:15 15 15 15'><table width='100%' border='0' cellspacing='0' cellpadding='0' style='border:1 dotted #BFBFBF;'>
 			  <tr>
-				<td style='padding:10 10 10 10' class='intext'><img src='/img/icon_book.gif' width='14' height='15'  align='absmiddle' /> <b><font color='#00CC33'><u>베스트 샵 </u></font></b> : 코디탑텐에서 회원님들께 높은 평가를 받은 <b><font color='#FF5C5C'><u>샾들의 순위</u></font></b>를 확인하실 수 있습니다. 샾이 등록한 모든 코디들의  <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;평가점수를 기준으로 순위가 결정됩니다.</td>
+				<td style='padding:10 10 10 10' class='intext'><img src='" . _HTTPURL_  . "/img/icon_book.gif' width='14' height='15'  align='absmiddle' /> <b><font color='#00CC33'><u>베스트 샵 </u></font></b> : 코디탑텐에서 회원님들께 높은 평가를 받은 <b><font color='#FF5C5C'><u>샾들의 순위</u></font></b>를 확인하실 수 있습니다. 샾이 등록한 모든 코디들의  <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;평가점수를 기준으로 순위가 결정됩니다.</td>
 			  </tr>
 		  </table></td>
 		</tr>
@@ -76,9 +77,9 @@ $str .= "
 
 <table width='645' border='0' cellspacing='0' cellpadding='0'>
 	<tr>
-		<td width='129'><a href='#' onClick=\"loadShopRankSub('weekly','$this_w_first','$key','$kwd');\" onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image52','','/img/tap_codi_ov_01.gif',1);\"><img src='/img/{$term_tab_1}' name='Image52' width='129' height='30' border='0' id='Image52' /></a></td>
-		<td width='130'><a href='#' onClick=\"loadShopRankSub('monthly','$this_m_first','$key','$kwd');\" onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image53','','/img/tap_codi_ov_02.gif',1);\"><img src='/img/{$term_tab_2}' name='Image53' width='131' height='30' border='0' id='Image53' /></a></td>
-		<td width='130'><a href='#' onClick=\"loadShopRankSub('','','$key','$kwd');\" onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image56','','/img/tap_codi_ov_04.gif',1);\"><img src='/img/{$term_tab_3}' name='Image56' width='131' height='30' border='0' id='Image56' /></a></td>
+		<td width='129'><a href='#' onClick=\"loadShopRankSub('weekly','$this_w_first','$key','$kwd');\" onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image52','','/img/tap_codi_ov_01.gif',1);\"><img src='" . _HTTPURL_  . "/img/{$term_tab_1}' name='Image52' width='129' height='30' border='0' id='Image52' /></a></td>
+		<td width='130'><a href='#' onClick=\"loadShopRankSub('monthly','$this_m_first','$key','$kwd');\" onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image53','','/img/tap_codi_ov_02.gif',1);\"><img src='" . _HTTPURL_  . "/img/{$term_tab_2}' name='Image53' width='131' height='30' border='0' id='Image53' /></a></td>
+		<td width='130'><a href='#' onClick=\"loadShopRankSub('','','$key','$kwd');\" onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image56','','/img/tap_codi_ov_04.gif',1);\"><img src='" . _HTTPURL_  . "/img/{$term_tab_3}' name='Image56' width='131' height='30' border='0' id='Image56' /></a></td>
 		<td align='right' background='/img/tap_04.gif'>&nbsp;
 ";
 
@@ -87,9 +88,9 @@ if ( $term ) {
 	$str .= "
 		<table border='0' cellspacing='0' cellpadding='0'>
 			<tr>
-				<td width='62'><a href='#' onClick=\"loadShopRankSub('$term','$ptr_prev_first','$key','$kwd');\"><!--<img src='/img/btn_a01.gif' width='50' height='14' border='0'>--><font size='-2'>".str_replace("-",".",$ptr_prev_first)."<br>".str_replace("-",".",$ptr_prev_last)."</font></a></td>
-				<td width='62'><a href='#' onClick=\"loadShopRankSub('$term','$f_date','$key','$kwd');\"><!--<img src='/img/btn_a03.gif' width='50' height='14' border='0'>--><font size='-2'>".str_replace("-",".",$f_date)."<br>".str_replace("-",".",$l_date)."</font></a></td>
-				<td><a href='#' onClick=\"loadShopRankSub('$term','$ptr_next_first','$key','$kwd');\"><!--<img src='/img/btn_a02.gif' width='50' height='14' border='0'>--><font size='-2'>".str_replace("-",".",$ptr_next_first)."<br>".str_replace("-",".",$ptr_next_last)."</font></a></td>
+				<td width='62'><a href='#' onClick=\"loadShopRankSub('$term','$ptr_prev_first','$key','$kwd');\"><!--<img src='" . _HTTPURL_  . "/img/btn_a01.gif' width='50' height='14' border='0'>--><font size='-2'>".str_replace("-",".",$ptr_prev_first)."<br>".str_replace("-",".",$ptr_prev_last)."</font></a></td>
+				<td width='62'><a href='#' onClick=\"loadShopRankSub('$term','$f_date','$key','$kwd');\"><!--<img src='" . _HTTPURL_  . "/img/btn_a03.gif' width='50' height='14' border='0'>--><font size='-2'>".str_replace("-",".",$f_date)."<br>".str_replace("-",".",$l_date)."</font></a></td>
+				<td><a href='#' onClick=\"loadShopRankSub('$term','$ptr_next_first','$key','$kwd');\"><!--<img src='" . _HTTPURL_  . "/img/btn_a02.gif' width='50' height='14' border='0'>--><font size='-2'>".str_replace("-",".",$ptr_next_first)."<br>".str_replace("-",".",$ptr_next_last)."</font></a></td>
 			</tr>
 		</table>
 	";
@@ -155,7 +156,7 @@ while ( $row = $mainconn->fetch($res) ) {
 
 	if ( $cnt == 1 ) {
 		if ( $shop_medal == "Y" ) {
-			$shop_medal_mark = "<img src='/img_seri/icon_ks_mini.gif' border='0' align=absmiddle />";
+			$shop_medal_mark = "<img src='" . _HTTPURL_  . "/img_seri/icon_ks_mini.gif' border='0' align=absmiddle />";
 		} else {
 			$shop_medal_mark = "&nbsp;";
 		}
@@ -170,13 +171,13 @@ while ( $row = $mainconn->fetch($res) ) {
 
 						<table width='160' border='0' cellspacing='0' cellpadding='0'>
 							<tr>
-								<td><img src='/img/title_ranking1.jpg' width='160' height='35' /></td>
+								<td><img src='" . _HTTPURL_  . "/img/title_ranking1.jpg' width='160' height='35' /></td>
 							</tr>
 							<tr>
 								<td height='6'></td>
 							</tr>
 							<tr>
-								<td><a href='#' onClick=\"MM_showHideLayers($param_show);\"><img src='$shop_logo' width='160' height='160' border='0' /></a></td>
+								<td><a href='#' onClick=\"MM_showHideLayers($param_show);\"><img src='" . _HTTPURL_  . "$shop_logo' width='160' height='160' border='0' /></a></td>
 							</tr>
 							<tr>
 								<td height='6'></td>
@@ -193,7 +194,7 @@ while ( $row = $mainconn->fetch($res) ) {
 								<td height='8'></td>
 							</tr>
 							<tr>
-								<td height='18' class='shopname'><img src='/img/icon_shop.gif'  align='absmiddle' /> <b><a href='#' onClick=\"MM_showHideLayers($param_show);\">$shop_name</a>$shop_medal_mark</b> 
+								<td height='18' class='shopname'><img src='" . _HTTPURL_  . "/img/icon_shop.gif'  align='absmiddle' /> <b><a href='#' onClick=\"MM_showHideLayers($param_show);\">$shop_name</a>$shop_medal_mark</b> 
 		";
 
 		// 샵 정보 레이어
@@ -203,10 +204,10 @@ while ( $row = $mainconn->fetch($res) ) {
 								</td>
 							</tr>
 							<tr>
-								<td height='18' class='evfont'><span class='shopname'><img src='/img/icon_score.gif'  align='absmiddle' /> <b>$prt_score 점 </b></span></td>
+								<td height='18' class='evfont'><span class='shopname'><img src='" . _HTTPURL_  . "/img/icon_score.gif'  align='absmiddle' /> <b>$prt_score 점 </b></span></td>
 							</tr>
 							<tr>
-								<td height='18'  class='evfont'><span class='shopname'><img src='/img/icon_codi.gif'  align='absmiddle' /> <b><font color='#CC3300'>$codi_cnt</font></b></span></td>
+								<td height='18'  class='evfont'><span class='shopname'><img src='" . _HTTPURL_  . "/img/icon_codi.gif'  align='absmiddle' /> <b><font color='#CC3300'>$codi_cnt</font></b></span></td>
 							</tr>
 						</table>
 
@@ -228,7 +229,7 @@ while ( $row = $mainconn->fetch($res) ) {
 						<td valign='middle'>
 						<table width='427' border='0' cellspacing='0' cellpadding='0'>
 							<tr>
-								<td><img src='/img/title_2_6.gif' width='427' height='25' /></td>
+								<td><img src='" . _HTTPURL_  . "/img/title_2_6.gif' width='427' height='25' /></td>
 							</tr>
 						</table>
 
@@ -248,7 +249,7 @@ while ( $row = $mainconn->fetch($res) ) {
 			</table>
 			<table width='427' border='0' cellspacing='0' cellpadding='0'>
 				<tr>
-					<td><img src='/img/title_7_10.gif' width='427' height='25' /></td>
+					<td><img src='" . _HTTPURL_  . "/img/title_7_10.gif' width='427' height='25' /></td>
 				</tr>
 			</table>
 			<table border='0' cellspacing='0' cellpadding='0'>
@@ -257,7 +258,7 @@ while ( $row = $mainconn->fetch($res) ) {
 		}
 
 		if ( $shop_medal == "Y" ) {
-			$auth_td = "<td width='20' rowspan='2' valign='top' bgcolor='#FFFFFF' class='shopname'><img src='/img_seri/icon_ks_mini.gif' border='0' align=absmiddle /></td>";
+			$auth_td = "<td width='20' rowspan='2' valign='top' bgcolor='#FFFFFF' class='shopname'><img src='" . _HTTPURL_  . "/img_seri/icon_ks_mini.gif' border='0' align=absmiddle /></td>";
 		} else {
 			$auth_td = "<td width='2' rowspan='2' valign='top' bgcolor='#FFFFFF' class='shopname'>&nbsp;</td>";
 		}
@@ -269,7 +270,7 @@ while ( $row = $mainconn->fetch($res) ) {
 				<td height='6' ></td>
 			</tr>
 			<tr>
-				<td><a href='#' onClick=\"MM_showHideLayers($param_show);\"><img src='$shop_logo' width='70' height='70' border='0'></a></td>
+				<td><a href='#' onClick=\"MM_showHideLayers($param_show);\"><img src='" . _HTTPURL_  . "$shop_logo' width='70' height='70' border='0'></a></td>
 			</tr>
 			<tr>
 				<td height='4'></td>
@@ -331,7 +332,7 @@ for ( $i=$cnt; $i<11; $i++ ) {
 		</table>
 		<table width='427' border='0' cellspacing='0' cellpadding='0'>
 			<tr>
-				<td><img src='/img/title_7_10.gif' width='427' height='25' /></td>
+				<td><img src='" . _HTTPURL_  . "/img/title_7_10.gif' width='427' height='25' /></td>
 			</tr>
 		</table>
 		<table border='0' cellspacing='0' cellpadding='0'>
@@ -346,7 +347,7 @@ for ( $i=$cnt; $i<11; $i++ ) {
 				<td height='6' ></td>
 			</tr>
 			<tr>
-				<td><img src='/img/photo_no.gif' width='70' height='70' border='0' /></td>
+				<td><img src='" . _HTTPURL_  . "/img/photo_no.gif' width='70' height='70' border='0' /></td>
 			</tr>
 			<tr>
 				<td height='4'></td>
@@ -373,7 +374,7 @@ for ( $i=$cnt; $i<11; $i++ ) {
 }
 
 $str .= "
-						<td width='85' align='center' valign='top'><img src='/img/btn_gotop_codi.gif' width='70' height='142' border='0' usemap='#btn_codi' /></td>
+						<td width='85' align='center' valign='top'><img src='" . _HTTPURL_  . "/img/btn_gotop_codi.gif' width='70' height='142' border='0' usemap='#btn_codi' /></td>
 					</tr>
 				</table>
 				</td>

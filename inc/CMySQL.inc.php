@@ -124,14 +124,26 @@ class CMySQL
 //print __FILE__ . __LINE__ . "pass:" . $this->pass . "<br>"; 
 //print __FILE__ . __LINE__ . "db:" . $this->db . "<br>"; 
 //TODO TEMPCODE
-$this->id = "root";
-$this->pass = "";
-$this->db = "master";
-//print __FILE__ . __LINE__ . "host:" . $this->host . "<br>"; 
-//print __FILE__ . __LINE__ . "id:" . $this->id . "<br>"; 
-//print __FILE__ . __LINE__ . "pass:" . $this->pass . "<br>"; 
-//print __FILE__ . __LINE__ . "db:" . $this->db . "<br>"; 
-
+if ($_SERVER['HTTP_HOST'] == "localhost")
+{
+	$this->id = "root";
+	$this->pass = "";
+	$this->db = "master";
+}
+else /* hostinger http://codi.esy.es */
+{
+	$this->host = "mysql.hostinger.kr";
+	$this->id = "u929226436_codi";
+	$this->pass = "codi1234!";
+	$this->db = "u929226436_codi";
+}
+/*
+print __FILE__ . __LINE__ . "_SERVER['HTTP_HOST']:" . $_SERVER['HTTP_HOST'] . "<br>"; 
+print __FILE__ . __LINE__ . "host:" . $this->host . "<br>"; 
+print __FILE__ . __LINE__ . "id:" . $this->id . "<br>"; 
+print __FILE__ . __LINE__ . "pass:" . $this->pass . "<br>"; 
+print __FILE__ . __LINE__ . "db:" . $this->db . "<br>"; 
+*/
 
 		$this->conn = mysql_connect($this->host, $this->id, $this->pass) or die("exit");
 		mysql_select_db($this->db, $this->conn);

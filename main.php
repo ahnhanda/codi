@@ -8,6 +8,7 @@
 session_start();
 
 require_once "inc/common.inc.php";
+require_once "config/config.php";
 //echo  __FILE__ . __LINE__ ; exit; 
 //require_once "inc/chk_frame.inc.php";
 
@@ -62,6 +63,8 @@ echo "<script>g_categ = '$rand_main_categ';</script>";
 
 <!-- 좌측 가이드 5개(포커스) 롤링 시작 //-->
 <?
+//die (__FILE__ . __LINE__. "TPL_DIR:" . $TPL_DIR . "<br>");
+
 // 관리자 페이지의 포커스 관리에서 입력/수정/삭제 될때마다 파일을 새로 생성한다.
 require_once $TPL_DIR."/main/focus.tpl";
 ?>

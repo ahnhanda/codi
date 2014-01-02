@@ -26,9 +26,9 @@
         <table width='180' border='0' cellspacing='0' cellpadding='0'>
 		
 			<tr>
-				<td width='17' height='20'><img src='/img/nomber_01.gif' width='12' height='12'></td>
+				<td width='17' height='20'><img src='/coditop/img/nomber_01.gif' width='12' height='12'></td>
 				<td class='shopname'><b><font color='#333333'><a href='#'>¸¸µÎ¸£</a></font></b></td>
-				<td width='20' align='center'><img src='/img/icon_minus.gif' width='10' height='10'></td>
+				<td width='20' align='center'><img src='/coditop/img/icon_minus.gif' width='10' height='10'></td>
 				<td width='30' align='center' class='nomber'>1</td>
 			</tr>
 			<tr>
@@ -36,9 +36,9 @@
 			</tr>
 				
 			<tr>
-				<td width='17' height='20'><img src='/img/nomber_02.gif' width='12' height='12'></td>
+				<td width='17' height='20'><img src='/coditop/img/nomber_02.gif' width='12' height='12'></td>
 				<td class='shopname'><b><font color='#333333'><a href='#'>±Â¼¥</a></font></b></td>
-				<td width='20' align='center'><img src='/img/icon_minus.gif' width='10' height='10'></td>
+				<td width='20' align='center'><img src='/coditop/img/icon_minus.gif' width='10' height='10'></td>
 				<td width='30' align='center' class='nomber'>2</td>
 			</tr>
 			<tr>
@@ -46,9 +46,9 @@
 			</tr>
 				
 			<tr>
-				<td width='17' height='20'><img src='/img/nomber_03.gif' width='12' height='12'></td>
+				<td width='17' height='20'><img src='/coditop/img/nomber_03.gif' width='12' height='12'></td>
 				<td class='shopname'><b><font color='#333333'><a href='#'>±Â¼¥2È£Á¡</a></font></b></td>
-				<td width='20' align='center'><img src='/img/icon_minus.gif' width='10' height='10'></td>
+				<td width='20' align='center'><img src='/coditop/img/icon_minus.gif' width='10' height='10'></td>
 				<td width='30' align='center' class='nomber'>3</td>
 			</tr>
 			<tr>
@@ -56,9 +56,9 @@
 			</tr>
 				
 			<tr>
-				<td width='17' height='20'><img src='/img/nomber_04.gif' width='12' height='12'></td>
+				<td width='17' height='20'><img src='/coditop/img/nomber_04.gif' width='12' height='12'></td>
 				<td class='shopname'><b><font color='#333333'><a href='#'>¼ö¾ß¸ô</a></font></b></td>
-				<td width='20' align='center'><img src='/img/icon_minus.gif' width='10' height='10'></td>
+				<td width='20' align='center'><img src='/coditop/img/icon_minus.gif' width='10' height='10'></td>
 				<td width='30' align='center' class='nomber'>4</td>
 			</tr>
 			<tr>
@@ -66,9 +66,9 @@
 			</tr>
 				
 			<tr>
-				<td width='17' height='20'><img src='/img/nomber_05.gif' width='12' height='12'></td>
+				<td width='17' height='20'><img src='/coditop/img/nomber_05.gif' width='12' height='12'></td>
 				<td class='shopname'><b><font color='#333333'><a href='#'>Çà»ç¸ô</a></font></b></td>
-				<td width='20' align='center'><img src='/img/icon_minus.gif' width='10' height='10'></td>
+				<td width='20' align='center'><img src='/coditop/img/icon_minus.gif' width='10' height='10'></td>
 				<td width='30' align='center' class='nomber'>5</td>
 			</tr>
 			<tr>
@@ -76,9 +76,9 @@
 			</tr>
 				
 			<tr>
-				<td width='17' height='20'><img src='/img/nomber_06.gif' width='12' height='12'></td>
+				<td width='17' height='20'><img src='/coditop/img/nomber_06.gif' width='12' height='12'></td>
 				<td class='shopname'><b><font color='#333333'><a href='#'>(ÁÖ)ÁÁÀº¼¥</a></font></b></td>
-				<td width='20' align='center'><img src='/img/icon_minus.gif' width='10' height='10'></td>
+				<td width='20' align='center'><img src='/coditop/img/icon_minus.gif' width='10' height='10'></td>
 				<td width='30' align='center' class='nomber'>6</td>
 			</tr>
 			<tr>
@@ -86,9 +86,9 @@
 			</tr>
 				
 			<tr>
-				<td width='17' height='20'><img src='/img/nomber_07.gif' width='12' height='12'></td>
+				<td width='17' height='20'><img src='/coditop/img/nomber_07.gif' width='12' height='12'></td>
 				<td class='shopname'><b><font color='#333333'><a href='#'>(ÁÖ)¸ÀÀÖ´Â°í±â</a></font></b></td>
-				<td width='20' align='center'><img src='/img/icon_minus.gif' width='10' height='10'></td>
+				<td width='20' align='center'><img src='/coditop/img/icon_minus.gif' width='10' height='10'></td>
 				<td width='30' align='center' class='nomber'>7</td>
 			</tr>
 			<tr>
@@ -96,9 +96,9 @@
 			</tr>
 				
 			<tr>
-				<td width='17' height='20'><img src='/img/nomber_08.gif' width='12' height='12'></td>
+				<td width='17' height='20'><img src='/coditop/img/nomber_08.gif' width='12' height='12'></td>
 				<td class='shopname'><b><font color='#333333'><a href='#'>¼±Áö±¹Àü¹®</a></font></b></td>
-				<td width='20' align='center'><img src='/img/icon_minus.gif' width='10' height='10'></td>
+				<td width='20' align='center'><img src='/coditop/img/icon_minus.gif' width='10' height='10'></td>
 				<td width='30' align='center' class='nomber'>8</td>
 			</tr>
 			<tr>
@@ -106,9 +106,9 @@
 			</tr>
 				
 			<tr>
-				<td width='17' height='20'><img src='/img/nomber_09.gif' width='12' height='12'></td>
+				<td width='17' height='20'><img src='/coditop/img/nomber_09.gif' width='12' height='12'></td>
 				<td class='shopname'><b><font color='#333333'><a href='#'>(ÁÖ)ÀÌ·ç¸®</a></font></b></td>
-				<td width='20' align='center'><img src='/img/icon_minus.gif' width='10' height='10'></td>
+				<td width='20' align='center'><img src='/coditop/img/icon_minus.gif' width='10' height='10'></td>
 				<td width='30' align='center' class='nomber'>9</td>
 			</tr>
 			<tr>
@@ -119,7 +119,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td height='13'><img src='/images/week_bestshop_03.gif' width='200' height='13' alt=''></td>
+		<td height='13'><img src='/coditop/images/week_bestshop_03.gif' width='200' height='13' alt=''></td>
 	</tr>
 </table>
 

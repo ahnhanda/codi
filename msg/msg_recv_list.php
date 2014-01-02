@@ -6,8 +6,10 @@
  * desc   : 메시지 수신함
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
-require_once "/coditop/inc/chk_frame.inc.php";
+//require_once "/coditop/inc/common.inc.php";
+//require_once "/coditop/inc/chk_frame.inc.php";
+require_once  $_SERVER[DOCUMENT_ROOT] . "/coditop" . "/inc/common.inc.php";
+require_once  $_SERVER[DOCUMENT_ROOT] . "/coditop" . "/inc/chk_frame.inc.php";
 
 auth_chk($RURL);
 
@@ -84,7 +86,7 @@ if ( $total_block <= $block ) {
 
 ?>
 
-<? include "/coditop/include/_head.php"; ?>
+<? include $_SERVER[DOCUMENT_ROOT] . "/coditop" . "/include/_head.php"; ?>
 
 
 
@@ -106,8 +108,7 @@ if ( $total_block <= $block ) {
             <td valign="top">
 			
 			 <!-- 마이페이지 시작 //-->
-			
-			<? include "/coditop/include/left_my.php" ?>
+			<? include   $_SERVER[DOCUMENT_ROOT] . "/coditop/include/left_my.php" ?>
 			
 			 <!-- 마이페이지 시작 //-->
 			</td>
@@ -211,4 +212,4 @@ if ( $total_block <= $block ) {
 
 </form>
 </table>
-<? include "/coditop/include/_foot.php"; ?>
+<? include   $_SERVER[DOCUMENT_ROOT] . "/coditop/include/_foot.php"; ?>

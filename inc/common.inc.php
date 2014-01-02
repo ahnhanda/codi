@@ -1,6 +1,9 @@
 <?
 define('MYSQL_LOG_DIR',   "../log");         // MYSQL로그 디렉토리
 
+//require_once "config/config.php";
+require_once $_SERVER[DOCUMENT_ROOT] . "/coditop" . "/config/config.php";
+
 require_once "const.inc.php";
 require_once "public.inc.php";
 require_once "CMySQL.inc.php";

@@ -6,6 +6,7 @@
  * desc   : 메인 "오늘의 추천코디" 만드는 proc 스크립트
  *******************************************************/
 require_once "/coditop/inc/common.inc.php";
+require_once "/coditop/config/config.php";
 $mainconn->open();
 
 $today = date("Y-m-d", time());
@@ -33,8 +34,8 @@ if ( $total_record == 0 ) {
 			<td height='40' align='right' background='/img/title_today.gif' style='padding-right:14;padding-top:7'>
 			<table border='0' cellspacing='0' cellpadding='0'>
 				<tr>
-					<td width='17'><img src='/img/btn_pre008.gif' width='14' height='14' border='0' /></td>
-					<td width='14'><img src='/img/btn_next008.gif' width='14' height='14' border='0' /></td>
+					<td width='17'><img src='" . __HTTPURL__  . "/img/btn_pre008.gif' width='14' height='14' border='0' /></td>
+					<td width='14'><img src='" . __HTTPURL__  . "/img/btn_next008.gif' width='14' height='14' border='0' /></td>
 				</tr>
 			</table>
 			</td>
@@ -76,10 +77,10 @@ if ( $total_record == 0 ) {
 			<td align='center'>
 			<table border='0' cellspacing='0' cellpadding='4'>
 				<tr>
-					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_0');\"><img src='$p_img_0' width='85' height='85' border='0' /></a></td>
-					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_1');\"><img src='$p_img_1' width='85' height='85' border='0' /></a></td>
-					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_2');\"><img src='$p_img_2' width='85' height='85' border='0' /></a></td>
-					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_3');\"><img src='$p_img_3' width='85' height='85' border='0' /></a></td>
+					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_0');\"><img src='" . __HTTPURL__  . "$p_img_0' width='85' height='85' border='0' /></a></td>
+					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_1');\"><img src='" . __HTTPURL__  . "$p_img_1' width='85' height='85' border='0' /></a></td>
+					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_2');\"><img src='" . __HTTPURL__  . "$p_img_2' width='85' height='85' border='0' /></a></td>
+					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_3');\"><img src='" . __HTTPURL__  . "$p_img_3' width='85' height='85' border='0' /></a></td>
 				</tr>
 				<tr>
 					<td width='90' align='center' class='evmem'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_0');\">$p_title_0 </a></td>
@@ -103,10 +104,10 @@ if ( $total_record == 0 ) {
 			<td align='center'>
 			<table border='0' cellspacing='0' cellpadding='4'>
 				<tr>
-					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_4');\"><img src='$p_img_4' width='85' height='85' border='0'></a></td>
-					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_5');\"><img src='$p_img_5' width='85' height='85' border='0'></a></td>
-					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_6');\"><img src='$p_img_6' width='85' height='85' border='0'></a></td>
-					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_7');\"><img src='$p_img_7' width='85' height='85' border='0'></a></td>
+					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_4');\"><img src='" . __HTTPURL__  . "$p_img_4' width='85' height='85' border='0'></a></td>
+					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_5');\"><img src='" . __HTTPURL__  . "$p_img_5' width='85' height='85' border='0'></a></td>
+					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_6');\"><img src='" . __HTTPURL__  . "$p_img_6' width='85' height='85' border='0'></a></td>
+					<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_7');\"><img src='" . __HTTPURL__  . "$p_img_7' width='85' height='85' border='0'></a></td>
 				</tr>
 				<tr>
 					<td width='90' align='center' class='evmem'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_4');\">$p_title_4 </a></td>
@@ -139,8 +140,8 @@ if ( $total_record == 0 ) {
 				<td height='40' align='right' background='/img/title_today.gif' style='padding-right:14;padding-top:7'>
 				<table border='0' cellspacing='0' cellpadding='0'>
 					<tr>
-						<td width='17'><a href=\"javascript:main_today_recom_page_view('$total_page','".($i-1)."');\"><img src='/img/btn_pre008.gif' width='14' height='14' border='0' /></a></td>
-						<td width='14'><a href=\"javascript:main_today_recom_page_view('$total_page','".($i+1)."');\"><img src='/img/btn_next008.gif' width='14' height='14' border='0' /></a></td>
+						<td width='17'><a href=\"javascript:main_today_recom_page_view('$total_page','".($i-1)."');\"><img src='" . __HTTPURL__  . "/img/btn_pre008.gif' width='14' height='14' border='0' /></a></td>
+						<td width='14'><a href=\"javascript:main_today_recom_page_view('$total_page','".($i+1)."');\"><img src='" . __HTTPURL__  . "/img/btn_next008.gif' width='14' height='14' border='0' /></a></td>
 					</tr>
 				</table>
 				</td>
@@ -217,10 +218,10 @@ if ( $total_record == 0 ) {
 				<td align='center'>
 				<table border='0' cellspacing='0' cellpadding='4'>
 					<tr>
-						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_0');\"><img src='$p_img_0' width='85' height='85' border='0' /></a></td>
-						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_1');\"><img src='$p_img_1' width='85' height='85' border='0' /></a></td>
-						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_2');\"><img src='$p_img_2' width='85' height='85' border='0' /></a></td>
-						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_3');\"><img src='$p_img_3' width='85' height='85' border='0' /></a></td>
+						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_0');\"><img src='" . __HTTPURL__  . "$p_img_0' width='85' height='85' border='0' /></a></td>
+						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_1');\"><img src='" . __HTTPURL__  . "$p_img_1' width='85' height='85' border='0' /></a></td>
+						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_2');\"><img src='" . __HTTPURL__  . "$p_img_2' width='85' height='85' border='0' /></a></td>
+						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_3');\"><img src='" . __HTTPURL__  . "$p_img_3' width='85' height='85' border='0' /></a></td>
 					</tr>
 					<tr>
 						<td width='90' align='center' class='evmem'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_0');\">$p_title_0 </a></td>
@@ -244,10 +245,10 @@ if ( $total_record == 0 ) {
 				<td align='center'>
 				<table border='0' cellspacing='0' cellpadding='4'>
 					<tr>
-						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_4');\"><img src='$p_img_4' width='85' height='85' border='0'></a></td>
-						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_5');\"><img src='$p_img_5' width='85' height='85' border='0'></a></td>
-						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_6');\"><img src='$p_img_6' width='85' height='85' border='0'></a></td>
-						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_7');\"><img src='$p_img_7' width='85' height='85' border='0'></a></td>
+						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_4');\"><img src='" . __HTTPURL__  . "$p_img_4' width='85' height='85' border='0'></a></td>
+						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_5');\"><img src='" . __HTTPURL__  . "$p_img_5' width='85' height='85' border='0'></a></td>
+						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_6');\"><img src='" . __HTTPURL__  . "$p_img_6' width='85' height='85' border='0'></a></td>
+						<td width='90' height='95' align='center' valign='top'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_7');\"><img src='" . __HTTPURL__  . "$p_img_7' width='85' height='85' border='0'></a></td>
 					</tr>
 					<tr>
 						<td width='90' align='center' class='evmem'><a href='#today_recom_pos' onClick=\"codi_view('$p_idx_4');\">$p_title_4 </a></td>

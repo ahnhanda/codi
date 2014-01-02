@@ -17,7 +17,7 @@ $mem_key = trim($_REQUEST['mem_key']);
 $this_mem_key	= md5("*^___^*" . $mem_jumin . $mem_name);
 
 if ( $this_mem_key != $mem_key ) {
-	echo "<script>alert('실명인증 비정상적인 접근입니다.'); location.href='/main.php';</script>";
+	echo "<script>alert('실명인증 비정상적인 접근입니다.'); location.href='<?=__HTTPURL__?>/main.php';</script>";
 	exit;
 }
 

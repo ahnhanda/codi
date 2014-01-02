@@ -69,7 +69,7 @@ echo "mem_name:ju : $mem_name <br>";
 
 if ($mykey != $recvkey)
 {
-	echo "<script> alert('☞ 정상응답이 아닙니다.\\n\\n올바른 접속경로로 접근해주세요.'); location.href='/main.php'; </script>";
+	echo "<script> alert('☞ 정상응답이 아닙니다.\\n\\n올바른 접속경로로 접근해주세요.'); location.href='<?=__HTTPURL__?>/main.php'; </script>";
 	exit;
 }
 
@@ -95,28 +95,28 @@ else if ($retcd == "1")
 }
 else if ($retcd == "2" || $retcd == "6" || $retcd == "7")
 {
-	echo "<script> alert('☞ 성명이 미일치합니다.\\n\\n\\n금융거래가 없었거나 오래된 경우 한국신용정보에 데이타가 없을 수 있습니다.\\n\\n아래의 연락처로 문의하신후 가입해주시기 바랍니다.\\n\\n한국신용정보 Tel. 1588-2486 Fax. 02-2122-4599'); location.href='/main.php'; </script>";
+	echo "<script> alert('☞ 성명이 미일치합니다.\\n\\n\\n금융거래가 없었거나 오래된 경우 한국신용정보에 데이타가 없을 수 있습니다.\\n\\n아래의 연락처로 문의하신후 가입해주시기 바랍니다.\\n\\n한국신용정보 Tel. 1588-2486 Fax. 02-2122-4599'); location.href='<?=__HTTPURL__?>/main.php'; </script>";
 	exit;
 }
 else if ($retcd == "3")
 {
-	echo "<script> alert('☞ 성명 미보유.\\n\\n\\n금융거래가 없었거나 오래된 경우 한국신용정보에 데이타가 없을 수 있습니다.\\n\\n아래의 연락처로 문의하신후 가입해주시기 바랍니다.\\n\\n한국신용정보 Tel. 1588-2486 Fax. 02-2122-4599'); location.href='/main.php'; </script>";
+	echo "<script> alert('☞ 성명 미보유.\\n\\n\\n금융거래가 없었거나 오래된 경우 한국신용정보에 데이타가 없을 수 있습니다.\\n\\n아래의 연락처로 문의하신후 가입해주시기 바랍니다.\\n\\n한국신용정보 Tel. 1588-2486 Fax. 02-2122-4599'); location.href='<?=__HTTPURL__?>/main.php'; </script>";
 	exit;
 }
 else if ($retcd == "4")
 {
-	echo "<script> alert('☞ 나이스 성명 불완전.\\n\\n\\n금융거래가 없었거나 오래된 경우 한국신용정보에 데이타가 없을 수 있습니다.\\n\\n아래의 연락처로 문의하신후 가입해주시기 바랍니다.\\n\\n한국신용정보 Tel. 1588-2486 Fax. 02-2122-4599'); location.href='/main.php'; </script>";
+	echo "<script> alert('☞ 나이스 성명 불완전.\\n\\n\\n금융거래가 없었거나 오래된 경우 한국신용정보에 데이타가 없을 수 있습니다.\\n\\n아래의 연락처로 문의하신후 가입해주시기 바랍니다.\\n\\n한국신용정보 Tel. 1588-2486 Fax. 02-2122-4599'); location.href='<?=__HTTPURL__?>/main.php'; </script>";
 	exit;
 }
 else if ($retcd == "9")
 {
-	echo "<script> alert('☞ 일시적인 통신장애입니다.\\n\\n잠시 후 다시 시도하세요'); location.href='/main.php'; </script>";
+	echo "<script> alert('☞ 일시적인 통신장애입니다.\\n\\n잠시 후 다시 시도하세요'); location.href='<?=__HTTPURL__?>/main.php'; </script>";
 	exit;
 }
 else
 {
 	$ERR_MSG = $_REQUEST[ERR_MSG];
-	echo "<script> alert('". $ERR_MSG ."'); location.href='/main.php'; </script>";
+	echo "<script> alert('". $ERR_MSG ."'); location.href='<?=__HTTPURL__?>/main.php'; </script>";
 	exit;
 }
 

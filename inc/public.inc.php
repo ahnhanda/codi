@@ -1,4 +1,6 @@
 <?php
+//die("FILE:" . __FILE__ . " LINE:" . __LINE__ . " __HTTPURL__:" . __HTTPURL__ . "<br>"); 
+
 /*━[ 프로그램  정보 ]━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃ 프로그램 : public (공통함수) Ver 1.00                                    ┃
 ┃ 작 성 자 : 이광철 (따식이)                                               ┃
@@ -56,7 +58,7 @@ function make_quick_html( $id, $kind ) {
 			$str = "
 			<table width='110' border='0' cellpadding='0' cellspacing='0'>
 				<tr>
-					<td height='39'><img src='/images/myquick_01.gif' width='110' height='39' alt=''></td>
+					<td height='39'><img src='" . __HTTPURL__ . "/images/myquick_01.gif' width='110' height='39' alt=''></td>
 				</tr>
 				<tr>
 					<td  align='left' valign='top'>
@@ -71,7 +73,7 @@ function make_quick_html( $id, $kind ) {
 							</table>
 							<table width='100' border='0' cellspacing='0' cellpadding='0'>
 								<tr>
-									<td height='120' align='center' class='textlevel'><a href='/mypage/history.php'><img src='/img_seri/quick_ol.gif' width='100' height='199' border='0'></a></td>
+									<td height='120' align='center' class='textlevel'><a href='/mypage/history.php'><img src='" . __HTTPURL__ . "/img_seri/quick_ol.gif' width='100' height='199' border='0'></a></td>
 								</tr>
 								<tr>
 									<td height='5'></td>
@@ -92,7 +94,7 @@ function make_quick_html( $id, $kind ) {
 					</td>
 				</tr>
 				<tr>
-					<td height='16'><a href='#'><img src='/images/myquick_03.gif' alt='맨위로' width='110' height='16' border='0'></a></td>
+					<td height='16'><a href='#'><img src='" . __HTTPURL__ . "/images/myquick_03.gif' alt='맨위로' width='110' height='16' border='0'></a></td>
 				</tr>
 			</table>
 			";
@@ -114,7 +116,7 @@ function make_quick_html( $id, $kind ) {
 			$str = "
 			<table width='110' border='0' cellpadding='0' cellspacing='0'>
 				<tr>
-					<td height='39'><img src='/images/myquick_01.gif' width='110' height='39' alt=''></td>
+					<td height='39'><img src='" . __HTTPURL__ . "/images/myquick_01.gif' width='110' height='39' alt=''></td>
 				</tr>
 				<tr>
 					<td  align='left' valign='top'>
@@ -123,7 +125,7 @@ function make_quick_html( $id, $kind ) {
 							<td>
 							<table width='100' border='0' cellspacing='0' cellpadding='0'>
 								<tr>
-									<td height='19' bgcolor='FF5C5C' class='tienom'  style='PADDING-LEFT: 6px'  ><a href='/msg/msg_recv_list.php'><font color='#FFFFFF'>쪽지:<font color='#FFFF00'><b><span id='my_quick_msg_noread_area'>{$noread_msg_cnt}</span></b></font>/<span id='my_quick_msg_total_area'>{$msg_cnt}</span></font> <img id='quick_msg_icon' src='/img/{$memo_icon}' width='12' height='14' align='absmiddle' border='0' /></a></td>
+									<td height='19' bgcolor='FF5C5C' class='tienom'  style='PADDING-LEFT: 6px'  ><a href='/msg/msg_recv_list.php'><font color='#FFFFFF'>쪽지:<font color='#FFFF00'><b><span id='my_quick_msg_noread_area'>{$noread_msg_cnt}</span></b></font>/<span id='my_quick_msg_total_area'>{$msg_cnt}</span></font> <img id='quick_msg_icon' src='" . __HTTPURL__ . "/img/{$memo_icon}' width='12' height='14' align='absmiddle' border='0' /></a></td>
 								</tr>
 								<tr>
 									<td height='3'></td>
@@ -143,7 +145,7 @@ function make_quick_html( $id, $kind ) {
 									<td height='22' align='center' valign='top' class='evgray'><b><font color='#000000'>7일간 내당첨 등급</font></b></td>
 								</tr>
 								<tr>
-									<td><img src='/img/quick_level.gif' width='100' height='50'></td>
+									<td><img src='" . __HTTPURL__ . "/img/quick_level.gif' width='100' height='50'></td>
 								</tr>
 								<tr>
 									<td height='33' align='center' class='textlevel'><b><span style='filter:dropshadow(color=black,offy=1,offx=1);width:100px;height:33px'><span id='my_quick_grade_area'>{$my_grade}</span>등급</span></b></td>
@@ -171,7 +173,7 @@ function make_quick_html( $id, $kind ) {
 					</td>
 				</tr>
 				<tr>
-					<td height='16'><a href='#'><img src='/images/myquick_03.gif' alt='맨위로' width='110' height='16' border='0'></a></td>
+					<td height='16'><a href='#'><img src='" . __HTTPURL__ . "/images/myquick_03.gif' alt='맨위로' width='110' height='16' border='0'></a></td>
 				</tr>
 			</table>
 			";
@@ -185,7 +187,7 @@ function make_quick_html( $id, $kind ) {
 			$str = "
 			<table width='110' border='0' cellpadding='0' cellspacing='0'>
 				<tr>
-					<td height='39'><img src='/images/myquick_01.gif' width='110' height='39' alt=''></td>
+					<td height='39'><img src='" . __HTTPURL__ . "/images/myquick_01.gif' width='110' height='39' alt=''></td>
 				</tr>
 				<tr>
 					<td  align='left' valign='top'>
@@ -199,7 +201,7 @@ function make_quick_html( $id, $kind ) {
 							</table>
 							<table width='100' border='0' cellspacing='0' cellpadding='0'>
 								<tr>
-									<td height='170' align='center' class='textlevel'><a href='/mypage/Mgift.php'><img src='/img_seri/quick_eend.gif' width='100' border='0' /></a></td>
+									<td height='170' align='center' class='textlevel'><a href='/mypage/Mgift.php'><img src='" . __HTTPURL__ . "/img_seri/quick_eend.gif' width='100' border='0' /></a></td>
 								</tr>
 								<tr>
 									<td height='5'></td>
@@ -220,7 +222,7 @@ function make_quick_html( $id, $kind ) {
 					</td>
 				</tr>
 				<tr>
-					<td height='16'><a href='#'><img src='/images/myquick_03.gif' alt='맨위로' width='110' height='16' border='0'></a></td>
+					<td height='16'><a href='#'><img src='" . __HTTPURL__ . "/images/myquick_03.gif' alt='맨위로' width='110' height='16' border='0'></a></td>
 				</tr>
 			</table>
 			";
@@ -238,7 +240,7 @@ function make_quick_html( $id, $kind ) {
 			$str = "
 			<table width='110' border='0' cellpadding='0' cellspacing='0'>
 				<tr>
-					<td height='39'><img src='/images/myquick_01.gif' width='110' height='39' alt=''></td>
+					<td height='39'><img src='" . __HTTPURL__ . "/images/myquick_01.gif' width='110' height='39' alt=''></td>
 				</tr>
 				<tr>
 					<td  align='left' valign='top'>
@@ -247,7 +249,7 @@ function make_quick_html( $id, $kind ) {
 							<td>
 							<table width='100' border='0' cellspacing='0' cellpadding='0'>
 								<tr>
-									<td height='19' bgcolor='FF5C5C' class='tienom'  style='PADDING-LEFT: 6px'  ><a href='/msg/msg_recv_list.php'><font color='#FFFFFF'>쪽지:<font color='#FFFF00'><b><span id='my_quick_msg_noread_area'>{$noread_msg_cnt}</span></b></font>/<span id='my_quick_msg_total_area'>{$msg_cnt}</span></font> <img id='quick_msg_icon' src='/img/{$memo_icon}' width='12' height='14' align='absmiddle' border='0' /></a></td>
+									<td height='19' bgcolor='FF5C5C' class='tienom'  style='PADDING-LEFT: 6px'  ><a href='" . __HTTPURL__ . 										"/msg/msg_recv_list.php'><font color='#FFFFFF'>쪽지TODO:<font color='#FFFF00'><b><span id='my_quick_msg_noread_area'>{$noread_msg_cnt}</span></b></font>/<span id='my_quick_msg_total_area'>{$msg_cnt}</span></font> <img id='quick_msg_icon' src='/img/{$memo_icon}' width='12' height='14' align='absmiddle' border='0' /></a></td>
 								</tr>
 								<tr>
 									<td height='3'></td>
@@ -267,7 +269,7 @@ function make_quick_html( $id, $kind ) {
 									<td height='22' align='center' valign='top' class='evgray'><b><font color='#000000'>지난주 코디샵 순위</font></b></td>
 								</tr>
 								<tr>
-									<td><img src='/img/quick_level.gif' width='100' height='50'></td>
+									<td><img src='" . __HTTPURL__ . "/img/quick_level.gif' width='100' height='50'></td>
 								</tr>
 								<tr>
 									<td height='33' align='center' class='textlevel'><b><span style='filter:dropshadow(color=black,offy=1,offx=1);width:100px;height:33px'> 			<span id='main_shop_last_rank_area'>{$last_rank}</span>위</span></b></td>
@@ -289,7 +291,7 @@ function make_quick_html( $id, $kind ) {
 							</table>
 							<table width='100' height='65' border='0' cellpadding='0' cellspacing='0'>
 								<tr>
-									<td><a href='/mypage/product_in01.php'><img src='/img_seri/btn_codi_in.gif' border=0></a></td>
+									<td><a href='/mypage/product_in01.php'><img src='" . __HTTPURL__ . "/img_seri/btn_codi_in.gif' border=0></a></td>
 								</tr>
 							</table>
 							</td>
@@ -299,7 +301,7 @@ function make_quick_html( $id, $kind ) {
 					</td>
 				</tr>
 				<tr>
-					<td height='16'><a href='#'><img src='/images/myquick_03.gif' alt='맨위로' width='110' height='16' border='0'></a></td>
+					<td height='16'><a href='#'><img src='" . __HTTPURL__ . "/images/myquick_03.gif' alt='맨위로' width='110' height='16' border='0'></a></td>
 				</tr>
 			</table>
 			";
@@ -1015,9 +1017,9 @@ function admin_page_navi($page,$first_page,$last_page,$total_page,$block,$total_
 
 	if ( $block > 1 ) {
 		$my_page = $first_page;
-		$navi .= "<td width='7'><a href='$list_url?page=$my_page$qry_str'><img src='board_img/btn_pre.gif' width='7' height='7' border='0'></a></td>";
+		$navi .= "<td width='7'><a href='$list_url?page=$my_page$qry_str'><img src='" . __HTTPURL__ . "board_img/btn_pre.gif' width='7' height='7' border='0'></a></td>";
 	} else {
-		$navi .= "<td width='7'><img src='{$ADMIN_DIR}board_img/btn_pre.gif' width='7' height='7' border='0'></td>";
+		$navi .= "<td width='7'><img src='" . __HTTPURL__ . "{$ADMIN_DIR}board_img/btn_pre.gif' width='7' height='7' border='0'></td>";
 	}
 
 	$navi .= "<td align='center' style='padding-left:10;padding-right:10;padding-bottom:2'>";
@@ -1032,9 +1034,9 @@ function admin_page_navi($page,$first_page,$last_page,$total_page,$block,$total_
 
 	if ( $block < $total_block ) {
 	    $my_page = $last_page + 1;
-	    $navi .= "<td width='7' align='right'><a href='$list_url?page=$my_page$qry_str'><img src='board_img/btn_next.gif' width='7' height='7' border='0'></a></td>";
+	    $navi .= "<td width='7' align='right'><a href='$list_url?page=$my_page$qry_str'><img src='" . __HTTPURL__ . "board_img/btn_next.gif' width='7' height='7' border='0'></a></td>";
 	} else {
-		$navi .= "<td width='7' align='right'><img src='{$ADMIN_DIR}board_img/btn_next.gif' width='7' height='7' border='0'></td>";
+		$navi .= "<td width='7' align='right'><img src='" . __HTTPURL__ . "{$ADMIN_DIR}board_img/btn_next.gif' width='7' height='7' border='0'></td>";
 	}
 
 	$navi .= "</tr></table>";
@@ -1048,16 +1050,16 @@ function page_navi($page,$first_page,$last_page,$total_page,$block,$total_block,
 
 	if ( $block > 1 ) {
 		$my_page = $first_page;
-		$navi .= "<a href='$list_url?page=$my_page$qry_str'><img src='/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
+		$navi .= "<a href='$list_url?page=$my_page$qry_str'><img src='" . __HTTPURL__ . "/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
 	}
 
 	if ( $page > 1 ) {
 		$prev_page = $page - 1;
-		$navi .= "<a href='$list_url?page=$prev_page$qry_str'><img src='/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' /></a>";
+		$navi .= "<a href='$list_url?page=$prev_page$qry_str'><img src='" . __HTTPURL__ . "/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' />";
 	}
 
 	$navi .= "&nbsp;";
@@ -1077,16 +1079,16 @@ function page_navi($page,$first_page,$last_page,$total_page,$block,$total_block,
 
 	if ( $page != $total_page ) {
 		$next_page = $page + 1;
-		$navi .= "<a href='$list_url?page=$next_page$qry_str'><img src='/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' /></a>";
+		$navi .= "<a href='$list_url?page=$next_page$qry_str'><img src='" . __HTTPURL__ . "/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' />";
 	}
 
 	if ( $block < $total_block ) {
 	    $my_page = $last_page + 1;
-	    $navi .= "<a href='$list_url?page=$my_page$qry_str'><img src='/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
+	    $navi .= "<a href='$list_url?page=$my_page$qry_str'><img src='" . __HTTPURL__ . "/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
 	}
 
 	return $navi;
@@ -1101,16 +1103,16 @@ function ajax_gift_page_navi($page,$first_page,$last_page,$total_page,$block,$to
 
 	if ( $block > 1 ) {
 		$my_page = $first_page;
-		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p_idx','$p_e_idx','$shop_idx','$my_page');\"><img src='/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
+		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p_idx','$p_e_idx','$shop_idx','$my_page');\"><img src='" . __HTTPURL__ . "/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
 	}
 
 	if ( $page > 1 ) {
 		$prev_page = $page - 1;
-		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p_idx','$p_e_idx','$shop_idx','$prev_page');\"><img src='/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' /></a>&nbsp;";
+		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p_idx','$p_e_idx','$shop_idx','$prev_page');\"><img src='" . __HTTPURL__ . "/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' /></a>&nbsp;";
 	} else {
-		$navi .= "<img src='/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' />&nbsp;";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' />&nbsp;";
 	}
 
 
@@ -1129,17 +1131,17 @@ function ajax_gift_page_navi($page,$first_page,$last_page,$total_page,$block,$to
 
 	if ( $page != $total_page ) {
 		$next_page = $page + 1;
-		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p_idx','$p_e_idx','$shop_idx','$next_pag');\"><img src='/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' /></a>";
+		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p_idx','$p_e_idx','$shop_idx','$next_pag');\"><img src='" . __HTTPURL__ . "/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' />";
 	}
 
 
 	if ( $block < $total_block ) {
 	    $my_page = $last_page + 1;
-	    $navi .= "<a style='cursor:hand;' onClick=\"$func('$p_idx','$p_e_idx','$shop_idx','$my_page');\"><img src='/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
+	    $navi .= "<a style='cursor:hand;' onClick=\"$func('$p_idx','$p_e_idx','$shop_idx','$my_page');\"><img src='" . __HTTPURL__ . "/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
 	}
 
 	$navi .= "
@@ -1156,16 +1158,16 @@ function ajax_general_page_navi($page,$first_page,$last_page,$total_page,$block,
 
 	if ( $block > 1 ) {
 		$my_page = $first_page;
-		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$my_page','$p4');\"><img src='/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
+		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$my_page','$p4');\"><img src='" . __HTTPURL__ . "/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
 	}
 
 	if ( $page > 1 ) {
 		$prev_page = $page - 1;
-		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$prev_page','$p4');\"><img src='/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' /></a>&nbsp;";
+		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$prev_page','$p4');\"><img src='" . __HTTPURL__ . "/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' /></a>&nbsp;";
 	} else {
-		$navi .= "<img src='/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' />&nbsp;";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' />&nbsp;";
 	}
 
 
@@ -1184,17 +1186,17 @@ function ajax_general_page_navi($page,$first_page,$last_page,$total_page,$block,
 
 	if ( $page != $total_page ) {
 		$next_page = $page + 1;
-		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$next_page','$p4');\"><img src='/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' /></a>";
+		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$next_page','$p4');\"><img src='" . __HTTPURL__ . "/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' />";
 	}
 
 
 	if ( $block < $total_block ) {
 	    $my_page = $last_page + 1;
-	    $navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$my_page','$p4');\"><img src='/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
+	    $navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$my_page','$p4');\"><img src='" . __HTTPURL__ . "/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
 	}
 
 	return $navi;
@@ -1205,16 +1207,16 @@ function ajax_board_page_navi($page,$first_page,$last_page,$total_page,$block,$t
 
 	if ( $block > 1 ) {
 		$my_page = $first_page;
-		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$my_page','$p4','$p5','$p6');\"><img src='/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
+		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$my_page','$p4','$p5','$p6');\"><img src='" . __HTTPURL__ . "/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
 	}
 
 	if ( $page > 1 ) {
 		$prev_page = $page - 1;
-		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$prev_page','$p4','$p5','$p6');\"><img src='/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' /></a>&nbsp;";
+		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$prev_page','$p4','$p5','$p6');\"><img src='" . __HTTPURL__ . "/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' /></a>&nbsp;";
 	} else {
-		$navi .= "<img src='/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' />&nbsp;";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' />&nbsp;";
 	}
 
 
@@ -1233,17 +1235,17 @@ function ajax_board_page_navi($page,$first_page,$last_page,$total_page,$block,$t
 
 	if ( $page != $total_page ) {
 		$next_page = $page + 1;
-		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$next_page','$p4','$p5','$p6');\"><img src='/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' /></a>";
+		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$next_page','$p4','$p5','$p6');\"><img src='" . __HTTPURL__ . "/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' />";
 	}
 
 
 	if ( $block < $total_block ) {
 	    $my_page = $last_page + 1;
-	    $navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$my_page','$p4','$p5','$p6');\"><img src='/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
+	    $navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$my_page','$p4','$p5','$p6');\"><img src='" . __HTTPURL__ . "/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
 	}
 
 	return $navi;
@@ -1255,16 +1257,16 @@ function ajax_codi_page_navi($page,$first_page,$last_page,$total_page,$block,$to
 
 	if ( $block > 1 ) {
 		$my_page = $first_page;
-		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$p4','$p5','$my_page');\"><img src='/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
+		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$p4','$p5','$my_page');\"><img src='" . __HTTPURL__ . "/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
 	}
 
 	if ( $page > 1 ) {
 		$prev_page = $page - 1;
-		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$p4','$p5','$prev_page');\"><img src='/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' /></a>&nbsp;";
+		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$p4','$p5','$prev_page');\"><img src='" . __HTTPURL__ . "/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' /></a>&nbsp;";
 	} else {
-		$navi .= "<img src='/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' />&nbsp;";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' />&nbsp;";
 	}
 
 
@@ -1283,17 +1285,17 @@ function ajax_codi_page_navi($page,$first_page,$last_page,$total_page,$block,$to
 
 	if ( $page != $total_page ) {
 		$next_page = $page + 1;
-		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$p4','$p5','$next_page');\"><img src='/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' /></a>";
+		$navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$p4','$p5','$next_page');\"><img src='" . __HTTPURL__ . "/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' />";
 	}
 
 
 	if ( $block < $total_block ) {
 	    $my_page = $last_page + 1;
-	    $navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$p4','$p5','$my_page');\"><img src='/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
+	    $navi .= "<a style='cursor:hand;' onClick=\"$func('$p1','$p2','$p3','$p4','$p5','$my_page');\"><img src='" . __HTTPURL__ . "/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
 	}
 
 	return $navi;
@@ -1308,16 +1310,16 @@ function ajax_page_navi($page,$first_page,$last_page,$total_page,$block,$total_b
 
 	if ( $block > 1 ) {
 		$my_page = $first_page;
-		$navi .= "<a href='#{$etc3}' onClick=\"$func('$mem_id','$mem_kind','$rurl','$etc1','$etc2','$my_page','$v_url','$w_url','$updown_yn','$active');\"><img src='/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
+		$navi .= "<a href='#{$etc3}' onClick=\"$func('$mem_id','$mem_kind','$rurl','$etc1','$etc2','$my_page','$v_url','$w_url','$updown_yn','$active');\"><img src='" . __HTTPURL__ . "/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_first_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
 	}
 
 	if ( $page > 1 ) {
 		$prev_page = $page - 1;
-		$navi .= "<a href='#{$etc3}' onClick=\"$func('$mem_id','$mem_kind','$rurl','$etc1','$etc2','$prev_page','$v_url','$w_url','$updown_yn','$active');\"><img src='/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' /></a>&nbsp;";
+		$navi .= "<a href='#{$etc3}' onClick=\"$func('$mem_id','$mem_kind','$rurl','$etc1','$etc2','$prev_page','$v_url','$w_url','$updown_yn','$active');\"><img src='" . __HTTPURL__ . "/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' /></a>&nbsp;";
 	} else {
-		$navi .= "<img src='/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' />&nbsp;";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_prev6.gif' width='44' height='16' border='0' align='absmiddle' />&nbsp;";
 	}
 
 
@@ -1336,17 +1338,17 @@ function ajax_page_navi($page,$first_page,$last_page,$total_page,$block,$total_b
 
 	if ( $page != $total_page ) {
 		$next_page = $page + 1;
-		$navi .= "<a href='#{$etc3}' onClick=\"$func('$mem_id','$mem_kind','$rurl','$etc1','$etc2','$next_page','$v_url','$w_url','$updown_yn','$active');\"><img src='/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' /></a>";
+		$navi .= "<a href='#{$etc3}' onClick=\"$func('$mem_id','$mem_kind','$rurl','$etc1','$etc2','$next_page','$v_url','$w_url','$updown_yn','$active');\"><img src='" . __HTTPURL__ . "/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_next6.gif' width='44' height='16' border='0' align='absbottom' />";
 	}
 
 
 	if ( $block < $total_block ) {
 	    $my_page = $last_page + 1;
-	    $navi .= "<a href='#{$etc3}' onClick=\"$func('$mem_id','$mem_kind','$rurl','$etc1','$etc2','$my_page','$v_url','$w_url','$updown_yn','$active');\"><img src='/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
+	    $navi .= "<a href='#{$etc3}' onClick=\"$func('$mem_id','$mem_kind','$rurl','$etc1','$etc2','$my_page','$v_url','$w_url','$updown_yn','$active');\"><img src='" . __HTTPURL__ . "/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' /></a>";
 	} else {
-		$navi .= "<img src='/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
+		$navi .= "<img src='" . __HTTPURL__ . "/img/btn_end_go2.gif' width='20' height='16' border='0' align='absmiddle' />";
 	}
 
 	$navi .= "
@@ -1365,7 +1367,7 @@ function getLayerShopInfo($obj, $cnt, $zidx1, $zidx2, $left, $top, $rp_total_ran
 	<div STYLE='position: absolute; z-index: {$zidx2};'>
 	<table width='100' border='0' cellpadding='0' cellspacing='0' >
 		<tr>
-			<td width='6' align='right'><img src='/img/arr_orage.gif'></td>
+			<td width='6' align='right'><img src='" . __HTTPURL__ . "/img/arr_orage.gif'></td>
 			<td bgcolor='#FFFFFF'>
 			<table width='100' border='0' cellpadding='1' cellspacing='1' bgcolor='#FF7533'>
 				<tr>
@@ -1385,19 +1387,19 @@ function getLayerShopInfo($obj, $cnt, $zidx1, $zidx2, $left, $top, $rp_total_ran
 							</table>
 							<table width='90%' border='0' cellspacing='0' cellpadding='0' align=center>
 								<tr>
-									<td height='22' class=evmem><img src='/img/icon_homepage.gif' width='16' height='12' align='absmiddle'> <a href='$shop_url' target='_blank'>홈페이지 바로가기</a></td>
+									<td height='22' class=evmem><img src='" . __HTTPURL__ . "/img/icon_homepage.gif' width='16' height='12' align='absmiddle'> <a href='$shop_url' target='_blank'>홈페이지 바로가기</a></td>
 								</tr>
 								<tr>
 									<td height='1' background='/img/dot_garo_max.gif'></td>
 								</tr>
 								<tr>
-									<td height='22' class=evmem><img src='/img/icon_allcodi.gif' width='17' height='15' align='absmiddle'> <a href='#' onClick=\"go_shop_info('$shop_name');\">등록코디 전체보기</a></td>
+									<td height='22' class=evmem><img src='" . __HTTPURL__ . "/img/icon_allcodi.gif' width='17' height='15' align='absmiddle'> <a href='#' onClick=\"go_shop_info('$shop_name');\">등록코디 전체보기</a></td>
 								</tr>
 								<tr>
 									<td height='1' background='/img/dot_garo_max.gif'></td>
 								</tr>
 								<tr>
-									<td  height='22' class=evmem><img src='/img/icon_memo_tran.gif' width='17' height='14' align='absmiddle'> <a href='#' height='22' class=evmem onClick=\"pop_msg('$shop_mem_id');\">쪽지보내기</a></td>
+									<td  height='22' class=evmem><img src='" . __HTTPURL__ . "/img/icon_memo_tran.gif' width='17' height='14' align='absmiddle'> <a href='#' height='22' class=evmem onClick=\"pop_msg('$shop_mem_id');\">쪽지보내기</a></td>
 								</tr>
 								<tr>
 									<td height='1' background='/img/dot_garo_max.gif'></td>
@@ -1405,7 +1407,7 @@ function getLayerShopInfo($obj, $cnt, $zidx1, $zidx2, $left, $top, $rp_total_ran
 							</table>
 							<table width='100%' height='20' border='0' cellpadding='0' cellspacing='0'>
 								<tr>
-									<td align='right' valign='bottom'><a  onClick=\"MM_showHideLayers($param_hide);\" style='cursor:hand;'><img src='/img/btn_pop_close.gif' width='13' height='13' border=0></a></td>
+									<td align='right' valign='bottom'><a  onClick=\"MM_showHideLayers($param_hide);\" style='cursor:hand;'><img src='" . __HTTPURL__ . "/img/btn_pop_close.gif' width='13' height='13' border=0></a></td>
 								</tr>
 							</table>
 							</td>
