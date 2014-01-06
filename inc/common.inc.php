@@ -1,8 +1,5 @@
 <?
-define('MYSQL_LOG_DIR',   "../log");         // MYSQL로그 디렉토리
-
-//require_once "config/config.php";
-require_once $_SERVER[DOCUMENT_ROOT] . "/coditop" . "/config/config.php";
+define('MYSQL_LOG_DIR',   "/coditop/log");         // MYSQL로그 디렉토리
 
 require_once "const.inc.php";
 require_once "public.inc.php";
@@ -77,9 +74,8 @@ $MAIN_DB      = "coditop";
 if($TestServer)
 {
 	$mainconn = new CMySQL();
-//	$mainconn->set("localhost", "coditop", "@coditop~!", "coditop");
-	$mainconn->set("localhost", "root", "", "coditop");
-print __FILE__ . __LINE__ ;
+	$mainconn->set("localhost", "coditop", "@coditop~!", "coditop");
+
 	$SuperBoard = "testcgi.superboard.com:8000";
 }
 else

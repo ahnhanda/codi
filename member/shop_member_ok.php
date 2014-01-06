@@ -6,8 +6,8 @@
  * desc   : shop member insert/update
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
-require_once "/coditop/inc/util.inc.php";
+require_once "../inc/common.inc.php";
+require_once "../inc/util.inc.php";
 
 // 리퍼러 체크
 referer_chk();
@@ -48,7 +48,7 @@ $mem_addr2		= trim($_POST['mem_addr2']);
 // 체크
 $this_mem_key	= md5("*^___^*" . $mem_jumin . $mem_name);
 if ( $this_mem_key != $mem_key ) {
-	echo "<script>alert('비정상적인 접근입니다.'); location.href='<?=__HTTPURL__?>/main.php';</script>";
+	echo "<script>alert('비정상적인 접근입니다.'); location.href='/main.php';</script>";
 	exit;
 }
 
@@ -208,5 +208,5 @@ if ( $mode == "I" ) {
 
 $mainconn->close();
 
-goto_url("<?=__HTTPURL__?>/main.php", "회원가입이 되었습니다");
+goto_url("/main.php", "회원가입이 되었습니다");
 ?>

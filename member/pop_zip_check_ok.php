@@ -6,7 +6,7 @@
  * desc   : popup zip check
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 $addr = trim($_POST['addr']);
 $mem_kind = trim($_POST['mem_kind']);

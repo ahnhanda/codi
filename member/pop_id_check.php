@@ -6,7 +6,7 @@
  * desc   : popup id check
  *******************************************************/
 
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 $mem_id = trim($_REQUEST['mem_id']);
 $chk = trim($_REQUEST['chk']);

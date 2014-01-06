@@ -1,6 +1,6 @@
 <?
 session_start();
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 if ( $_SESSION['mem_id'] ) {
 	echo "<script>alert('이미 가입되어 있습니다'); history.go(-1);</script>";

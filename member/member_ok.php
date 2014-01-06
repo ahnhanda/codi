@@ -6,8 +6,8 @@
  * desc   : member insert/update
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
-require_once "/coditop/inc/util.inc.php";
+require_once "../inc/common.inc.php";
+require_once "../inc/util.inc.php";
 
 // 리퍼러 체크
 referer_chk();
@@ -56,7 +56,7 @@ if ( $mode == "I" ) {
 	$this_mem_key	= md5("*^___^*" . $mem_jumin . $mem_name);
 
 	if ( $this_mem_key != $mem_key ) {
-		echo "<script>alert('비정상적인 접근입니다.'); location.href='<?=__HTTPURL__?>/main.php';</script>";
+		echo "<script>alert('비정상적인 접근입니다.'); location.href='/main.php';</script>";
 		exit;
 	}
 }

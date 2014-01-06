@@ -1,6 +1,6 @@
 <?
-require_once "/coditop/inc/common.inc.php";
-require_once "/coditop/inc/util.inc.php";
+require_once "../inc/common.inc.php";
+require_once "../inc/util.inc.php";
 
 $mainconn->open();
 

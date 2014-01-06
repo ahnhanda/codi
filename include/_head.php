@@ -60,7 +60,7 @@ if ( IE ) {
 
 </head>
 
-<body onLoad="MM_preloadImages('<?=__HTTPURL__?>/images/nextpre_ov_01.gif','<?=__HTTPURL__?>/images/nextpre_ov_02.gif','<?=__HTTPURL__?>/images/foot_menu_ov_02.gif','<?=__HTTPURL__?>/images/foot_menu_ov_03.gif','<?=__HTTPURL__?>/images/foot_menu_ov_04.gif','<?=__HTTPURL__?>/images/foot_menu_ov_05.gif','<?=__HTTPURL__?>/images/foot_menu_ov_06.gif','<?=__HTTPURL__?>/images/foot_menu_ov_07.gif','<?=__HTTPURL__?>/images/foot_menu_ov_08.gif','<?=__HTTPURL__?>/images/foot_menu_ov_09.gif','<?=__HTTPURL__?>/images/foot_menu_ov_10.gif');">
+<body onLoad="MM_preloadImages('images/nextpre_ov_01.gif','images/nextpre_ov_02.gif','images/foot_menu_ov_02.gif','images/foot_menu_ov_03.gif','images/foot_menu_ov_04.gif','images/foot_menu_ov_05.gif','images/foot_menu_ov_06.gif','images/foot_menu_ov_07.gif','images/foot_menu_ov_08.gif','images/foot_menu_ov_09.gif','images/foot_menu_ov_10.gif');">
 
 <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
@@ -73,7 +73,7 @@ if ( IE ) {
 						<td height="60">&nbsp;</td>
 					</tr>
 					<tr>
-						<td height="61" background="<?= __HTTPURL__ ?>/img/bg_top_menu.gif">&nbsp;</td>
+						<td height="61" background="/img/bg_top_menu.gif">&nbsp;</td>
 					</tr>
 					<tr>
 						<td height="40" bgcolor="E8E8E8">&nbsp;</td>
@@ -86,11 +86,12 @@ if ( IE ) {
 						<td width="860" valign="top">
 						<table width="860" height="60" border="0" cellpadding="0" cellspacing="0">
 							<tr>
-								<td width="260" valign="bottom"><a href="/main.php"><img src="<?= __HTTPURL__ ?>/img/logo_ori.jpg" border="0"></a></td>
+								<td width="260" valign="bottom"><a href="/main.php"><img src="/img/logo_ori.jpg" border="0"></a></td>
 								<td align="right" valign="bottom">
 
 
 <!-- 로그박스 start //-->
+<?// require_once "/include/_log.php"; ?>
 <? require_once "_log.php"; ?>
 <!-- 로그박스 end //-->			  
 				  
@@ -101,7 +102,7 @@ if ( IE ) {
 						<table width="860" height="61" border="0" cellpadding="0" cellspacing="0">
 							<tr>
 								<td>
-									<script language="javascript">flashToJS('860','61',''<?=__HTTPURL__?>/img/global_menu.swf','');</script>
+									<script language="javascript">flashToJS('860','61','/img/global_menu.swf','');</script>
 								</td>
 							</tr>
 						</table>
@@ -113,7 +114,7 @@ if ( IE ) {
 										<td width="240">
 
 										<!-- 탑부분 텍스트형 광고배너 start //-->
-										<table width="202" height="40" border="0" cellpadding="0" cellspacing="0" background="<?=__HTTPURL__?>/img/banner_top_text.gif">
+										<table width="202" height="40" border="0" cellpadding="0" cellspacing="0" background="/img/banner_top_text.gif">
 											<tr>
 												<td align="center" class="evgray" style="PADDING-top: 4px;"><a href="#"><b><font color="#000000">평가만 하면</font></b> 경품을<br>
 										받을 수 있는 <font color="#FF3300"><b>코디탑텐</b></font></a></td>
@@ -133,7 +134,7 @@ if ( IE ) {
 <table border="0" cellspacing="0" cellpadding="0">
 <form name="MainSearchFrm" autocomplete="off" action="/product/product_list.php">
 	<tr>
-		<td width="80"><img src="<?=__HTTPURL__?>/img/icon_search.gif" width="78" height="20" align="absmiddle"></td>
+		<td width="80"><img src="/img/icon_search.gif" width="78" height="20" align="absmiddle"></td>
 
 		<td width="18" align="center"><input type="radio" name="s_key" id="s_key" value="S" <?if ( $s_key == "S" ) echo " checked"; ?> /> </td>
 		<td width="22" class="evgray">샵</td>
@@ -150,7 +151,7 @@ if ( IE ) {
 		
 		<td width="205"><input type="text" id="keyword" name="keyword" class="logbox" OnKeyUp="searchRequest();" onKeyPress="if (event.keyCode == 13) AjaxSearch();" style="width:200px;" tabindex="5" /></td>
 
-		<td><a href="#" onClick="AjaxSearch();"><img src="<?=__HTTPURL__?>/img/btn_search.gif" width="70" height="20" border="0" align="absmiddle" alt="검색" tabindex="5" /></a></td>
+		<td><a href="#" onClick="AjaxSearch();"><img src="/img/btn_search.gif" width="70" height="20" border="0" align="absmiddle" alt="검색" tabindex="5" /></a></td>
 		<td width="10"></td>
 	</tr>
 </form>

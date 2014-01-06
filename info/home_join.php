@@ -6,9 +6,9 @@
  * desc   : 제휴 및 문의
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
+require_once $_SERVER[DOCUMENT_ROOT] . "/coditop/inc/common.inc.php";
 
-require_once "/coditop/include/_head.php";
+require_once $_SERVER[DOCUMENT_ROOT] . "/coditop/include/_head.php";
 ?>
 
 <table border="0" cellspacing="0" cellpadding="0">
@@ -20,7 +20,7 @@ require_once "/coditop/include/_head.php";
 			
 			 <!-- 마이페이지 시작 //-->
 			
-			<? require_once "/coditop/include/left_info.php" ?>
+			<? require_once  $_SERVER[DOCUMENT_ROOT] . "/coditop/include/left_info.php" ?>
 			
 			 <!-- 마이페이지 시작 //-->
 			</td>
@@ -102,4 +102,4 @@ require_once "/coditop/include/_head.php";
       </table></td>
   </tr>
 </table>
-<? require_once "/coditop/include/_foot.php"; ?>
+<? require_once  $_SERVER[DOCUMENT_ROOT] .  "/coditop/include/_foot.php"; ?>

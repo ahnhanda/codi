@@ -6,8 +6,8 @@
  * desc   : shop info insert/update
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
-require_once "/coditop/inc/util.inc.php";
+require_once "../inc/common.inc.php";
+require_once "../inc/util.inc.php";
 
 // 리퍼러 체크
 referer_chk();

@@ -6,8 +6,8 @@
  * desc   : shop join
  *******************************************************/
 //session_start();
-require_once "/coditop/inc/common.inc.php";
-require_once "/coditop/inc/chk_frame.inc.php";
+require_once "../inc/common.inc.php";
+require_once "../inc/chk_frame.inc.php";
 
 $mem_name = trim($_REQUEST['mem_name']);
 $mem_jumin = trim($_REQUEST['mem_jumin']);
@@ -16,11 +16,11 @@ $mem_key = trim($_REQUEST['mem_key']);
 $this_mem_key	= md5("*^___^*" . $mem_jumin . $mem_name);
 
 if ( $this_mem_key != $mem_key ) {
-	echo "<script>alert('실명인증 비정상적인 접근입니다.'); location.href='<?=__HTTPURL__?>/main.php';</script>";
+	echo "<script>alert('실명인증 비정상적인 접근입니다.'); location.href='/main.php';</script>";
 	exit;
 }
 
-require_once "/coditop/include/_head.php";
+require_once "../include/_head.php";
 
 
 ?>

@@ -8,11 +8,8 @@
 session_start();
 
 require_once "inc/common.inc.php";
-require_once "config/config.php";
-//echo  __FILE__ . __LINE__ ; exit; 
-//require_once "inc/chk_frame.inc.php";
+require_once "inc/chk_frame.inc.php";
 
-//echo  __FILE__ . __LINE__ ; exit; 
 
 // 랜덤 메인 카테고리
 $t = time();
@@ -40,7 +37,6 @@ switch ( $t ) {
 		break;
 }
 echo "<script>g_categ = '$rand_main_categ';</script>";
-//echo  __FILE__ . __LINE__ ; exit; 
 
 	
 ?>
@@ -63,8 +59,6 @@ echo "<script>g_categ = '$rand_main_categ';</script>";
 
 <!-- 좌측 가이드 5개(포커스) 롤링 시작 //-->
 <?
-//die (__FILE__ . __LINE__. "TPL_DIR:" . $TPL_DIR . "<br>");
-
 // 관리자 페이지의 포커스 관리에서 입력/수정/삭제 될때마다 파일을 새로 생성한다.
 require_once $TPL_DIR."/main/focus.tpl";
 ?>
@@ -82,8 +76,6 @@ require_once $TPL_DIR."/main/focus.tpl";
 
 <!-- 당첨자 리스트 시작 //-->
 <?
-//echo  __FILE__ . __LINE__ ; exit; 
-
 // 매주 월요일 새벽 당첨루틴을 통해 당첨된 결과 파일을 생성한다.
 require_once $TPL_DIR."/main/gift_list.tpl";
 ?>
@@ -155,7 +147,6 @@ CacheLoadFile($TPL_DIR."/main/cache_notice.tpl",$WEB_URL."proc/make_main_notice.
 
 <!-- 배너 위치 //-->
 <?
-//echo  __FILE__ . __LINE__ ; exit; 
 // 관리자페이지에서 입력/수정/삭제시 파일생성
 require_once $TPL_DIR."/banner/MAINL.tpl";
 ?>

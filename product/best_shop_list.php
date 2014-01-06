@@ -6,11 +6,11 @@
 * desc   : 코디평가순위 - 베스트샵 (둘다 비슷)
 *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
-require_once "/coditop/inc/chk_frame.inc.php";
+require_once "../inc/common.inc.php";
+require_once "../inc/chk_frame.inc.php";
 ?>
 
-<? require_once "/coditop/include/_head.php"; ?>
+<? require_once "../include/_head.php"; ?>
 
 
 
@@ -44,7 +44,7 @@ CacheLoadFile($TPL_DIR."/sub/cache_sub_today_recom_codi.tpl",$WEB_URL."proc/make
 <!-- 주간 베스트 샵 10위 시작 //-->
 <? 
 // 매주 일요일 새벽 주간베스트샵을 통해 한번 실행한다.(메인에 있는거 그대로)
-require_once $TPL_DIR."/main/weekly_best_shop.tpl";
+require_once "../" . $TPL_DIR."/main/weekly_best_shop.tpl";
 ?>
 <!-- 주간 베스트 샵 10위 끝 //-->
 
@@ -119,4 +119,4 @@ CacheLoadFile($TPL_DIR."/sub/cache_shop_rank_list.tpl",$WEB_URL."proc/make_shop_
 	<area shape="rect" coords="1,80,72,150" href="#" alt="모두보기" onclick="go_auth_shop();" />
 </map>
 
-<? include "/coditop/include/_foot.php"; ?>
+<? include "../include/_foot.php"; ?>

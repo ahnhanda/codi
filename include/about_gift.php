@@ -1,6 +1,6 @@
 <?
 echo "
-<table width='860' height='25' border='0' cellpadding='0' cellspacing='0' background='/coditop/img/bbg.jpg'>
+<table width='860' height='25' border='0' cellpadding='0' cellspacing='0' background='/img/bbg.jpg'>
   <tr>
     <td  style='PADDING-LEFT: 10px'  ><b><font color='#FFFFFF'>경품관련 이용안내</font></b></td>
   </tr>

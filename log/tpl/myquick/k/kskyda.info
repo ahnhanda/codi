@@ -1,0 +1,64 @@
+
+			<table width='110' border='0' cellpadding='0' cellspacing='0'>
+				<tr>
+					<td height='39'><img src='/images/myquick_01.gif' width='110' height='39' alt=''></td>
+				</tr>
+				<tr>
+					<td  align='left' valign='top'>
+					<table width='110' border='0' cellspacing='0' cellpadding='0'>
+						<tr>
+							<td>
+							<table width='100' border='0' cellspacing='0' cellpadding='0'>
+								<tr>
+									<td height='19' bgcolor='FF5C5C' class='tienom'  style='PADDING-LEFT: 6px'  ><a href='/msg/msg_recv_list.php'><font color='#FFFFFF'>쪽지:<font color='#FFFF00'><b>0</b></font>/0</font></a> <img src='/img/icon_memo.gif' width='12' height='14' align='absmiddle'></td>
+								</tr>
+								<tr>
+									<td height='3'></td>
+								</tr>
+								<tr>
+									<td height='19' bgcolor='FF5C5C' class='tienom'  style='PADDING-LEFT: 6px'  ><a href='/mypage/comment.php'><font color='#FFFFFF'>참여중평가:0개</font></a> </td>
+								</tr>
+								<tr>
+									<td height='3'></td>
+								</tr>
+								<tr>
+									<td height='19' bgcolor='FF5C5C' class='tienom'  style='PADDING-LEFT: 6px'  ><a href='/mypage/history.php'><font color='#FFFFFF'>경품수령:0개 </font></a> </td>
+								</tr>
+							</table>
+							<table width='100' border='0' cellspacing='0' cellpadding='0'>
+								<tr>
+									<td height='22' align='center' valign='top' class='evgray'><b><font color='#000000'>7일간 내당첨 등급</font></b></td>
+								</tr>
+								<tr>
+									<td><img src='/img/quick_level.gif' width='100' height='50'></td>
+								</tr>
+								<tr>
+									<td height='33' align='center' class='textlevel'><b><span style='filter:dropshadow(color=black,offy=1,offx=1);width:100px;height:33px'> 				10등급</span></b></td>
+								</tr>
+								<tr>
+									<td height='5'></td>
+								</tr>
+							</table>
+							<table width='104' border='0' cellspacing='0' cellpadding='0'>
+								<tr>
+									<td height='21' align='center' valign='top' bgcolor='f2f2f2' class='evgray'>당첨확률 1% 증가 </td>
+								</tr>
+								<tr>
+									<td height='25' align='center' class='evgray'><b><font color='#FF6600'><a href='/mypage/level.php'>당첨등급확인내역</a></font></b></td>
+								</tr>
+								<tr>
+									<td height='1' align='center' background='/img/dot_garo_max.gif' class='evgray'></td>
+								</tr>
+							</table>
+							
+							</td>
+							<td width='6' bgcolor='FF5B5C'></td>
+						</tr>
+					</table>
+					</td>
+				</tr>
+				<tr>
+					<td height='16'><a href='#'><img src='/images/myquick_03.gif' alt='맨위로' width='110' height='16' border='0'></a></td>
+				</tr>
+			</table>
+			

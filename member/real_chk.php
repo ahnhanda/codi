@@ -109,4 +109,4 @@ function chk_submit() {
 
 </form>
 
-<? require_once "../include/_foot.php"; ?>
+  <? require_once "../include/_foot.php"; ?>

@@ -6,7 +6,7 @@
  * desc   : logout
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 /*
 // tpl 파일의 디렉토리를 구한다.
@@ -22,7 +22,7 @@ $info_f = $my_dir."/".$_SESSION['mem_id'].".info";
 
 //$rurl = trim($_POST['rurl']);
 //if ( strlen($rurl) < 1 ) {
-	$rurl = "<?=__HTTPURL__?>/main.php";
+	$rurl = "/main.php";
 //}
 
 session_destroy(); 

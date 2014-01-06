@@ -23,9 +23,7 @@ $rurl = trim($_POST['rurl']);
 if ( $rurl != "" ) {
 	$rurl = my64decode($rurl);
 } else {
-	//die("FILE:" . __FILE__ . " LINE:" . __LINE__ . " __HTTPURL__:" . __HTTPURL__ . "<br>"); 
-
-	$rurl = __HTTPURL__. "/main.php";
+	$rurl = "/main.php";
 }
 
 // sql injection check
@@ -67,7 +65,7 @@ if ( $cnt == "0" ) {
 	$_SESSION['mem_mobile'] = $mem_mobile;
 
 	// 샵,일반회원 공통세션
-//TODO DEPRECATED	session_register("mem_id","mem_name","mem_kind","mem_jumin","mem_email","mem_mobile");
+	//session_register("mem_id","mem_name","mem_kind","mem_jumin","mem_email","mem_mobile");
 	
 	if ( $mem_kind == "U" ) {	// 일반회원용
 
@@ -82,7 +80,7 @@ if ( $cnt == "0" ) {
 		$_SESSION['my_updown_codi_cnt'] = $arr_user_info[3];	// 내가 참여한 코디수
 		$_SESSION['my_get_gift_cnt'] = $arr_user_info[4];		// 내가 수령한 경품수
 
-//TODO DEPRECATED		session_register("my_quick_msg_noread","my_quick_msg_total","my_not_notify_gift_cnt","mem_grade","mem_percent","my_updown_codi_cnt","my_get_gift_cnt");
+		//session_register("my_quick_msg_noread","my_quick_msg_total","my_not_notify_gift_cnt","mem_grade","mem_percent","my_updown_codi_cnt","my_get_gift_cnt");
 
 	} else {					// 샵회원용
 
@@ -103,7 +101,7 @@ if ( $cnt == "0" ) {
 		$shop_name = $mainconn->count($sql);
 
 		$_SESSION['shop_name'] = $shop_name;
-//TODO DEPRECATED		session_register("my_quick_msg_noread","my_quick_msg_total","my_not_notify_gift_cnt","my_ing_codi_cnt","my_ed_codi_cnt","main_shop_last_rank","main_shop_total_rank","mem_cash","shop_name");
+		//session_register("my_quick_msg_noread","my_quick_msg_total","my_not_notify_gift_cnt","my_ing_codi_cnt","my_ed_codi_cnt","main_shop_last_rank","main_shop_total_rank","mem_cash","shop_name");
 	}
 
 	

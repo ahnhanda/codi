@@ -5,7 +5,7 @@
  * date   : 2008.10.09
  * desc   : 휴대폰 인증번호 처리하는 팝업창
  *******************************************************/
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 NoCache();
 

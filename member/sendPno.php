@@ -6,7 +6,7 @@
 //##	 내  용 : 핸드폰 인증번호 발송									##
 //########################################################################
 
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 NoCache();
 
