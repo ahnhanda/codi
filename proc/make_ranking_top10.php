@@ -6,7 +6,6 @@
  * desc   : 분류별 랭킹 top 10
  *******************************************************/
 require_once "/coditop/inc/common.inc.php";
-require_once "/coditop/config/config.php";
 $mainconn->open();
 
 $prt_today = date("Y년 n월 j일", time());
@@ -37,8 +36,8 @@ $prt_l_d = substr($l_date,8,2); $prt_l_d = ( substr($prt_l_d,0,1) == "0" ) ? sub
 $str = "
 <table width='645' border='0' cellspacing='0' cellpadding='0'>
 	<tr>
-		<td width='375'><img src='" . __HTTPURL__  . "/img/title_top10.gif' width='374' height='31'></td>
-		<td align='right' class='date'><img src='" . __HTTPURL__  . "/img/icon_calender.gif' width='17' height='14' align='absmiddle'><a href='#' onClick='total_codi_ranking();'><font color='945D5D'>{$prt_f_y}년 {$prt_f_m}월 {$prt_f_d}일 ~ {$prt_l_y}년 {$prt_l_m}월 {$prt_l_d}일</font></a> </td>
+		<td width='375'><img src='/img/title_top10.gif' width='374' height='31'></td>
+		<td align='right' class='date'><img src='/img/icon_calender.gif' width='17' height='14' align='absmiddle'><a href='#' onClick='total_codi_ranking();'><font color='945D5D'>{$prt_f_y}년 {$prt_f_m}월 {$prt_f_d}일 ~ {$prt_l_y}년 {$prt_l_m}월 {$prt_l_d}일</font></a> </td>
 	</tr>
 </table>
 ";
@@ -66,11 +65,11 @@ foreach ( $P_CATEG as $k => $v ) {
 	<div id='categ_{$k}_area' style='display:none;'>
 	<table width='645' height='48' border='0' cellpadding='0' cellspacing='0'>
 		<tr>
-			<td><a href=\"javascript:chg_main_categ('T');\"><img src='" . __HTTPURL__  . "/images/{$ct_img}' width='113' height='48' alt='' border='0' /></a></td>
-			<td><a href=\"javascript:chg_main_categ('B');\"><img src='" . __HTTPURL__  . "/images/{$cb_img}' width='110' height='48' alt='' border='0' /></a></td>
-			<td><a href=\"javascript:chg_main_categ('O');\"><img src='" . __HTTPURL__  . "/images/{$co_img}' width='145' height='48' alt='' border='0' /></a></td>
-			<td><a href=\"javascript:chg_main_categ('U');\"><img src='" . __HTTPURL__  . "/images/{$cu_img}' width='166' height='48' alt='' border='0' /></a></td>
-			<td><a href=\"javascript:chg_main_categ('A');\"><img src='" . __HTTPURL__  . "/images/{$ca_img}' width='111' height='48' alt='' border='0' /></a></td>
+			<td><a href=\"javascript:chg_main_categ('T');\"><img src='/images/{$ct_img}' width='113' height='48' alt='' border='0' /></a></td>
+			<td><a href=\"javascript:chg_main_categ('B');\"><img src='/images/{$cb_img}' width='110' height='48' alt='' border='0' /></a></td>
+			<td><a href=\"javascript:chg_main_categ('O');\"><img src='/images/{$co_img}' width='145' height='48' alt='' border='0' /></a></td>
+			<td><a href=\"javascript:chg_main_categ('U');\"><img src='/images/{$cu_img}' width='166' height='48' alt='' border='0' /></a></td>
+			<td><a href=\"javascript:chg_main_categ('A');\"><img src='/images/{$ca_img}' width='111' height='48' alt='' border='0' /></a></td>
 		</tr>
 	</table>
 	<table width='645' border='0' cellspacing='0' cellpadding='0'>
@@ -127,13 +126,13 @@ foreach ( $P_CATEG as $k => $v ) {
 			<td width='160' valign='top'>
 			<table width='160' border='0' cellspacing='0' cellpadding='0'>
 				<tr>
-					<td><img src='" . __HTTPURL__  . "/img/title_ranking1.jpg' width='160' height='35'></td>
+					<td><img src='/img/title_ranking1.jpg' width='160' height='35'></td>
 				</tr>
 				<tr>
 					<td height='6'></td>
 				</tr>
 				<tr>
-					<td><a href='#' onClick=\"codi_view('$p_idx');\"><img src='" . __HTTPURL__  . "$p_main_img' width='160' height='160' border='0'></a></td>
+					<td><a href='#' onClick=\"codi_view('$p_idx');\"><img src='$p_main_img' width='160' height='160' border='0'></a></td>
 				</tr>
 				
 				<tr>
@@ -148,13 +147,13 @@ foreach ( $P_CATEG as $k => $v ) {
 				</tr>
 					
 				<tr>
-					<td height='18' class='shopname'><img src='" . __HTTPURL__  . "/img/icon_shop.gif'  align='absmiddle' /> <b><a href='#' onClick=\"shop_view('$shop_idx');\">$shop_name</a> </b></td>
+					<td height='18' class='shopname'><img src='/img/icon_shop.gif'  align='absmiddle' /> <b><a href='#' onClick=\"shop_view('$shop_idx');\">$shop_name</a> </b></td>
 				</tr>
 				<tr>
-					<td height='18' class='evfont'><span class='shopname'><img src='" . __HTTPURL__  . "/img/icon_score.gif'  align='absmiddle' /> <b>$rp_score 점 </b></span></td>
+					<td height='18' class='evfont'><span class='shopname'><img src='/img/icon_score.gif'  align='absmiddle' /> <b>$rp_score 점 </b></span></td>
 				</tr>
 				<tr>
-					<td height='18'  class='evfont'><span class='shopname'><img src='" . __HTTPURL__  . "/img/icon_codi.gif'  align='absmiddle' /> <b><font color='#CC3300'>$up_cnt</font></b></span></td>
+					<td height='18'  class='evfont'><span class='shopname'><img src='/img/icon_codi.gif'  align='absmiddle' /> <b><font color='#CC3300'>$up_cnt</font></b></span></td>
 				</tr>
 			</table>
 
@@ -185,7 +184,7 @@ foreach ( $P_CATEG as $k => $v ) {
 				<td width='427' valign='top'>
 				<table width='427' border='0' cellspacing='0' cellpadding='0'>
 					<tr>
-						<td><img src='" . __HTTPURL__  . "/img/title_2_6.gif' width='427' height='25'></td>
+						<td><img src='/img/title_2_6.gif' width='427' height='25'></td>
 					</tr>
 				</table>
 
@@ -205,7 +204,7 @@ foreach ( $P_CATEG as $k => $v ) {
 
 				<table width='427' border='0' cellspacing='0' cellpadding='0'>
 					<tr>
-						<td><img src='" . __HTTPURL__  . "/img/title_7_10.gif' width='427' height='25'></td>
+						<td><img src='/img/title_7_10.gif' width='427' height='25'></td>
 					</tr>
 				</table>
 
@@ -221,7 +220,7 @@ foreach ( $P_CATEG as $k => $v ) {
 					<td height='8'></td>
 				</tr>
 				<tr>
-					<td><a href='#' onClick=\"codi_view('$p_idx');\"><img src='" . __HTTPURL__  . "$p_main_img' width='70' height='70' border='0'></a></td>
+					<td><a href='#' onClick=\"codi_view('$p_idx');\"><img src='$p_main_img' width='70' height='70' border='0'></a></td>
 				</tr>
 				<tr>
 					<td height='4'></td>
@@ -270,7 +269,7 @@ foreach ( $P_CATEG as $k => $v ) {
 
 			<table width='427' border='0' cellspacing='0' cellpadding='0'>
 				<tr>
-					<td><img src='" . __HTTPURL__  . "/img/title_7_10.gif' width='427' height='25'></td>
+					<td><img src='/img/title_7_10.gif' width='427' height='25'></td>
 				</tr>
 			</table>
 
@@ -286,7 +285,7 @@ foreach ( $P_CATEG as $k => $v ) {
 				<td height='8'></td>
 			</tr>
 			<tr>
-				<td><img src='" . __HTTPURL__  . "/img/photo_no2.gif' width='70' height='70' border='0'></td>
+				<td><img src='/img/photo_no2.gif' width='70' height='70' border='0'></td>
 			</tr>
 			<tr>
 				<td height='4'></td>
@@ -317,7 +316,7 @@ foreach ( $P_CATEG as $k => $v ) {
 
 
 	$str .= "
-							<td width='85' align='center' valign='middle'><a href='#' onClick=\"total_codi_ranking();\"><img src='" . __HTTPURL__  . "/img/btn_gotop10.gif' width='70' height='142' border='0'></a></td>
+							<td width='85' align='center' valign='middle'><a href='#' onClick=\"total_codi_ranking();\"><img src='/img/btn_gotop10.gif' width='70' height='142' border='0'></a></td>
 						</tr>
 					</table>
 

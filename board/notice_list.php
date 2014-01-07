@@ -6,7 +6,7 @@
  * desc   : 공지사항 리스트
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 $mainconn->open();
 
@@ -108,7 +108,7 @@ if ( $total_block <= $block ) {
 $mainconn->close();
 ?>
 
-<? require_once "/coditop/include/_head.php"; ?>
+<? require_once "../include/_head.php"; ?>
 
 
 <table border="0" cellspacing="0" cellpadding="0">
@@ -121,7 +121,7 @@ $mainconn->close();
 			
 			  <!-- 게시판 메뉴 시작 //-->
 			
-			<? include "/coditop/include/left_board.php" ?>
+			<? include "../include/left_board.php" ?>
 			
 			 <!-- 게시판 메뉴 끝 //-->
 			</td>
@@ -215,4 +215,4 @@ echo page_navi($page,$first_page,$last_page,$total_page,$block,$total_block,"/bo
 </table>
 
 
-<? include "/coditop/include/_foot.php"; ?>
+<? include "../include/_foot.php"; ?>

@@ -4,7 +4,7 @@ $keyword = trim($_REQUEST['keyword']);
 ?>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <title><?=$TITLE?></title>
 <link rel = StyleSheet HREF='/css/style.css' type='text/css' title='thehigh CSS'>
 <SCRIPT LANGUAGE="JavaScript" SRC="/js/ajax.js"></SCRIPT>
@@ -91,7 +91,8 @@ if ( IE ) {
 
 
 <!-- 로그박스 start //-->
-<? require_once "/include/_log.php"; ?>
+<?// require_once "/include/_log.php"; ?>
+<? require_once "_log.php"; ?>
 <!-- 로그박스 end //-->			  
 				  
 

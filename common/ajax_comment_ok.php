@@ -8,7 +8,7 @@
 session_start();
 ini_set("default_charset", "utf-8");
 
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 // 인증여부 체크
 //auth_chk();

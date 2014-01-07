@@ -11,7 +11,7 @@
 $kwd_str = "
 <table width='200' border='0' cellpadding='0' cellspacing='0'>
 	<tr>
-		<td height='48'><img src='" . __HTTPURL__  . "/images/keyword_01.gif' width='200' height='48' alt='인기키워드'></td>
+		<td height='48'><img src='/images/keyword_01.gif' width='200' height='48' alt='인기키워드'></td>
 	</tr>
 	<tr>
 		<td align='center' background='/images/keyword_02.gif'>
@@ -46,7 +46,7 @@ $kwd_str .= "
 		</td>
 	</tr>
 	<tr>
-		<td height='14'><img src='" . __HTTPURL__  . "/images/keyword_03.gif' width='200' height='14' alt=''></td>
+		<td height='14'><img src='/images/keyword_03.gif' width='200' height='14' alt=''></td>
 	</tr>
 </table>
 	";

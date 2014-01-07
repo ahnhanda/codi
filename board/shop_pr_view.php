@@ -6,7 +6,7 @@
  * desc   : 샵 PR 상세보기 (전체 카테고리)
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 $pr_idx = trim($_REQUEST['pr_idx']);
 
@@ -51,7 +51,7 @@ $write_url = "/common/ajax_comment_ok.php";
 $rurl = my64encode($_SERVER['REQUEST_URI']."#reply_anc");
 ?>
 
-<? require_once "/coditop/include/_head.php"; ?>
+<? require_once "../include/_head.php"; ?>
 
 
 <iframe name="__blank__" width="0" height="0"></iframe>
@@ -65,7 +65,7 @@ $rurl = my64encode($_SERVER['REQUEST_URI']."#reply_anc");
 			
 			 <!-- 게시판 메뉴 시작 //-->
 			
-			<? include "/coditop/include/left_board.php" ?>
+			<? include "../include/left_board.php" ?>
 			
 			 <!-- 게시판 메뉴 끝 //-->
 			</td>
@@ -224,4 +224,4 @@ ttkind : UCC일때 ""->전체, "A"->코디평가, "B"->코디추천, "C"->코디의뢰, UCC가 아
 loadTailBoard('P','','','1','');
 </script>
 
-<? include "/coditop/include/_foot.php"; ?>
+<? include "../include/_foot.php"; ?>

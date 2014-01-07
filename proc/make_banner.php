@@ -9,7 +9,6 @@
  *			/manage/contents/banner_write_ok.php에 삽입되어 있다.
  *******************************************************/
 //require_once "/coditop/inc/common.inc.php";
-require_once "/coditop/config/config.php";
 //$mainconn->open();
 
 
@@ -31,7 +30,7 @@ while ( $rows = $mainconn->fetch($res) ) {
 		foreach ( $arr_file as $k => $v ) {
 			if ( trim($v) == "" ) continue;
 			$t_banner_file = trim($v);
-			$file_disp = "<img src='" . __HTTPURL__  . "".$UP_URL."/attach/".$t_banner_file."' width='200' height='75' border='0' />";
+			$file_disp = "<img src='".$UP_URL."/attach/".$t_banner_file."' width='200' height='75' border='0' />";
 		}
 	}
 

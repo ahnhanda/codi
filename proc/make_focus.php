@@ -9,7 +9,6 @@
  *			/manage/contents/focus_write_ok.php에 삽입되어 있다.
  *******************************************************/
 //require_once "/coditop/inc/common.inc.php";
-require_once "/coditop/config/config.php";
 //$mainconn->open();
 
 $focus_str = "
@@ -36,7 +35,7 @@ while ( $rows = $mainconn->fetch($res) ) {
 		foreach ( $arr_file as $k => $v ) {
 			if ( trim($v) == "" ) continue;
 			$t_focus_file = trim($v);
-			$file_disp = "<a href='$focus_url' $focus_target ><img src='" . __HTTPURL__  . "".$UP_URL."/attach/".$t_focus_file."' width='200' height='344' border='0' /></a>";
+			$file_disp = "<a href='$focus_url' $focus_target ><img src='".$UP_URL."/attach/".$t_focus_file."' width='200' height='344' border='0' /></a>";
 		}
 	}
 
@@ -48,7 +47,7 @@ while ( $rows = $mainconn->fetch($res) ) {
 
 	for ( $j = 1; $j <= 5; $j++ ) {
 		if ( $j == $cnt ) {
-			$focus_str .= "<td width='41'><a href='#'><img src='" . __HTTPURL__  . "img/tap_event0{$j}ov.gif' width='38' height='16' border='0' /></a></td>";
+			$focus_str .= "<td width='41'><a href='#'><img src='img/tap_event0{$j}ov.gif' width='38' height='16' border='0' /></a></td>";
 		} else {
 			$hs1 = ( $j == 1 ) ? "show" : "hide";
 			$hs2 = ( $j == 2 ) ? "show" : "hide";
@@ -56,7 +55,7 @@ while ( $rows = $mainconn->fetch($res) ) {
 			$hs4 = ( $j == 4 ) ? "show" : "hide";
 			$hs5 = ( $j == 5 ) ? "show" : "hide";
 
-			$focus_str .= "<td width='41'><a href='#' onmouseover=\"MM_showHideLayers('event01','','{$hs1}','event02','','{$hs2}','event03','','{$hs3}','event04','','{$hs4}','event05','','{$hs5}');\"><img src='" . __HTTPURL__  . "img/tap_event0{$j}.gif' width='38' height='16' border='0' /></a></td>";
+			$focus_str .= "<td width='41'><a href='#' onmouseover=\"MM_showHideLayers('event01','','{$hs1}','event02','','{$hs2}','event03','','{$hs3}','event04','','{$hs4}','event05','','{$hs5}');\"><img src='img/tap_event0{$j}.gif' width='38' height='16' border='0' /></a></td>";
 		}
 	}
 

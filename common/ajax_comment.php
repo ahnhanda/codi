@@ -8,7 +8,7 @@
 session_start();
 ini_set("default_charset", "euc-kr");
 
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 // 리퍼러 체크
 referer_chk();

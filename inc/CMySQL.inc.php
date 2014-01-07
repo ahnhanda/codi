@@ -146,6 +146,8 @@ print __FILE__ . __LINE__ . "db:" . $this->db . "<br>";
 */
 
 		$this->conn = mysql_connect($this->host, $this->id, $this->pass) or die("exit");
+//		mysql_query("set names utf8") ; // TODO 2014-01-06 add
+		mysql_query("set names euckr") ; // TODO 2014-01-06 add
 		mysql_select_db($this->db, $this->conn);
 
 //print __FILE__ . __LINE__ . "<br>";  exit;

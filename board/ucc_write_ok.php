@@ -6,8 +6,8 @@
  * desc   : UCC 게시판 입력/수정/삭제
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
-require_once "/coditop/inc/util.inc.php";
+require_once "../inc/common.inc.php";
+require_once "../inc/util.inc.php";
 
 // 인증여부 체크
 auth_chk($RURL);

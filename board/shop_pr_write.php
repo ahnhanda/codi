@@ -6,7 +6,7 @@
  * desc   : 샵 PR 작성 (전체 카테고리)
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 // 인증여부 체크
 auth_chk($RURL);
@@ -70,7 +70,7 @@ while ( $row = $mainconn->fetch($res) ) {
 $mainconn->close();
 ?>
 
-<? require_once "/coditop/include/_head.php"; ?>
+<? require_once "../include/_head.php"; ?>
 
 <script language="JavaScript" src="/wysiwyg/wysiwyg.js"></script>
 <script language="JavaScript">
@@ -137,7 +137,7 @@ function file_offset_reset(num) {
 			
 			 <!-- 게시판 메뉴 시작 //-->
 			
-			<? require_once "/coditop/include/left_board.php" ?>
+			<? require_once "../include/left_board.php" ?>
 			
 			 <!-- 게시판 메뉴 끝 //-->
 			</td>
@@ -268,4 +268,4 @@ function file_offset_reset(num) {
 initLightbox();
 </script>
 
-<? include "/coditop/include/_foot.php"; ?>
+<? include "../include/_foot.php"; ?>

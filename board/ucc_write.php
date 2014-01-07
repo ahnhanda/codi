@@ -124,7 +124,7 @@ function file_offset_reset(num) {
 			
 			 <!-- 게시판 메뉴 시작 //-->
 			
-			<? require_once "/coditop/include/left_board.php" ?>
+			<? require_once "../include/left_board.php" ?>
 			
 			 <!-- 게시판 메뉴 끝 //-->
 			</td>
@@ -257,4 +257,4 @@ function file_offset_reset(num) {
 initLightbox();
 </script>
 
-<? include "/coditop/include/_foot.php"; ?>
+<? include "../include/_foot.php"; ?>
