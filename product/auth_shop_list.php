@@ -6,8 +6,8 @@
 * desc   : 코디평가순위 - 인증샵
 *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
-require_once "/coditop/inc/chk_frame.inc.php";
+require_once "../inc/common.inc.php";
+require_once "../inc/chk_frame.inc.php";
 ?>
 
 <? require_once "/coditop/include/_head.php"; ?>
@@ -117,4 +117,4 @@ CacheLoadFile($TPL_DIR."/sub/cache_auth_rank_list.tpl",$WEB_URL."proc/make_auth_
   </tr>
 </table>
 
-<? include "/coditop/include/_foot.php"; ?>
+<? include "../include/_foot.php"; ?>

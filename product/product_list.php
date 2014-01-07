@@ -125,4 +125,4 @@ CacheLoadFile($TPL_DIR."/sub/cache_categ_kwd.tpl",$WEB_URL."proc/make_categ_kwd.
 loadCategKwdList('','','',1,'A','<?=$s_key?>','<?=$keyword?>');
 </script>
 
-<? include "/coditop/include/_foot.php"; ?>
+<? include "../include/_foot.php"; ?>

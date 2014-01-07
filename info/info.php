@@ -6,7 +6,7 @@
  * desc   : 사이트안내
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 require_once "/coditop/include/_head.php";
 ?>
@@ -20,7 +20,7 @@ require_once "/coditop/include/_head.php";
 			
 			 <!-- 마이페이지 시작 //-->
 			
-			<? require_once "/coditop/include/left_info.php" ?>
+			<? require_once "../include/left_info.php" ?>
 			
 			 <!-- 마이페이지 시작 //-->
 			</td>
@@ -83,4 +83,4 @@ require_once "/coditop/include/_head.php";
   </tr>
 </table>
 
-<? require_once "/coditop/include/_foot.php"; ?>
+<? require_once "../include/_foot.php"; ?>

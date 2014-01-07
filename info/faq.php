@@ -5,7 +5,7 @@
  * date   : 2008.12.22
  * desc   : FAQ
  *******************************************************/
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 $mainconn->open();
 
@@ -87,7 +87,7 @@ if ( $total_block <= $block ) {
 
 $mainconn->close();
 
-require_once "/coditop/include/_head.php";
+require_once "../include/_head.php";
 ?>
 
 <script LANGUAGE="JavaScript">
@@ -114,7 +114,7 @@ function qClick(num) {
 			
 			 <!-- 마이페이지 시작 //-->
 			
-			<? require_once "/coditop/include/left_info.php" ?>
+			<? require_once "../include/left_info.php" ?>
 			
 			 <!-- 마이페이지 시작 //-->
 			</td>
@@ -168,4 +168,4 @@ echo page_navi($page,$first_page,$last_page,$total_page,$block,$total_block,"/in
       </table></td>
   </tr>
 </table>
-<? require_once "/coditop/include/_foot.php"; ?>
+<? require_once "../include/_foot.php"; ?>

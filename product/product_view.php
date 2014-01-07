@@ -6,8 +6,8 @@
  * desc   : 코디 상세보기
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
-//require_once "/coditop/inc/chk_frame.inc.php";
+require_once "../inc/common.inc.php";
+//require_once "../inc/chk_frame.inc.php";
 
 //auth_chk( my64encode($_SERVER['REQUEST_URI']) );
 
@@ -374,7 +374,7 @@ if ( $mem_id ) {
 $mainconn->close();
 ?>
 
-<? include "/coditop/include/_head.php"; ?>
+<? include "../include/_head.php"; ?>
 
 <script language="javascript">
 function init_img(page) {
@@ -1245,6 +1245,6 @@ loadProductGiftAfter('<?=$p_idx?>','<?=$p_e_idx?>','',1);
 
 
 <!-- 경품관련 이용안내 -->
-<? include "/coditop/include/about_gift.php"; ?>
+<? include "../include/about_gift.php"; ?>
 
-<? include "/coditop/include/_foot.php"; ?>
+<? include "../include/_foot.php"; ?>

@@ -7,7 +7,7 @@
  *			현재 숨김 프레임에서 처리되고 있다.
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 auth_chk($RURL);
 $mem_id = $_SESSION['mem_id'];

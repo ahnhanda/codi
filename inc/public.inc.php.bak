@@ -762,7 +762,8 @@ function SaveFile($file, $str)
 
 function LoadFile($file)
 {
-	if(!eregi("http://", $file))
+//	if(!eregi("http://", $file))
+	if(!preg_matchi("#http://#i", $file))
 		return join ('', @file($file));
 	else
 	{
@@ -1457,7 +1458,7 @@ function strip_str($str, $flag="L") {
 
 // iconv
 /* TODO
-function iconv($f, $t, $str) {
+* function iconv($f, $t, $str) {
 	global $UP_DIR;
 
 	$tmp_file = $UP_DIR."/tmp/".random_code2(10);

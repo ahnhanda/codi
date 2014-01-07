@@ -6,9 +6,9 @@
  * desc   : 이용약관
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
-require_once "/coditop/include/_head.php";
+require_once "../include/_head.php";
 ?>
 
 <table border="0" cellspacing="0" cellpadding="0">
@@ -20,7 +20,7 @@ require_once "/coditop/include/_head.php";
 			
 			 <!-- 마이페이지 시작 //-->
 			
-			<? require_once "/coditop/include/left_info.php" ?>
+			<? require_once "../include/left_info.php" ?>
 			
 			 <!-- 마이페이지 시작 //-->
 			</td>
@@ -54,7 +54,7 @@ require_once "/coditop/include/_head.php";
         <tr>
           <td><textarea name="textarea" class="memberbox "  style="width:100%; height:3980; overflow:hidden " >
 
-			<? require_once "/coditop/member/txt/user1.php" ?>
+			<? require_once "../member/txt/user1.php" ?>
 
 </textarea></td>
         </tr>
@@ -77,11 +77,11 @@ require_once "/coditop/include/_head.php";
         <tr>
           <td><textarea name="textarea2" class="memberbox "  style="width:100%; height:3570;overflow:hidden " ><? 
 		  
-		  require_once "/coditop/member/txt/shop1.php" ?>
+		  require_once "../member/txt/shop1.php" ?>
 
 </textarea></td>
         </tr>
       </table></td>
   </tr>
 </table>
-<? require_once "/coditop/include/_foot.php"; ?>
+<? require_once "../include/_foot.php"; ?>

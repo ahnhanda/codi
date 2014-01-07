@@ -762,7 +762,8 @@ function SaveFile($file, $str)
 
 function LoadFile($file)
 {
-	if(!eregi("http://", $file))
+//	if(!eregi("http://", $file))
+	if(!preg_match("#http://#i", $file))
 		return join ('', @file($file));
 	else
 	{

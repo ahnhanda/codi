@@ -16,7 +16,7 @@
  * tblProductVisit Ãß°¡
  *******************************************************/
 session_start();
-require_once "/coditop/inc/common.inc.php";
+require_once "../inc/common.inc.php";
 
 //auth_chk( my64encode($_SERVER['REQUEST_URI']) );
 $mem_id = $_SESSION['mem_id'];
